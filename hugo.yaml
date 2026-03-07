@@ -9,17 +9,19 @@ defaultContentLanguageInSubdir: true
 
 languages:
   id:
-    languageName: "English"
+    languageName: "Bahasa Indonesia"
     weight: 1
     title: "Rualytics"
-    params:
-      description: "Statistics and Data Science"
-  en:
-    languageName: "Bahasa Indonesia"
-    weight: 2
-    title: "Rualytics"
+    contentDir: "content/id"
     params:
       description: "Statistika dan Sains Data"
+  en:
+    languageName: "English"
+    weight: 2
+    title: "Rualytics"
+    contentDir: "content/en"
+    params:
+      description: "Statistics and Data Science"
 
 # Site parameters
 params:

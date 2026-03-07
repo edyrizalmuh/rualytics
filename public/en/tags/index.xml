@@ -6,6 +6,28 @@
     <description>Recent content in Tags on Rualytics</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>en</language>
+    <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/rualytics/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beginner</title>
+      <link>http://localhost:1313/rualytics/en/tags/beginner/</link>
+      <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/rualytics/en/tags/beginner/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hypothesis-Testing</title>
+      <link>http://localhost:1313/rualytics/en/tags/hypothesis-testing/</link>
+      <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/rualytics/en/tags/hypothesis-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Statistics</title>
+      <link>http://localhost:1313/rualytics/en/tags/statistics/</link>
+      <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/rualytics/en/tags/statistics/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

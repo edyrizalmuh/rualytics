@@ -1,23 +1,15 @@
 ---
-title: Apa itu P-Value? Penjelasan Sederhana untuk Pemula
-date: 2024-03-07T00:00:00.000Z
-description: >-
-  Penjelasan p-value dalam bahasa sederhana, lengkap dengan contoh nyata dan
-  kode Python. Cocok untuk pemula statistika dan data science.
-tags:
-  - statistika
-  - pemula
-  - uji-hipotesis
-  - python
-categories:
-  - Statistika
+title: "Apa itu P-Value? Penjelasan Sederhana untuk Pemula"
+date: 2024-03-07
+description: "Penjelasan p-value dalam bahasa sederhana, lengkap dengan contoh nyata dan kode Python. Cocok untuk pemula statistika dan data science."
+tags: ["statistika", "pemula", "uji-hipotesis", "python"]
+categories: ["Statistika"]
 math: true
 draft: false
 lang: id
 ref: apa-itu-p-value
 slug: apa-itu-p-value
 ---
-
 
 ## Pendahuluan
 
@@ -27,13 +19,13 @@ Pernahkah kamu membaca jurnal ilmiah dan menemukan kalimat seperti ini?
 
 Apa sebenarnya angka **p = 0.03** itu artinya? Mengapa angka sekecil itu dianggap penting?
 
-Di artikel ini, kita akan membahas konsep **p-value** secara sederhana --- tanpa rumus yang menakutkan di awal, dan dengan contoh nyata yang mudah dipahami.
+Di artikel ini, kita akan membahas konsep **p-value** secara sederhana — tanpa rumus yang menakutkan di awal, dan dengan contoh nyata yang mudah dipahami.
 
-------------------------------------------------------------------------
+---
 
 ## Intuisi Dasar: Mulai dari Pertanyaan Sederhana
 
-Bayangkan kamu punya sebuah koin. Kamu curiga koin itu **tidak seimbang** --- lebih sering muncul angka daripada gambar.
+Bayangkan kamu punya sebuah koin. Kamu curiga koin itu **tidak seimbang** — lebih sering muncul angka daripada gambar.
 
 Untuk membuktikannya, kamu melempar koin tersebut **100 kali** dan hasilnya: **60 kali angka, 40 kali gambar**.
 
@@ -43,26 +35,26 @@ Sekarang muncul pertanyaan penting:
 
 Nah, **p-value** menjawab pertanyaan itu.
 
-------------------------------------------------------------------------
+---
 
 ## Definisi P-Value (Yang Mudah Dimengerti)
 
 > **P-value adalah probabilitas mendapatkan hasil seperti yang kita amati (atau yang lebih ekstrem), JIKA asumsi awal kita benar.**
 
 Dalam contoh koin tadi:
-- **Asumsi awal (hipotesis nol):** Koin seimbang --- peluang angka = 0.5
+- **Asumsi awal (hipotesis nol):** Koin seimbang — peluang angka = 0.5
 - **Hasil yang kita amati:** 60 dari 100 lemparan muncul angka
 - **P-value menjawab:** "Kalau koin memang seimbang, seberapa besar kemungkinan kita mendapat 60 angka atau lebih hanya karena keberuntungan?"
 
 Kalau p-value kecil (misalnya 0.03), artinya: hasil seperti ini sangat jarang terjadi jika koin memang seimbang. Jadi kita punya alasan kuat untuk meragukan bahwa koin itu seimbang.
 
-------------------------------------------------------------------------
+---
 
 ## Simulasi dengan Python
 
 Mari kita hitung p-value untuk kasus koin di atas secara langsung.
 
-``` python
+```{python}
 from scipy import stats
 
 # Data pengamatan
@@ -77,10 +69,7 @@ print(f"Jumlah angka yang muncul : {jumlah_angka} dari {jumlah_lemparan} lempara
 print(f"P-value                  : {hasil.pvalue:.4f}")
 ```
 
-    Jumlah angka yang muncul : 60 dari 100 lemparan
-    P-value                  : 0.0569
-
-``` python
+```{python}
 # Interpretasi sederhana
 alpha = 0.05  # batas signifikansi yang umum digunakan
 
@@ -94,17 +83,13 @@ else:
     print("→ Belum cukup bukti bahwa koin tidak seimbang")
 ```
 
-    P-value (0.0569) >= alpha (0.05)
-    → Gagal menolak hipotesis nol
-    → Belum cukup bukti bahwa koin tidak seimbang
-
-------------------------------------------------------------------------
+---
 
 ## Visualisasi: Memahami P-Value Secara Visual
 
-Grafik di bawah menunjukkan distribusi hasil lemparan koin jika koin benar-benar seimbang. Area yang diarsir merah adalah wilayah p-value --- seberapa "ekstrem" hasil kita dibanding yang diharapkan.
+Grafik di bawah menunjukkan distribusi hasil lemparan koin jika koin benar-benar seimbang. Area yang diarsir merah adalah wilayah p-value — seberapa "ekstrem" hasil kita dibanding yang diharapkan.
 
-``` python
+```{python}
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
@@ -154,13 +139,9 @@ plt.show()
 print("Grafik berhasil disimpan.")
 ```
 
-<img src="apa-itu-p-value_files/figure-markdown_strict/cell-4-output-1.png" width="951" height="470" />
+Perhatikan area merah di grafik. Area itulah yang diwakili oleh p-value — semakin kecil area merah, semakin kuat bukti bahwa hasil kita bukan sekadar kebetulan.
 
-    Grafik berhasil disimpan.
-
-Perhatikan area merah di grafik. Area itulah yang diwakili oleh p-value --- semakin kecil area merah, semakin kuat bukti bahwa hasil kita bukan sekadar kebetulan.
-
-------------------------------------------------------------------------
+---
 
 ## Rumus Matematika (Opsional)
 
@@ -172,43 +153,43 @@ Dan p-value dua arah dihitung sebagai:
 
 $$\text{p-value} = P(X \geq k) + P(X \leq n-k) = \sum_{i=k}^{n} \binom{n}{i} p^i(1-p)^{n-i} \times 2$$
 
-Tapi ingat --- kamu tidak perlu menghafal rumus ini. Python menghitungnya otomatis untuk kamu!
+Tapi ingat — kamu tidak perlu menghafal rumus ini. Python menghitungnya otomatis untuk kamu!
 
-------------------------------------------------------------------------
+---
 
 ## Kesalahan Umum dalam Memahami P-Value
 
-Banyak orang --- bahkan ilmuwan berpengalaman --- salah mengartikan p-value. Berikut beberapa kesalahan yang perlu dihindari:
+Banyak orang — bahkan ilmuwan berpengalaman — salah mengartikan p-value. Berikut beberapa kesalahan yang perlu dihindari:
 
 | ❌ Salah | ✅ Benar |
-|------------------------------------|------------------------------------|
+|---|---|
 | "P-value = probabilitas hipotesis nol benar" | P-value = probabilitas mendapat hasil ini JIKA hipotesis nol benar |
-| "P \< 0.05 berarti hasil penting/bermakna" | P \< 0.05 hanya berarti hasil tidak biasa secara statistik |
+| "P < 0.05 berarti hasil penting/bermakna" | P < 0.05 hanya berarti hasil tidak biasa secara statistik |
 | "P besar berarti hipotesis nol pasti benar" | P besar hanya berarti kita gagal menolak hipotesis nol |
 | "P-value mengukur ukuran efek" | P-value tidak mengatakan seberapa besar perbedaannya |
 
-------------------------------------------------------------------------
+---
 
 ## Ringkasan
 
 Mari kita rangkum poin-poin penting dari artikel ini:
 
--   **P-value** mengukur seberapa "mengejutkan" data kita jika hipotesis nol benar
--   P-value **kecil** (biasanya \< 0.05) → hasil jarang terjadi secara kebetulan → tolak hipotesis nol
--   P-value **besar** → hasil masuk akal terjadi secara kebetulan → gagal menolak hipotesis nol
--   P-value **bukan** probabilitas bahwa hipotesis nol benar atau salah
--   Nilai ambang batas 0.05 adalah **konvensi**, bukan hukum alam
+- **P-value** mengukur seberapa "mengejutkan" data kita jika hipotesis nol benar
+- P-value **kecil** (biasanya < 0.05) → hasil jarang terjadi secara kebetulan → tolak hipotesis nol
+- P-value **besar** → hasil masuk akal terjadi secara kebetulan → gagal menolak hipotesis nol
+- P-value **bukan** probabilitas bahwa hipotesis nol benar atau salah
+- Nilai ambang batas 0.05 adalah **konvensi**, bukan hukum alam
 
-------------------------------------------------------------------------
+---
 
 ## Selanjutnya
 
 Setelah memahami p-value, langkah selanjutnya yang bagus adalah mempelajari:
 
--   **\[Apa itu Hipotesis Nol dan Hipotesis Alternatif?\]** *(segera hadir)*
--   **\[Uji-t: Membandingkan Dua Kelompok\]** *(segera hadir)*
--   **\[Interval Kepercayaan: Alternatif yang Lebih Informatif dari P-Value\]** *(segera hadir)*
+- **[Apa itu Hipotesis Nol dan Hipotesis Alternatif?]** *(segera hadir)*
+- **[Uji-t: Membandingkan Dua Kelompok]** *(segera hadir)*
+- **[Interval Kepercayaan: Alternatif yang Lebih Informatif dari P-Value]** *(segera hadir)*
 
-------------------------------------------------------------------------
+---
 
 *Ada pertanyaan atau koreksi? Silakan tinggalkan komentar di bawah.*

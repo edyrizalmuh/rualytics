@@ -9,24 +9,31 @@
     <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/rualytics/id/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Beginner</title>
-      <link>http://localhost:1313/rualytics/id/tags/beginner/</link>
+      <title>Pemula</title>
+      <link>http://localhost:1313/rualytics/id/tags/pemula/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/rualytics/id/tags/beginner/</guid>
+      <guid>http://localhost:1313/rualytics/id/tags/pemula/</guid>
       <description></description>
     </item>
     <item>
-      <title>Hypothesis-Testing</title>
-      <link>http://localhost:1313/rualytics/id/tags/hypothesis-testing/</link>
+      <title>Python</title>
+      <link>http://localhost:1313/rualytics/id/tags/python/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/rualytics/id/tags/hypothesis-testing/</guid>
+      <guid>http://localhost:1313/rualytics/id/tags/python/</guid>
       <description></description>
     </item>
     <item>
-      <title>Statistics</title>
-      <link>http://localhost:1313/rualytics/id/tags/statistics/</link>
+      <title>Statistika</title>
+      <link>http://localhost:1313/rualytics/id/tags/statistika/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/rualytics/id/tags/statistics/</guid>
+      <guid>http://localhost:1313/rualytics/id/tags/statistika/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uji Hipotesis</title>
+      <link>http://localhost:1313/rualytics/id/tags/uji-hipotesis/</link>
+      <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/rualytics/id/tags/uji-hipotesis/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,10 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/rualytics/id/tags/beginner/</loc>
+    <loc>http://localhost:1313/rualytics/id/posts/what-is-pvalue/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/rualytics/en/posts/what-is-pvalue/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="http://localhost:1313/rualytics/id/posts/what-is-pvalue/"
+                />
   </url><url>
     <loc>http://localhost:1313/rualytics/id/categories/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
@@ -22,12 +32,27 @@
                 href="http://localhost:1313/rualytics/id/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/rualytics/id/en/</loc>
+    <loc>http://localhost:1313/rualytics/id/tags/pemula/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/rualytics/id/tags/hypothesis-testing/</loc>
+    <loc>http://localhost:1313/rualytics/id/posts/</loc>
+    <lastmod>2024-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/rualytics/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="http://localhost:1313/rualytics/id/posts/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/rualytics/id/tags/python/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -47,12 +72,12 @@
                 href="http://localhost:1313/rualytics/id/"
                 />
   </url><url>
-    <loc>http://localhost:1313/rualytics/id/categories/statistics/</loc>
+    <loc>http://localhost:1313/rualytics/id/categories/statistika/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/rualytics/id/tags/statistics/</loc>
+    <loc>http://localhost:1313/rualytics/id/tags/statistika/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -72,7 +97,7 @@
                 href="http://localhost:1313/rualytics/id/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/rualytics/id/en/posts/what-is-pvalue/</loc>
+    <loc>http://localhost:1313/rualytics/id/tags/uji-hipotesis/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

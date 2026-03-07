@@ -6,6 +6,7 @@ tags: ["statistics", "beginner", "hypothesis-testing"]
 categories: ["Statistics"]
 math: true
 draft: false
+translationKey: pvalue-post
 ---
 
 ## Introduction
