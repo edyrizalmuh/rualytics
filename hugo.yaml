@@ -1,0 +1,54 @@
+baseURL: "https://edyrizalmuh.github.io/"
+title: "Rualytics"
+theme: "PaperMod"
+paginate: 10
+
+# Bilingual setup
+defaultContentLanguage: "id"
+defaultContentLanguageInSubdir: true
+
+languages:
+  id:
+    languageName: "English"
+    weight: 1
+    title: "Rualytics"
+    params:
+      description: "Statistics and Data Science"
+  en:
+    languageName: "Bahasa Indonesia"
+    weight: 2
+    title: "Rualytics"
+    params:
+      description: "Statistika dan Sains Data"
+
+# Site parameters
+params:
+  author: "Muhammad Edy Rizal"
+  defaultTheme: auto # light/dark/auto
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true # important for code blocks
+  math: true # enables MathJax
+
+# Enable these output formats (needed for sitemap + RSS)
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Sitemap settings (important for SEO)
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+
+# Markdown settings
+markup:
+  highlight:
+    style: monokai # code block color theme
+    lineNos: true # show line numbers
+  goldmark:
+    renderer:
+      unsafe: true # allows HTML in markdown
