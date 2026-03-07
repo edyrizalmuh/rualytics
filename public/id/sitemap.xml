@@ -2,77 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/id/tags/beginner/</loc>
+    <loc>http://localhost:1313/rualytics/id/tags/beginner/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/id/categories/</loc>
-    <lastmod>2024-03-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="http://localhost:1313/id/categories/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/id/en/</loc>
-    <lastmod>2024-03-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/id/tags/hypothesis-testing/</loc>
-    <lastmod>2024-03-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/id/</loc>
+    <loc>http://localhost:1313/rualytics/id/categories/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="http://localhost:1313/rualytics/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
-                href="http://localhost:1313/id/"
+                href="http://localhost:1313/rualytics/id/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/id/categories/statistics/</loc>
+    <loc>http://localhost:1313/rualytics/id/en/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/id/tags/statistics/</loc>
+    <loc>http://localhost:1313/rualytics/id/tags/hypothesis-testing/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/id/tags/</loc>
+    <loc>http://localhost:1313/rualytics/id/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="http://localhost:1313/rualytics/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
-                href="http://localhost:1313/id/tags/"
+                href="http://localhost:1313/rualytics/id/"
                 />
   </url><url>
-    <loc>http://localhost:1313/id/en/posts/what-is-pvalue/</loc>
+    <loc>http://localhost:1313/rualytics/id/categories/statistics/</loc>
+    <lastmod>2024-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/rualytics/id/tags/statistics/</loc>
+    <lastmod>2024-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/rualytics/id/tags/</loc>
+    <lastmod>2024-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/rualytics/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="http://localhost:1313/rualytics/id/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/rualytics/id/en/posts/what-is-pvalue/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

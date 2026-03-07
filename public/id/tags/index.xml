@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Rualytics</title>
-    <link>http://localhost:1313/id/tags/</link>
+    <link>http://localhost:1313/rualytics/id/tags/</link>
     <description>Recent content in Tags on Rualytics</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>id</language>
     <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/id/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/rualytics/id/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Beginner</title>
-      <link>http://localhost:1313/id/tags/beginner/</link>
+      <link>http://localhost:1313/rualytics/id/tags/beginner/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/id/tags/beginner/</guid>
+      <guid>http://localhost:1313/rualytics/id/tags/beginner/</guid>
       <description></description>
     </item>
     <item>
       <title>Hypothesis-Testing</title>
-      <link>http://localhost:1313/id/tags/hypothesis-testing/</link>
+      <link>http://localhost:1313/rualytics/id/tags/hypothesis-testing/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/id/tags/hypothesis-testing/</guid>
+      <guid>http://localhost:1313/rualytics/id/tags/hypothesis-testing/</guid>
       <description></description>
     </item>
     <item>
       <title>Statistics</title>
-      <link>http://localhost:1313/id/tags/statistics/</link>
+      <link>http://localhost:1313/rualytics/id/tags/statistics/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/id/tags/statistics/</guid>
+      <guid>http://localhost:1313/rualytics/id/tags/statistics/</guid>
       <description></description>
     </item>
   </channel>
