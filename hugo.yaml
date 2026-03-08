@@ -33,6 +33,9 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true # important for code blocks
   math: true # enables MathJax
+  ShowToc: true
+  TocOpen: true
+#  UseHugoToc: true
 
 # Enable these output formats (needed for sitemap + RSS)
 outputs:
