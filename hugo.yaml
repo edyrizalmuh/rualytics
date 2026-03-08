@@ -1,4 +1,4 @@
-baseURL: "https://edyrizalmuh.github.io/rualytics/"
+baseURL: "https://rualytics.com/"
 title: "Rualytics"
 theme: "PaperMod"
 paginate: 10
@@ -58,4 +58,5 @@ markup:
     renderer:
       unsafe: true # allows HTML in markdown
 
-canonifyURLs: true
+
+# canonifyURLs: true
