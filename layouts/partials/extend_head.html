@@ -1,8 +1,14 @@
+<meta name="google-site-verification" content="tN67CgM1TTr4MHu2EdtX9Fa69BeBZ7SRgdEbLIjL-Rk" />
+
+<!-- Playfair Display for post titles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+
+<!-- MathJax -->
 {{ if .Params.math }}
 {{ partial "math.html" . }}
 {{ end }}
-
-<meta name="google-site-verification" content="tN67CgM1TTr4MHu2EdtX9Fa69BeBZ7SRgdEbLIjL-Rk" />
 
 <style>
     /* Back to TOC button */
@@ -23,6 +29,19 @@
     .back-to-toc:hover {
         opacity: 1;
         color: var(--primary);
+    }
+
+    /* Cormorant Garamond for post title only */
+    .post-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 1000;
+        font-size: 2.5em;
+        line-height: 1.2;
+        letter-spacing: 0.01em;
+    }
+
+    .post-description {
+        font-style: italic;
     }
 </style>
 
