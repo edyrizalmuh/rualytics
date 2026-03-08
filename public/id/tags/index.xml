@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Rualytics</title>
-    <link>http://localhost:1313/rualytics/id/tags/</link>
+    <link>http://localhost:1313/id/tags/</link>
     <description>Recent content in Tags on Rualytics</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>id</language>
     <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/rualytics/id/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/id/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pemula</title>
-      <link>http://localhost:1313/rualytics/id/tags/pemula/</link>
+      <link>http://localhost:1313/id/tags/pemula/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/rualytics/id/tags/pemula/</guid>
+      <guid>http://localhost:1313/id/tags/pemula/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/rualytics/id/tags/python/</link>
+      <link>http://localhost:1313/id/tags/python/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/rualytics/id/tags/python/</guid>
+      <guid>http://localhost:1313/id/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Statistika</title>
-      <link>http://localhost:1313/rualytics/id/tags/statistika/</link>
+      <link>http://localhost:1313/id/tags/statistika/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/rualytics/id/tags/statistika/</guid>
+      <guid>http://localhost:1313/id/tags/statistika/</guid>
       <description></description>
     </item>
     <item>
       <title>Uji Hipotesis</title>
-      <link>http://localhost:1313/rualytics/id/tags/uji-hipotesis/</link>
+      <link>http://localhost:1313/id/tags/uji-hipotesis/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/rualytics/id/tags/uji-hipotesis/</guid>
+      <guid>http://localhost:1313/id/tags/uji-hipotesis/</guid>
       <description></description>
     </item>
   </channel>
