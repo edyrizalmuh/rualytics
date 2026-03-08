@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Statistics on Rualytics</title>
-    <link>http://localhost:1313/en/tags/statistics/</link>
+    <link>http://localhost:1313/rualytics/en/tags/statistics/</link>
     <description>Recent content in Statistics on Rualytics</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>en</language>
     <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/en/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/rualytics/en/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is a P-Value?</title>
-      <link>http://localhost:1313/en/posts/what-is-pvalue/</link>
+      <link>http://localhost:1313/rualytics/en/posts/what-is-pvalue/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/posts/what-is-pvalue/</guid>
+      <guid>http://localhost:1313/rualytics/en/posts/what-is-pvalue/</guid>
       <description>A plain English explanation of p-values for beginners, with simple examples.</description>
     </item>
   </channel>

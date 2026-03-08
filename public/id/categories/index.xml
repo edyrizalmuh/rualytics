@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Rualytics</title>
-    <link>http://localhost:1313/id/categories/</link>
+    <link>http://localhost:1313/rualytics/id/categories/</link>
     <description>Recent content in Categories on Rualytics</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>id</language>
     <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/id/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/rualytics/id/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Statistika</title>
-      <link>http://localhost:1313/id/categories/statistika/</link>
+      <link>http://localhost:1313/rualytics/id/categories/statistika/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/id/categories/statistika/</guid>
+      <guid>http://localhost:1313/rualytics/id/categories/statistika/</guid>
       <description></description>
     </item>
   </channel>

@@ -54,3 +54,5 @@ markup:
   goldmark:
     renderer:
       unsafe: true # allows HTML in markdown
+
+canonifyURLs: true

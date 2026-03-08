@@ -146,13 +146,7 @@ plt.savefig('pvalue_visualisasi.png', dpi=150, bbox_inches='tight')
 plt.show()
 print("Grafik berhasil disimpan.")
 ```
-![Visualisasi P-value](/id/apa-itu-pvalue/cell-4-output-1.jpg)
-
-<img src="id\apa-itu-pvalue\cell-4-output-1.png" width="951" height="470" />
-
-![Visualisasi P-value 2](pvalue_visualisasi.png)
-
-![Visualisasi P-value 3](/id/apa-itu-pvalue/pvalue_visualisasi.png)
+![Visualisasi P-value](/id/apa-itu-pvalue/pvalue_visualisasi.png)
 
 
 
