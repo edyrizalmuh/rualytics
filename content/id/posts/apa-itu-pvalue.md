@@ -38,7 +38,7 @@ Nah, **p-value** menjawab pertanyaan itu.
 
 ------------------------------------------------------------------------
 
-## Definisi P-Value (Yang Mudah Dimengerti)
+### Definisi P-Value (Yang Mudah Dimengerti)
 
 > **P-value adalah probabilitas mendapatkan hasil seperti yang kita amati (atau yang lebih ekstrem), JIKA asumsi awal kita benar.**
 

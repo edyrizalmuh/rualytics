@@ -73,6 +73,55 @@
     }
 
 </script>
+
+<meta name="google-site-verification" content="tN67CgM1TTr4MHu2EdtX9Fa69BeBZ7SRgdEbLIjL-Rk" />
+
+<style>
+     
+    .back-to-toc {
+        display: inline-block;
+        font-size: 0.75em;
+        color: var(--secondary);
+        text-decoration: none;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 2px 8px;
+        margin-left: 8px;
+        vertical-align: middle;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+    }
+
+    .back-to-toc:hover {
+        opacity: 1;
+        color: var(--primary);
+    }
+
+     
+    .toc details summary .details {
+        font-size: 2em;
+        font-weight: bold;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        const toc = document.getElementById('toc');
+        if (!toc) return;
+
+        
+        const headers = document.querySelectorAll('.post-content h2, .post-content h3');
+        headers.forEach(function (header) {
+            const link = document.createElement('a');
+            link.href = '#toc';
+            link.className = 'back-to-toc';
+            link.title = 'ToC';
+            link.innerHTML = '↑';
+            header.appendChild(link);
+        });
+    });
+</script>
 </head>
 <body class="list" id="top">
     <header class="header">
