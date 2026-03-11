@@ -35,6 +35,7 @@ params:
   math: true # enables MathJax
   ShowToc: true
   TocOpen: true
+  googleAnalytics: "G-S33YNJ8FC0"
 #  UseHugoToc: true
 
 # Enable these output formats (needed for sitemap + RSS)
