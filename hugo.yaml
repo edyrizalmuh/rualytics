@@ -2,7 +2,7 @@ baseURL: "https://rualytics.com/"
 title: "Rualytics"
 theme: "PaperMod"
 paginate: 10
-googleAnalytics: G-S33YNJ8FC0
+googleAnalytics: "G-S33YNJ8FC0"
 
 # Bilingual setup
 defaultContentLanguage: "id"
