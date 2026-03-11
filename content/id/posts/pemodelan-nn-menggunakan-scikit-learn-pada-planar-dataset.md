@@ -204,7 +204,7 @@ plt.show()
 print('Catatan: Scatter plot memperlihatkan pola BUNGA/SPIRAL — tidak bisa dipisahkan dengan garis lurus!')
 ```
 
-![](pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/figure-markdown_strict/cell-5-output-1.png)
+![Scatter Plot](/id/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/cell-5-output-1.png)
 
     Catatan: Scatter plot memperlihatkan pola BUNGA/SPIRAL — tidak bisa dipisahkan dengan garis lurus!
 
@@ -424,7 +424,7 @@ plt.savefig('gridsearch_results.png', dpi=120, bbox_inches='tight')
 plt.show()
 ```
 
-![](pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/figure-markdown_strict/cell-10-output-1.png)
+![](/id/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/cell-10-output-1.png)
 
 ------------------------------------------------------------------------
 
@@ -501,7 +501,7 @@ plt.show()
     False Positive (FP): 6  → Salah prediksi Kelas 0 sebagai Kelas 1 (Type I Error)
     False Negative (FN): 2  → Salah prediksi Kelas 1 sebagai Kelas 0 (Type II Error)
 
-![](pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/figure-markdown_strict/cell-12-output-2.png)
+![](/id/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/cell-12-output-2.png)
 
 ------------------------------------------------------------------------
 
@@ -672,7 +672,7 @@ plt.savefig('metrics_comparison.png', dpi=120, bbox_inches='tight')
 plt.show()
 ```
 
-![](pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/figure-markdown_strict/cell-15-output-1.png)
+![](/id/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/cell-15-output-1.png)
 
 ------------------------------------------------------------------------
 
@@ -715,7 +715,7 @@ plt.savefig('roc_curve.png', dpi=120, bbox_inches='tight')
 plt.show()
 ```
 
-![](pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/figure-markdown_strict/cell-16-output-1.png)
+![](/id/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/cell-16-output-1.png)
 
 ------------------------------------------------------------------------
 
@@ -781,7 +781,7 @@ else:
     print('✅  Gap kecil dan Validation tinggi → Good Fit!')
 ```
 
-![](pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/figure-markdown_strict/cell-17-output-1.png)
+![](/id/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/cell-17-output-1.png)
 
     Training F1 (full data)   : 0.8949
     Validation F1 (full data) : 0.8770
@@ -843,7 +843,7 @@ plt.show()
                Good Fit\n(Best Model)         0.90625         0.9000  0.00625
       Overfitting\n(Terlalu Kompleks)         0.90000         0.8375  0.06250
 
-![](pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/figure-markdown_strict/cell-18-output-2.png)
+![](/id/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/cell-18-output-2.png)
 
 ------------------------------------------------------------------------
 
@@ -892,7 +892,7 @@ plt.savefig('decision_boundary.png', dpi=120, bbox_inches='tight')
 plt.show()
 ```
 
-![](pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/figure-markdown_strict/cell-19-output-1.png)
+![](/id/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/cell-19-output-1.png)
 
 ------------------------------------------------------------------------
 
@@ -942,7 +942,7 @@ print(f'CV F1-Score (NN Awal)  : {cv_scores_nn.mean():.4f} ± {cv_scores_nn.std(
 print(f'CV F1-Score (NN Best)  : {cv_scores_best.mean():.4f} ± {cv_scores_best.std():.4f}')
 ```
 
-![](pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/figure-markdown_strict/cell-20-output-1.png)
+![](/id/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset_files/cell-20-output-1.png)
 
     CV F1-Score (LR)       : 0.5049 ± 0.0274
     CV F1-Score (NN Awal)  : 0.6807 ± 0.1078

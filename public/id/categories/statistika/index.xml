@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Statistika on Rualytics</title>
-    <link>http://localhost:1313/rualytics/id/categories/statistika/</link>
+    <link>http://localhost:1313/id/categories/statistika/</link>
     <description>Recent content in Statistika on Rualytics</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>id</language>
     <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/rualytics/id/categories/statistika/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/id/categories/statistika/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apa itu P-Value? Penjelasan Sederhana untuk Pemula</title>
-      <link>http://localhost:1313/rualytics/id/posts/apa-itu-pvalue/</link>
+      <link>http://localhost:1313/id/posts/apa-itu-pvalue/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/rualytics/id/posts/apa-itu-pvalue/</guid>
+      <guid>http://localhost:1313/id/posts/apa-itu-pvalue/</guid>
       <description>Penjelasan p-value dalam bahasa sederhana, lengkap dengan contoh nyata dan kode Python. Cocok untuk pemula statistika dan data science.</description>
     </item>
   </channel>

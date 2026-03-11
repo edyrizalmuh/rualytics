@@ -2,18 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Rualytics</title>
-    <link>http://localhost:1313/rualytics/id/posts/</link>
+    <link>http://localhost:1313/id/posts/</link>
     <description>Recent content in Posts on Rualytics</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>id</language>
     <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/rualytics/id/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/id/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apa itu P-Value? Penjelasan Sederhana untuk Pemula</title>
-      <link>http://localhost:1313/rualytics/id/posts/apa-itu-pvalue/</link>
+      <link>http://localhost:1313/id/posts/apa-itu-pvalue/</link>
       <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/rualytics/id/posts/apa-itu-pvalue/</guid>
+      <guid>http://localhost:1313/id/posts/apa-itu-pvalue/</guid>
       <description>Penjelasan p-value dalam bahasa sederhana, lengkap dengan contoh nyata dan kode Python. Cocok untuk pemula statistika dan data science.</description>
+    </item>
+    <item>
+      <title>Neural Network untuk Planar Dataset</title>
+      <link>http://localhost:1313/id/posts/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/id/posts/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset/</guid>
+      <description>&lt;script src=&#34;https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js&#34; integrity=&#34;sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js&#34; integrity=&#34;sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2&#34; crossorigin=&#34;anonymous&#34; data-relocate-top=&#34;true&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;application/javascript&#34;&gt;define(&#39;jquery&#39;, [],function() {return window.jQuery;})&lt;/script&gt;
+&lt;h2 id=&#34;pemodelan-dengan-scikit-learn-mlpclassifier--hyperparameter-tuning&#34;&gt;Pemodelan dengan Scikit-Learn (MLPClassifier) + Hyperparameter Tuning&lt;/h2&gt;
+&lt;p&gt;Notebook ini membangun Neural Network untuk mengklasifikasikan flower/planar dataset (non-linearly separable).&lt;br&gt;
+Topik yang dibahas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Data Generation &amp;amp; Eksplorasi&lt;/li&gt;
+&lt;li&gt;Preprocessing&lt;/li&gt;
+&lt;li&gt;Baseline Model (Logistic Regression) &amp;mdash; menunjukkan keterbatasan model linear&lt;/li&gt;
+&lt;li&gt;Neural Network (MLPClassifier)&lt;/li&gt;
+&lt;li&gt;Hyperparameter Tuning dengan GridSearchCV&lt;/li&gt;
+&lt;li&gt;Evaluasi Lengkap: Confusion Matrix, Accuracy, Balanced Accuracy, Precision, Recall, F1-Score, ROC-AUC, MAE, MSE, RMSE&lt;/li&gt;
+&lt;li&gt;Overfitting &amp;amp; Underfitting&lt;/li&gt;
+&lt;li&gt;Decision Boundary Visualization&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;1-import-library&#34;&gt;1. Import Library&lt;/h2&gt;
+&lt;p&gt;Kita menggunakan:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
