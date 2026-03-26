@@ -86,3 +86,14 @@ h6 {
   overflow-x: auto;
   white-space: nowrap;
 }
+
+// Override homepage post titles
+.home[posts] .summary .single-title {
+  font-size: 1.6rem !important;
+  line-height: 100% !important;
+}
+
+// Or for post page titles
+article.single h1.single-title {
+  font-size: 2.5rem !important;
+}
