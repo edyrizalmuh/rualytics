@@ -1,0 +1,723 @@
+baseURL = "https://rualytics.com/"
+defaultContentLanguage = "id"
+languageCode = "id"
+defaultContentLanguageInSubdir = false
+theme = "DoIt"
+title = "Rualytics"
+
+
+[languages.id]
+languageName = "Indonesia"
+weight = 1
+title = "Rualytics"
+contentDir = "content/id"
+
+
+[languages.id.params]
+description = "Rualytics adalah blog edukasi yang men share study note dan panduan praktis terkait  statistika, sains data, dan topik terkait lainnya."
+
+
+[languages.id.params.home.profile]
+subtitle = "Catatan Pembelajaran Statistik, Sains Data, dan Lainnya"
+
+
+[[languages.id.menu.main]]
+identifier = "posts"
+name = "Pos"
+url = "/posts/"
+weight = 1
+
+
+[[languages.id.menu.main]]
+identifier = "tags"
+name = "Tag"
+url = "/tags/"
+weight = 2
+
+
+[[languages.id.menu.main]]
+identifier = "categories"
+name = "Kategori"
+url = "/categories/"
+weight = 3
+
+
+[[languages.id.menu.main]]
+identifier = "series"
+name = "Seri"
+url = "/series/"
+weight = 4
+
+
+[[languages.id.menu.main]]
+identifier = "about"
+name = "Tentang"
+url = "/about/"
+weight = 5
+
+
+[languages.en]
+languageName = "English"
+weight = 2
+title = "Rualytics"
+contentDir = "content/en"
+
+
+[languages.en.params]
+description = "Rualytics is an education blog sharing study notes and practical insights on statistics, data science, and other related topics."
+
+
+[languages.en.params.home.profile]
+subtitle = "Study Note on Statistics, Data Science, and More"
+
+
+[[languages.en.menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/en/posts/"
+weight = 1
+
+
+[[languages.en.menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/en/tags/"
+weight = 2
+
+
+[[languages.en.menu.main]]
+identifier = "categories"
+name = "Categories"
+url = "/en/categories/"
+weight = 3
+
+
+[[languages.en.menu.main]]
+identifier = "series"
+name = "Series"
+url = "/en/series/"
+weight = 4
+
+
+[[languages.en.menu.main]]
+identifier = "about"
+name = "About"
+url = "/en/about/"
+weight = 5
+
+
+[params]
+dateFormat = "2 January 2006"
+defaultTheme = "auto"
+description = "Rualytics adalah blog yang membahas tentang data science, machine learning, dan topik terkait lainnya. Blog ini dibuat untuk berbagi pengetahuan dan pengalaman dalam dunia data science, serta memberikan wawasan tentang tren terbaru di bidang ini."
+images = [ "/logo-adaptive.svg" ]
+title = "Rualytics"
+version = "0.4.X"
+enablePWA = false
+cacheRemoteImages = true
+optimizeImages = true
+srcsetDefaultResizeMethod = "1200x webp Lanczos q75"
+srcsetLargeResizeMethod = "2000x webp Lanczos q75"
+srcsetSmallResizeMethod = "700x webp Lanczos q75"
+license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+
+[params.author]
+name = "Muhammad Edy Rizal"
+
+
+[params.app]
+title = "Rualytics"
+noFavicon = false
+svgFavicon = "/logo-adaptive.svg"
+iconColor = "#5bbad5"
+tileColor = "#da532c"
+
+
+[params.search]
+enable = true
+type = "fuse"
+contentLength = 4_000
+placeholder = ""
+maxResultLength = 10
+snippetLength = 30
+highlightTag = "em"
+absoluteURL = true
+
+
+[params.search.algolia]
+appID = ""
+index = ""
+searchKey = ""
+
+
+[params.search.fuse]
+distance = 100
+findAllMatches = false
+ignoreFieldNorm = false
+ignoreLocation = false
+isCaseSensitive = false
+location = 0
+minMatchCharLength = 2
+threshold = 0.3
+useExtendedSearch = false
+
+
+[params.image]
+cacheRemote = true
+optimise = true
+
+
+[params.header]
+themeChangeMode = "switch"
+
+
+[params.header.title]
+logo = "/logo-adaptive.svg"
+name = "Rualytics"
+pre = ""
+post = ""
+typeit = false
+
+
+[params.footer]
+enable = true
+custom = ""
+hugo = true
+hostedOn = ""
+copyright = true
+author = true
+since = 2_026
+icp = ""
+license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+
+[params.section]
+paginate = 20
+dateFormat = "2 January 2006"
+rss = 10
+
+
+[params.section.recentlyUpdated]
+days = 30
+enable = true
+maxCount = 10
+rss = false
+
+
+[params.list]
+paginate = 20
+dateFormat = "2 January 2006"
+rss = 10
+
+
+[params.home]
+rss = 10
+
+
+[params.home.profile]
+enable = true
+gravatarEmail = ""
+avatarURL = "/logo-adaptive.svg"
+avatarLinkURL = ""
+title = "Rualytics"
+typeit = false
+social = true
+disclaimer = ""
+
+
+[params.home.posts]
+enable = true
+paginate = 6
+defaultHiddenFromHomePage = false
+
+
+[params.social]
+Angellist = ""
+Bandcamp = ""
+Behance = ""
+Bilibili = ""
+Bitbucket = ""
+BuyMeACoffee = ""
+Codepen = ""
+Deviantart = ""
+Devto = ""
+Douban = ""
+Dribbble = ""
+Email = "rualytics@gmail.com"
+Facebook = ""
+Fivehundredpx = ""
+Flickr = ""
+Foursquare = ""
+FreeCodeCamp = ""
+GitHub = ""
+Gitea = ""
+Gitlab = ""
+Goodreads = ""
+Googlescholar = ""
+Hackernews = ""
+Instagram = ""
+Jsfiddle = ""
+Keybase = ""
+Kickstarter = ""
+Ko-Fi = ""
+Lastfm = ""
+Liberapay = ""
+Linkedin = ""
+Linktree = ""
+Mastodon = ""
+Matrix = ""
+Medium = ""
+Mix = ""
+ORCID = ""
+Odnoklassniki = ""
+Patreon = ""
+Paypal = ""
+Pinterest = ""
+QQ = ""
+QQGroup = ""
+Quora = ""
+RSS = true
+Reddit = ""
+Researchgate = ""
+Skype = ""
+Slidershare = ""
+Snapchat = ""
+Soundcloud = ""
+Spotify = ""
+Stackoverflow = ""
+Steam = ""
+Strava = ""
+Telegram = ""
+Thingiverse = ""
+Tumblr = ""
+Twitch = ""
+Twitter = ""
+VK = ""
+Vine = ""
+Weibo = ""
+Whatsapp = ""
+Wordpress = ""
+XMPP = ""
+Xing = ""
+Youtubechannel = ""
+Youtubecustom = ""
+Youtubelegacy = ""
+Zhihu = ""
+
+
+[params.page]
+hiddenFromHomePage = false
+hiddenFromSearch = false
+twemoji = false
+lightgallery = true
+ruby = true
+fraction = true
+linkToMarkdown = false
+linkToSource = false
+linkToEdit = false
+linkToReport = false
+rssFullText = false
+seriesNavigation = true
+enableLastMod = true
+enableWordCount = true
+enableReadingTime = true
+
+
+[params.page.outdatedArticleReminder]
+enable = false
+reminder = 90
+warning = 180
+
+
+[params.page.toc]
+enable = true
+keepStatic = false
+auto = true
+
+
+[params.page.math]
+enable = true
+blockLeftDelimiter = ""
+blockRightDelimiter = ""
+inlineLeftDelimiter = ""
+inlineRightDelimiter = ""
+copyTex = true
+mhchem = true
+mathjax = false
+
+
+[params.page.code]
+maxShownLines = 10
+lineNos = true
+wrap = false
+header = true
+
+
+[params.page.table]
+sort = true
+
+
+[params.page.mapbox]
+accessToken = ""
+lightStyle = "mapbox://styles/mapbox/light-v9"
+darkStyle = "mapbox://styles/mapbox/dark-v9"
+navigation = true
+geolocate = true
+scale = true
+fullscreen = true
+
+
+[params.page.share]
+Baidu = false
+Blogger = true
+Buffer = false
+Digg = false
+Evernote = true
+Facebook = true
+Flipboard = false
+HackerNews = false
+Instapaper = false
+Line = true
+Linkedin = false
+Mastodon = false
+Mix = false
+Myspace = true
+Odnoklassniki = false
+Pinterest = false
+Pocket = false
+Reddit = false
+Renren = false
+Skype = false
+Stumbleupon = false
+Trello = false
+Tumblr = false
+Twitter = true
+VK = false
+Weibo = true
+Whatsapp = true
+Xing = false
+enable = true
+
+
+[params.page.plantuml]
+server = "https://www.plantuml.com/plantuml"
+
+
+[params.page.instantpage]
+enable = true
+
+
+[params.page.comment]
+enable = true
+
+
+[params.page.comment.disqus]
+enable = false
+shortname = ""
+
+
+[params.page.comment.gitalk]
+clientId = ""
+clientSecret = ""
+enable = false
+owner = ""
+repo = ""
+
+
+[params.page.comment.valine]
+appId = ""
+appKey = ""
+avatar = "mp"
+enable = false
+enableQQ = false
+highlight = true
+lang = ""
+meta = ""
+pageSize = 10
+placeholder = ""
+recordIP = true
+serverURLs = ""
+visitor = true
+emoji = ""
+
+
+[params.page.comment.waline]
+comment = true
+enable = false
+pageview = true
+serverURL = ""
+
+
+[params.page.comment.facebook]
+appId = ""
+enable = false
+languageCode = ""
+numPosts = 10
+width = "100%"
+
+
+[params.page.comment.telegram]
+color = ""
+colorful = true
+dark = false
+dislikes = false
+enable = false
+height = ""
+limit = 5
+outlined = false
+siteID = ""
+
+
+[params.page.comment.commento]
+enable = false
+
+
+[params.page.comment.utterances]
+enable = false
+darkTheme = "github-dark"
+issueTerm = "pathname"
+label = ""
+lightTheme = "github-light"
+repo = ""
+
+
+[params.page.comment.twikoo]
+cloudbase = true
+commentCount = true
+enable = false
+envId = ""
+path = ""
+region = ""
+visitor = true
+
+
+[params.page.comment.vssue]
+clientId = ""
+clientSecret = ""
+enable = false
+owner = ""
+platform = ""
+repo = ""
+
+
+[params.page.comment.remark42]
+enable = false
+host = ""
+max_shown_comments = 15
+show_email_subscription = true
+simple_view = false
+site_id = ""
+
+
+[params.page.comment.giscus]
+enable = false
+darkTheme = "dark"
+dataCategory = ""
+dataCategoryId = ""
+dataEmitMetadata = "0"
+dataInputPosition = "bottom"
+dataLang = "en"
+dataLoading = "lazy"
+dataMapping = "pathname"
+dataReactionsEnabled = "1"
+dataRepo = ""
+dataRepoId = ""
+lightTheme = "light"
+
+
+[params.page.comment.artalk]
+commentCount = true
+enable = false
+katex = false
+lightbox = false
+lite = false
+pageview = true
+server = ""
+site = ""
+
+
+[params.page.library]
+css = { }
+js = { }
+
+
+[params.page.seo]
+images = [ ]
+
+
+[params.page.seo.publisher]
+logoUrl = ""
+name = ""
+
+
+[params.page.related]
+count = 5
+enable = true
+
+
+[params.page.header.number]
+enable = false
+
+
+[params.page.header.number.format]
+h2 = "{h2} {title}"
+h3 = "{h2}.{h3} {title}"
+h4 = "{h2}.{h3}.{h4} {title}"
+h5 = "{h2}.{h3}.{h4}.{h5} {title}"
+h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
+
+
+[params.sponsor]
+bio = "Support us on Trakteer!"
+custom = ""
+enable = true
+link = "https://trakteer.id/rua_lytics"
+
+
+[params.typeit]
+speed = 100
+cursorSpeed = 1_000
+cursorChar = "|"
+duration = -1
+
+
+[params.verification]
+baidu = ""
+bing = ""
+google = ""
+pinterest = ""
+so = ""
+sogou = ""
+yandex = ""
+
+
+[params.seo]
+image = ""
+thumbnailUrl = ""
+alternateName = [ "Hugo DoIt" ]
+
+
+[params.analytics]
+enable = false
+
+
+[params.analytics.google]
+id = ""
+anonymizeIP = true
+
+
+[params.analytics.fathom]
+id = ""
+server = ""
+
+
+[params.analytics.baidu]
+id = ""
+
+
+[params.analytics.umami]
+data_domains = ""
+data_host_url = ""
+data_website_id = ""
+src = ""
+
+
+[params.analytics.plausible]
+data_domain = ""
+src = ""
+
+
+[params.analytics.cloudflare]
+token = ""
+
+
+[params.cookieconsent]
+enable = true
+
+
+[params.cookieconsent.content]
+dismiss = ""
+link = ""
+message = ""
+
+
+[params.cdn]
+data = ""
+
+
+[params.compatibility]
+polyfill = false
+
+
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
+
+
+[markup.goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+strikethrough = true
+table = true
+taskList = true
+typographer = true
+
+
+[markup.goldmark.renderer]
+unsafe = true
+
+
+[markup.tableOfContents]
+endLevel = 6
+startLevel = 2
+
+
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
+
+[Permalinks]
+posts = ":contentbasename"
+
+
+[privacy]
+googleAnalytics = { }
+
+
+[privacy.x]
+enableDNT = true
+
+
+[privacy.youtube]
+privacyEnhanced = true
+
+
+[mediaTypes."text/plain"]
+suffixes = [ "md" ]
+
+
+[outputFormats.MarkDown]
+isHTML = false
+isPlainText = true
+mediaType = "text/plain"
+
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+page = [ "HTML", "MarkDown" ]
+section = [ "HTML", "RSS" ]
+taxonomy = [ "HTML", "RSS" ]
+
+
+[taxonomies]
+author = "authors"
+category = "categories"
+series = "series"
+tag = "tags"

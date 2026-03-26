@@ -1,0 +1,27 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Rualytics</title>
+        <link>http://localhost:1313/</link>
+        <description>Rualytics adalah blog edukasi yang men share study note dan panduan praktis terkait  statistika, sains data, dan topik terkait lainnya.</description>
+        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Tue, 24 Mar 2026 06:00:00 &#43;0800</lastBuildDate>
+            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Pivot Table</title>
+    <link>http://localhost:1313/pivot-table/</link>
+    <pubDate>Tue, 24 Mar 2026 06:00:00 &#43;0800</pubDate><author>
+        <name>Muhammad Edy Rizal</name>
+    </author><guid>http://localhost:1313/pivot-table/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/pivot-table/images/thumbnail-pivot-table.png" referrerpolicy="no-referrer">
+            </div>Pivot Table adalah tools Excel yang powerful untuk merangkum, membandingkan, dan menemukan pola dalam data besar. Artikel ini ditujukan bagi pemula, menjelaskan kapan menggunakan Pivot Table vs formula, beserta panduan praktisnya.]]></description>
+</item><item>
+    <title>Pemodelan Neural Network Menggunakan Scikit Learn pada Planar Dataset</title>
+    <link>http://localhost:1313/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset/</link>
+    <pubDate>Wed, 11 Mar 2026 15:57:53 &#43;0800</pubDate><author>
+        <name>Muhammad Edy Rizal</name>
+    </author><guid>http://localhost:1313/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset/images/cell-5-output-1.png" referrerpolicy="no-referrer">
+            </div><p>Notebook ini membangun Neural Network untuk mengklasifikasikan flower/planar dataset (non-linearly separable).</p>]]></description>
+</item></channel>
+</rss>
