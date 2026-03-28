@@ -7,10 +7,11 @@ languages = 'id'
 tags = ['Microsoft Excel', 'Pemula']
 featuredImage = "images/thumbnail-pivot-table.png"
 featuredImagePreview = "images/thumbnail-pivot-table.png"
-# series = ['Pengantar Microsoft Excel']
+series = ['Pengantar Microsoft Excel']
 categories = ['Tutorial']
 description = "Pelajari cara menggunakan Pivot Table di Excel untuk merangkum dan menganalisis data secara efisien. Bandingkan dengan penggunaan formula seperti COUNTIF dan SUMIF."
 summary = "Pivot Table adalah tools Excel yang powerful untuk merangkum, membandingkan, dan menemukan pola dalam data besar. Artikel ini ditujukan bagi pemula, menjelaskan kapan menggunakan Pivot Table vs formula, beserta panduan praktisnya."
+seo_description = "Pelajari cara menggunakan Pivot Table di Excel untuk merangkum dan menganalisis data secara efisien. Bandingkan dengan penggunaan formula seperti COUNTIF dan SUMIF."
 +++
 
 
