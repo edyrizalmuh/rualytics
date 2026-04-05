@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Teori - Kategori - Rualytics</title>
+        <link>http://localhost:1313/categories/teori/</link>
+        <description>Teori - Kategori - Rualytics</description>
+        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Sun, 05 Apr 2026 06:00:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/teori/" rel="self" type="application/rss+xml" /><item>
+    <title>Exploratory Data Analysis (EDA)</title>
+    <link>http://localhost:1313/exploratory-data-analysis/</link>
+    <pubDate>Sun, 05 Apr 2026 06:00:00 &#43;0800</pubDate><author>
+        <name>Muhammad Edy Rizal</name>
+    </author><guid>http://localhost:1313/exploratory-data-analysis/</guid>
+    <description><![CDATA[<h2 id="definisi-dan-tujuan-eda" class="headerLink">
+    <a href="#definisi-dan-tujuan-eda" class="header-mark"></a>Definisi dan Tujuan EDA</h2><h3 id="apa-itu-eda" class="headerLink">
+    <a href="#apa-itu-eda" class="header-mark"></a>Apa itu EDA?</h3><p><strong>Exploratory Data Analysis (EDA)</strong> adalah proses <strong>mengenal dan memahami data</strong> sebelum melakukan analisis atau pemodelan lebih lanjut. EDA pertama kali diperkenalkan oleh statistikawan John Tukey pada tahun 1977.</p>
+<p>Bayangkan Anda baru saja mendapatkan sebuah buku tebal yang belum pernah Anda baca. Sebelum membaca dari halaman pertama, Anda mungkin akan:</p>
+<ul>
+<li>Melihat sampul dan judul</li>
+<li>Membaca daftar isi</li>
+<li>Membalik beberapa halaman secara acak</li>
+<li>Membaca ringkasan di bagian belakang</li>
+</ul>
+<p><strong>EDA adalah hal yang sama — tetapi untuk data.</strong></p>]]></description>
+</item></channel>
+</rss>
