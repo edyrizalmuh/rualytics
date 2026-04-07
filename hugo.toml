@@ -599,11 +599,11 @@ alternateName = [ "Hugo DoIt" ]
 
 
 [params.analytics]
-enable = false
+enable = true
 
 
 [params.analytics.google]
-id = ""
+id = "G-S33YNJ8FC0"
 anonymizeIP = true
 
 
@@ -687,8 +687,9 @@ priority = 0.5
 posts = ":contentbasename"
 
 
-[privacy]
-googleAnalytics = { }
+[privacy.googleAnalytics]
+anonymizeIP = true
+respectDoNotTrack = true
 
 
 [privacy.x]
