@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Pengantar Data Sains - series - Rualytics</title>
+        <link>http://localhost:1313/series/pengantar-data-sains/</link>
+        <description>Pengantar Data Sains - series - Rualytics</description>
+        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Tue, 24 Mar 2026 06:00:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/series/pengantar-data-sains/" rel="self" type="application/rss+xml" /><item>
+    <title>Data Cleaning</title>
+    <link>http://localhost:1313/data-cleaning/</link>
+    <pubDate>Tue, 24 Mar 2026 06:00:00 &#43;0800</pubDate><author>
+        <name>Muhammad Edy Rizal</name>
+    </author><guid>http://localhost:1313/data-cleaning/</guid>
+    <description><![CDATA[Data mentah di dunia nyata hampir tidak pernah datang dalam kondisi bersih. Ada banyak masalah kualitas data yang mungkin terjadi, misalnya data hilang, data inkonsisten, atau data rusak. Oleh karena itu, <em>data cleaning</em> merupakan satu tahapan penting untuk memastikan kualitas data yang akan dianalisis atau dimodelkan.]]></description>
+</item></channel>
+</rss>
