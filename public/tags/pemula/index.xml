@@ -16,7 +16,9 @@
     <pubDate>Sun, 12 Apr 2026 06:00:00 &#43;0800</pubDate><author>
         <name>Muhammad Edy Rizal</name>
     </author><guid>http://localhost:1313/data-cleaning/</guid>
-    <description><![CDATA[Data mentah di dunia nyata hampir tidak pernah datang dalam kondisi bersih. Ada banyak masalah kualitas data yang mungkin terjadi, misalnya data hilang, data inkonsisten, atau data rusak. Oleh karena itu, <em>data cleaning</em> merupakan satu tahapan penting untuk memastikan kualitas data yang akan dianalisis atau dimodelkan.]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/data-cleaning/images/GIGO-edit.jpg" referrerpolicy="no-referrer">
+            </div>Data mentah di dunia nyata hampir tidak pernah datang dalam kondisi bersih. Ada banyak masalah kualitas data yang mungkin terjadi, misalnya data hilang, data inkonsisten, atau data rusak. Oleh karena itu, <em>data cleaning</em> merupakan satu tahapan penting untuk memastikan kualitas data yang akan dianalisis atau dimodelkan.]]></description>
 </item><item>
     <title>Pengenalan Macro di Microsoft Excel</title>
     <link>http://localhost:1313/excel-macro/</link>
