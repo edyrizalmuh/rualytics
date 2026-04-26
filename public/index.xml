@@ -3,7 +3,7 @@
         <title>Rualytics</title>
         <link>http://localhost:1313/</link>
         <description>Rualytics adalah blog edukasi yang men share study note dan panduan praktis terkait  statistika, sains data, dan topik terkait lainnya.</description>
-        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Sun, 12 Apr 2026 06:00:00 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Sun, 26 Apr 2026 06:00:00 &#43;0800</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Exploratory Data Analysis (EDA)</title>
@@ -21,6 +21,13 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/data-cleaning/images/GIGO-edit2.jpg" referrerpolicy="no-referrer">
             </div>Data mentah di dunia nyata hampir tidak pernah datang dalam kondisi bersih. Ada banyak masalah kualitas data yang mungkin terjadi, misalnya data hilang, data inkonsisten, atau data rusak. Oleh karena itu, <em>data cleaning</em> merupakan satu tahapan penting untuk memastikan kualitas data yang akan dianalisis atau dimodelkan.]]></description>
+</item><item>
+    <title>Pengenalan Machine Learning</title>
+    <link>http://localhost:1313/pengantar-ml-post1-pengenalan-ml/</link>
+    <pubDate>Sun, 26 Apr 2026 06:00:00 &#43;0800</pubDate><author>
+        <name>Muhammad Edy Rizal</name>
+    </author><guid>http://localhost:1313/pengantar-ml-post1-pengenalan-ml/</guid>
+    <description><![CDATA[<em>Machine Learning</em> (ML) adalah bidang ilmu yang berfokus pada pengembangan algoritma agar komputer mampu melakukan prediksi atau menghasilkan konten (seperti teks, gambar, audio, dan video) tanpa diprogram secara eksplisit untuk setiap tugas tersebut. Artikel ini merupakan bagian pertama dari seri Pengantar Machine Learning yang membahas konsep dasar <em>Machine Learning</em>.]]></description>
 </item><item>
     <title>Pengenalan Macro di Microsoft Excel</title>
     <link>http://localhost:1313/excel-macro/</link>
@@ -46,5 +53,28 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset/images/cell-5-output-1.png" referrerpolicy="no-referrer">
             </div><p>Notebook ini membangun Neural Network untuk mengklasifikasikan flower/planar dataset (non-linearly separable).</p>]]></description>
+</item><item>
+    <title></title>
+    <link>http://localhost:1313/rencana-series/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate><author>
+        <name>Muhammad Edy Rizal</name>
+    </author><guid>http://localhost:1313/rencana-series/</guid>
+    <description><![CDATA[<h1 id="series-pengantar-machine-learning" class="headerLink">
+    <a href="#series-pengantar-machine-learning" class="header-mark"></a>SERIES: PENGANTAR MACHINE LEARNING</h1><h2 id="post-1-pengenalan-machine-learning" class="headerLink">
+    <a href="#post-1-pengenalan-machine-learning" class="header-mark"></a>Post 1: Pengenalan Machine Learning</h2><p>Rasional: Fondasi konseptual yang koheren</p>
+<h3 id="1-definisi-machine-learning" class="headerLink">
+    <a href="#1-definisi-machine-learning" class="header-mark"></a>1 Definisi machine learning</h3><h3 id="2-perbedaan-ml-dengan-pemrograman-konvensional" class="headerLink">
+    <a href="#2-perbedaan-ml-dengan-pemrograman-konvensional" class="header-mark"></a>2 Perbedaan ML dengan pemrograman konvensional</h3><h3 id="3-mengapa-ml-dibutuhkan-dalam-sains-data" class="headerLink">
+    <a href="#3-mengapa-ml-dibutuhkan-dalam-sains-data" class="header-mark"></a>3 Mengapa ML dibutuhkan dalam sains data</h3><h3 id="4-anatomi-pipeline-machine-learning" class="headerLink">
+    <a href="#4-anatomi-pipeline-machine-learning" class="header-mark"></a>4 Anatomi Pipeline Machine Learning</h3><h4 id="41-gambaran-end-to-end-dari-raw-data--model--deployment" class="headerLink">
+    <a href="#41-gambaran-end-to-end-dari-raw-data--model--deployment" class="header-mark"></a>4.1 Gambaran end-to-end: dari raw data → model → deployment</h4><h4 id="42-tahapan-utama-data-collection-preprocessing-training-evaluation-deployment" class="headerLink">
+    <a href="#42-tahapan-utama-data-collection-preprocessing-training-evaluation-deployment" class="header-mark"></a>4.2 Tahapan utama: data collection, preprocessing, training, evaluation, deployment</h4><h3 id="5-jenis-jenis-data-dalam-ml" class="headerLink">
+    <a href="#5-jenis-jenis-data-dalam-ml" class="header-mark"></a>5 Jenis-jenis Data dalam ML</h3><h4 id="51-structured-vs-unstructured-data" class="headerLink">
+    <a href="#51-structured-vs-unstructured-data" class="header-mark"></a>5.1 Structured vs unstructured data</h4><h4 id="52-tabular-time-series-text-image-audio" class="headerLink">
+    <a href="#52-tabular-time-series-text-image-audio" class="header-mark"></a>5.2 Tabular, time series, text, image, audio</h4><h3 id="6-peran-statistika-dan-matematika-dalam-ml" class="headerLink">
+    <a href="#6-peran-statistika-dan-matematika-dalam-ml" class="header-mark"></a>6 Peran Statistika dan Matematika dalam ML</h3><h4 id="61-konsep-probabilitas-dasar" class="headerLink">
+    <a href="#61-konsep-probabilitas-dasar" class="header-mark"></a>6.1 Konsep probabilitas dasar</h4><h4 id="62-linear-algebra-sederhana-vektor-matriks" class="headerLink">
+    <a href="#62-linear-algebra-sederhana-vektor-matriks" class="header-mark"></a>6.2 Linear algebra sederhana (vektor, matriks)</h4><h2 id="post-2-supervised-learning" class="headerLink">
+    <a href="#post-2-supervised-learning" class="header-mark"></a>Post 2: Supervised Learning</h2><p>Rasional: Fokus pada satu paradigma dengan aplikasi konkret</p>]]></description>
 </item></channel>
 </rss>

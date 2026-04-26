@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Machine Learning - Label - Rualytics</title>
+        <link>http://localhost:1313/tags/machine-learning/</link>
+        <description>Machine Learning - Label - Rualytics</description>
+        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Sun, 26 Apr 2026 06:00:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/machine-learning/" rel="self" type="application/rss+xml" /><item>
+    <title>Pengenalan Machine Learning</title>
+    <link>http://localhost:1313/pengantar-ml-post1-pengenalan-ml/</link>
+    <pubDate>Sun, 26 Apr 2026 06:00:00 &#43;0800</pubDate><author>
+        <name>Muhammad Edy Rizal</name>
+    </author><guid>http://localhost:1313/pengantar-ml-post1-pengenalan-ml/</guid>
+    <description><![CDATA[<em>Machine Learning</em> (ML) adalah bidang ilmu yang berfokus pada pengembangan algoritma agar komputer mampu melakukan prediksi atau menghasilkan konten (seperti teks, gambar, audio, dan video) tanpa diprogram secara eksplisit untuk setiap tugas tersebut. Artikel ini merupakan bagian pertama dari seri Pengantar Machine Learning yang membahas konsep dasar <em>Machine Learning</em>.]]></description>
+</item></channel>
+</rss>
