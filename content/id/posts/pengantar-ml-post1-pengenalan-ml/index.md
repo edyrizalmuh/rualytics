@@ -52,7 +52,7 @@ Proses ini menghasilkan sebuah Model. Model inilah yang nantinya digunakan untuk
 
 Sebagai ilustrasi, misalkan seorang programmer ingin membuat program untuk mendeteksi email spam. Gambar berikut ini mengilustrasikan dua pendekatan yang dapat dilakukan.
 
-![Perbandingan Pemrograman Konvensional dan *Machine Learning*](\images\konvensional_vs_ml.svg)
+{{< image src="images/konvensional_vs_ml.svg" caption="Perbandingan Pemrograman Konvensional dan *Machine Learning*" >}}
 
 Jika menggunakan pemrograman konvensional, seorang programmer harus mendefinisikan semua kemungkinan kata kunci (*keywords*) yang mungkin termuat di dalam email spam. Dalam kasus ini, pendekatan konvensional tentu saja kurang ideal, sebab jenis dan trik email spam terus berkembang. Sebaliknya, dengan ML, seorang programmer hanya perlu menyediakan kumpulan email yang sudah dilabeli (spam/bukan spam), kemudian membiarkan model menemukan polanya sendiri.
 
@@ -157,7 +157,7 @@ Menulis aturan manual untuk melayani preferensi ratusan juta pengguna secara rea
 Dalam praktiknya, ML bukan sekadar tentang algoritma, melainkan sebuah proses panjang. Pipeline ML merujuk pada alur kerja menyeluruh (*end-to-end*), dimulai dari penanganan data mentah hingga menghasilkan model yang siap digunakan di dunia nyata.
 
 Berikut adalah gambaran alur kerja tersebut:
-![Pipeline Machine Learning](\images\Machine_Learning_Pipeline.png)
+{{< image src="images/Machine_Learning_Pipeline.png" caption="Pipeline Machine Learning" >}}
 
 **Tahap 1:  Pengumpulan Data (*Data Collection*)**  
 Data adalah bahan bakar utama bagi *Machine Learning*. Sumber data dapat sangat bervariasi, mulai dari formulir survei, sensor *Internet of Things* (IoT), database internal perusahaan, API publik, hingga ekstraksi data dari situs web (*web scraping*). Terdapat sebuah prinsip fundamental di tahap ini: ["Garbage in, garbage out"](https://frge.top/rualytics_data_cleaning). Artinya, secanggih apa pun algoritma yang digunakan, kualitas dan akurasi model bergantung sepenuhnya pada kualitas data yang dikumpulkan.
