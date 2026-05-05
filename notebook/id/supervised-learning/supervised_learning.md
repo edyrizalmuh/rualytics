@@ -246,7 +246,7 @@ y = iris.target        # Label: 0=Setosa, 1=Versicolor, 2=Virginica
 
 # Membagi data: 80% untuk latih, 20% untuk uji
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
+    X, y, test_size=0.3, random_state=2026
 )
 
 # Normalisasi fitur (penting untuk beberapa algoritma)
@@ -267,8 +267,8 @@ print(df_iris.to_string(index=False))
 ```
 
     Total data   : 150 baris
-    Data latih   : 120 baris
-    Data uji     : 30 baris
+    Data latih   : 105 baris
+    Data uji     : 45 baris
     
     Kelas bunga  : ['setosa' 'versicolor' 'virginica']
     Fitur        : ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)']
@@ -302,7 +302,7 @@ Jika hasilnya > 0.5, prediksinya kelas 1; jika < 0.5, prediksinya kelas 0.
 
 ```python
 # Logistic Regression
-lr_model = LogisticRegression(max_iter=500, random_state=42)
+lr_model = LogisticRegression(max_iter=500, random_state=2026)
 lr_model.fit(X_train_scaled, y_train)
 
 y_pred_lr = lr_model.predict(X_test_scaled)
@@ -314,20 +314,35 @@ print(classification_report(y_test, y_pred_lr, target_names=iris.target_names))
 
 ```
 
-    Logistic Regression - Akurasi: 100.00%
+    Logistic Regression - Akurasi: 95.56%
     
     Laporan Detail:
                   precision    recall  f1-score   support
     
-          setosa       1.00      1.00      1.00        10
-      versicolor       1.00      1.00      1.00         9
-       virginica       1.00      1.00      1.00        11
+          setosa       1.00      1.00      1.00        15
+      versicolor       0.88      1.00      0.94        15
+       virginica       1.00      0.87      0.93        15
     
-        accuracy                           1.00        30
-       macro avg       1.00      1.00      1.00        30
-    weighted avg       1.00      1.00      1.00        30
+        accuracy                           0.96        45
+       macro avg       0.96      0.96      0.96        45
+    weighted avg       0.96      0.96      0.96        45
     
     
+
+
+```python
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+confusion_matrix(y_test, y_pred_lr)
+```
+
+
+
+
+    array([[15,  0,  0],
+           [ 0, 15,  0],
+           [ 0,  2, 13]], dtype=int64)
+
+
 
 ### 3.2 Decision Tree
 
@@ -351,7 +366,7 @@ Apakah panjang kelopak < 2.5 cm?
 
 ```python
 # Decision Tree
-dt_model = DecisionTreeClassifier(max_depth=3, random_state=42)
+dt_model = DecisionTreeClassifier(max_depth=3, random_state=2026)
 dt_model.fit(X_train, y_train)   # Decision Tree tidak perlu scaling
 
 y_pred_dt = dt_model.predict(X_test)
@@ -372,12 +387,12 @@ plt.show()
 
 ```
 
-    Decision Tree - Akurasi: 100.00%
+    Decision Tree - Akurasi: 93.33%
     
 
 
     
-![png](supervised_learning_files/supervised_learning_12_1.png)
+![png](supervised_learning_files/supervised_learning_13_1.png)
     
 
 
@@ -408,7 +423,7 @@ Input Data
 
 ```python
 # Random Forest
-rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
+rf_model = RandomForestClassifier(n_estimators=100, random_state=2026)
 rf_model.fit(X_train, y_train)
 
 y_pred_rf = rf_model.predict(X_test)
@@ -435,17 +450,17 @@ print("\nFitur terpenting:", feat_names[np.argmax(importances)])
 
 ```
 
-    Random Forest - Akurasi: 100.00%
+    Random Forest - Akurasi: 95.56%
     
 
 
     
-![png](supervised_learning_files/supervised_learning_14_1.png)
+![png](supervised_learning_files/supervised_learning_15_1.png)
     
 
 
     
-    Fitur terpenting: petal length (cm)
+    Fitur terpenting: petal width (cm)
     
 
 ### 3.4 Support Vector Machine (SVM)
@@ -471,7 +486,7 @@ Model berusaha **memaksimalkan margin** ini sambil tetap mengklasifikasikan data
 
 ```python
 # SVM
-svm_model = SVC(kernel='rbf', C=1.0, random_state=42)
+svm_model = SVC(kernel='rbf', C=1.0, random_state=2026)
 svm_model.fit(X_train_scaled, y_train)
 
 y_pred_svm = svm_model.predict(X_test_scaled)
@@ -501,12 +516,12 @@ plt.show()
 
 ```
 
-    SVM (kernel RBF) - Akurasi: 100.00%
+    SVM (kernel RBF) - Akurasi: 95.56%
     
 
 
     
-![png](supervised_learning_files/supervised_learning_16_1.png)
+![png](supervised_learning_files/supervised_learning_17_1.png)
     
 
 
@@ -570,12 +585,12 @@ plt.show()
 
 ```
 
-    KNN (K=5) - Akurasi: 100.00%
+    KNN (K=5) - Akurasi: 91.11%
     
 
 
     
-![png](supervised_learning_files/supervised_learning_18_1.png)
+![png](supervised_learning_files/supervised_learning_19_1.png)
     
 
 
@@ -623,7 +638,7 @@ plt.show()
 
 
     
-![png](supervised_learning_files/supervised_learning_20_0.png)
+![png](supervised_learning_files/supervised_learning_21_0.png)
     
 
 
@@ -654,7 +669,7 @@ berdasarkan satu fitur (misal: luas bangunan dalam meter persegi).
 
 ```python
 # Membuat dataset regresi sintetis
-np.random.seed(42)
+np.random.seed(2026)
 n = 120
 X_base = np.sort(np.random.uniform(30, 200, n))
 
@@ -696,7 +711,7 @@ plt.show()
 
 
     
-![png](supervised_learning_files/supervised_learning_23_1.png)
+![png](supervised_learning_files/supervised_learning_24_1.png)
     
 
 
@@ -755,14 +770,14 @@ plt.show()
 ```
 
     Linear Regression:
-      Persamaan : y = 2.92 * luas + 140.35
-      RMSE      : 36.33 juta rupiah
-      (rata-rata selisih prediksi vs aktual = 36 juta)
+      Persamaan : y = 2.88 * luas + 141.05
+      RMSE      : 42.13 juta rupiah
+      (rata-rata selisih prediksi vs aktual = 42 juta)
     
 
 
     
-![png](supervised_learning_files/supervised_learning_25_1.png)
+![png](supervised_learning_files/supervised_learning_26_1.png)
     
 
 
@@ -820,7 +835,7 @@ plt.show()
 
 
     
-![png](supervised_learning_files/supervised_learning_27_0.png)
+![png](supervised_learning_files/supervised_learning_28_0.png)
     
 
 
@@ -886,7 +901,7 @@ plt.show()
 
 
     
-![png](supervised_learning_files/supervised_learning_29_0.png)
+![png](supervised_learning_files/supervised_learning_30_0.png)
     
 
 
@@ -1015,7 +1030,7 @@ plt.show()
 
 
     
-![png](supervised_learning_files/supervised_learning_34_0.png)
+![png](supervised_learning_files/supervised_learning_35_0.png)
     
 
 
@@ -1130,7 +1145,7 @@ plt.show()
 
 
     
-![png](supervised_learning_files/supervised_learning_37_1.png)
+![png](supervised_learning_files/supervised_learning_38_1.png)
     
 
 

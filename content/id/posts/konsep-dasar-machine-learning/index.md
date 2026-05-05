@@ -17,6 +17,8 @@ seo_description = "*Machine Learning* (ML) adalah bidang ilmu yang berfokus pada
 
 Di tengah popularitasnya sebagai *buzzword* teknologi, *Machine Learning* (ML) sering kali dianggap sebagai subjek yang kompleks dan sulit dipahami. Seri artikel "Pengantar *Machine Learning*" ini disusun khusus untuk membantu pemula memahami esensi ML secara bertahap. Melalui lima bagian pembahasan, kita akan membedah konsep-konsep dasar secara lugas, didukung dengan detail krusial serta ilustrasi sederhana untuk memudahkan pemahaman tanpa membebani pembaca dengan teknis yang terlalu mendalam.
 
+---
+
 ## 1. Apa itu *Machine Learning*?
 
 Pada dasarnya, *Machine Learning* (ML) adalah bidang ilmu yang berfokus pada pengembangan algoritma agar komputer mampu melakukan prediksi atau menghasilkan konten (seperti teks, gambar, audio, dan video) tanpa diprogram secara eksplisit untuk setiap tugas tersebut. Kemampuan ini diperoleh melalui proses "belajar", di mana mesin (komputer) dilatih untuk mengenali pola-pola kompleks di dalam sekumpulan data. Dari sinilah istilah *machine learning* atau **pembelajaran mesin** berasal.
@@ -34,6 +36,8 @@ Untuk merangkum konsep ini secara ilmiah, kita dapat merujuk pada definisi forma
 > *"Sebuah program komputer dikatakan belajar dari pengalaman E terkait dengan suatu tugas T dan ukuran kinerja P, jika kinerjanya pada T, yang diukur dengan P, meningkat seiring dengan bertambahnya pengalaman E."*
 
 Jika dikaitkan dengan analogi sebelumnya, maka yang dimaksud oleh **Tom Mitchell** adalah: sebuah program komputer dikatakan "belajar" jika kemampuannya dalam membedakan foto kucing dan anjing (T/*Task*) meningkat seiring dengan bertambahnya jumlah foto yang dipelajari (E/*Experience*). Peningkatan ini diukur menggunakan nilai tertentu seperti akurasi (P/*performance*).
+
+---
 
 ## 2. ML vs Pemrograman Konvensional
 
@@ -119,6 +123,7 @@ print("""
     # model.predict("Email baru") ← bisa mengenali pola yang belum pernah dilihat
     
     
+---
 
 ## 3. Mengapa ML Dibutuhkan dalam Sains Data?
 
@@ -153,6 +158,8 @@ Model bisnis digital modern sangat bergantung pada pengalaman pengguna yang dise
 
 Menulis aturan manual untuk melayani preferensi ratusan juta pengguna secara real-time adalah hal yang tidak rasional secara teknis. ML memecahkan masalah ini melalui sistem rekomendasi (*recommender systems*). Algoritma akan mempelajari riwayat interaksi setiap pengguna secara individual, membandingkannya dengan miliaran titik data lain, dan memprediksi apa yang paling relevan bagi pengguna tersebut. Hasilnya adalah personalisasi tingkat tinggi dalam skala masif yang berjalan secara otomatis.
 
+---
+
 ## 4. Anatomi Pipeline Machine Learning
 
 Dalam praktiknya, ML bukan sekadar tentang algoritma, melainkan sebuah proses panjang. Pipeline ML merujuk pada alur kerja menyeluruh (*end-to-end*), dimulai dari penanganan data mentah hingga menghasilkan model yang siap digunakan di dunia nyata.
@@ -180,6 +187,8 @@ Setelah model selesai dilatih, kita tidak bisa langsung mempercayai hasilnya. Mo
 Setelah model lolos uji evaluasi akhir dan tervalidasi dengan baik, model siap diintegrasikan ke dalam sistem perangkat lunak yang sesungguhnya. Bentuk penerapannya bisa berupa layanan REST API, fitur pintar di dalam aplikasi mobile, atau sistem rekomendasi real-time yang langsung berinteraksi dengan pengguna akhir.
 
 > **Catatan penting:** Pipeline ini **tidak selalu linear**. Dalam praktiknya, kita sering kembali ke tahap sebelumnya. Evaluasi yang buruk bisa berarti kita perlu mengumpulkan lebih banyak data, memperbaiki preprocessing, atau mengganti algoritma.
+
+---
 
 ## 5. Jenis-jenis Data dalam ML
 Dalam Machine Learning, data adalah fondasi utama. Namun, tidak semua data diciptakan sama. Cara kita memproses dan memilih algoritma sangat bergantung pada jenis data yang kita miliki. Secara garis besar, data terbagi berdasarkan strukturnya dan format spesifiknya.

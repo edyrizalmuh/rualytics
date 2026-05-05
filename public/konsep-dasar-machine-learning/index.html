@@ -16,9 +16,9 @@
     <meta property="article:tag" content="Machine Learning">
     <meta property="article:tag" content="Pemula">
     <meta property="og:image" content="http://localhost:1313/logo-adaptive.svg">
-      <meta property="og:see_also" content="http://localhost:1313/pengantar-ml-post2-supervised-learning/">
-      <meta property="og:see_also" content="http://localhost:1313/pengantar-ml-post3-unsupervised-reinforcement-learning/">
-      <meta property="og:see_also" content="http://localhost:1313/pengantar-ml-post4-mekanisme-ml/">
+      <meta property="og:see_also" content="http://localhost:1313/supervised-learning/">
+      <meta property="og:see_also" content="http://localhost:1313/unsupervised-and-reinforcement-learning/">
+      <meta property="og:see_also" content="http://localhost:1313/mekanisme-kerja-machine-learning/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/logo-adaptive.svg">
@@ -249,9 +249,9 @@
                                 <div class="details-content series-content">
                                     <nav>
                                         <ul><li><span class="active">Konsep Dasar Machine Learning</span></li>
-                                                    <li><a href="/pengantar-ml-post2-supervised-learning/">Supervised Learning</a></li>
-                                                    <li><a href="/pengantar-ml-post3-unsupervised-reinforcement-learning/">Unsupervised dan Reinforcement Learning</a></li>
-                                                    <li><a href="/pengantar-ml-post4-mekanisme-ml/">Mekanisme Kerja Machine Learning</a></li></ul>
+                                                    <li><a href="/supervised-learning/">Supervised Learning</a></li>
+                                                    <li><a href="/unsupervised-and-reinforcement-learning/">Unsupervised dan Reinforcement Learning</a></li>
+                                                    <li><a href="/mekanisme-kerja-machine-learning/">Mekanisme Kerja Machine Learning</a></li></ul>
                                     </nav>
                                 </div>
                             </div><div class="details toc print:!tw-block" id="toc-static"  kept="">
@@ -290,6 +290,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content" data-pagefind-body><p>Di tengah popularitasnya sebagai <em>buzzword</em> teknologi, <em>Machine Learning</em> (ML) sering kali dianggap sebagai subjek yang kompleks dan sulit dipahami. Seri artikel &ldquo;Pengantar <em>Machine Learning</em>&rdquo; ini disusun khusus untuk membantu pemula memahami esensi ML secara bertahap. Melalui lima bagian pembahasan, kita akan membedah konsep-konsep dasar secara lugas, didukung dengan detail krusial serta ilustrasi sederhana untuk memudahkan pemahaman tanpa membebani pembaca dengan teknis yang terlalu mendalam.</p>
+<hr>
 <h2 id="1-apa-itu-machine-learning" class="headerLink">
     <a href="#1-apa-itu-machine-learning" class="header-mark"></a>1. Apa itu <em>Machine Learning</em>?</h2><p>Pada dasarnya, <em>Machine Learning</em> (ML) adalah bidang ilmu yang berfokus pada pengembangan algoritma agar komputer mampu melakukan prediksi atau menghasilkan konten (seperti teks, gambar, audio, dan video) tanpa diprogram secara eksplisit untuk setiap tugas tersebut. Kemampuan ini diperoleh melalui proses &ldquo;belajar&rdquo;, di mana mesin (komputer) dilatih untuk mengenali pola-pola kompleks di dalam sekumpulan data. Dari sinilah istilah <em>machine learning</em> atau <strong>pembelajaran mesin</strong> berasal.</p>
 <p>Untuk memahami mekanisme kerja ML, kita dapat menggunakan analogi cara belajar pada anak-anak. Secara alamiah, seorang anak kecil belum mengetahui perbedaan antara hal-hal sederhana, seperti kucing dan anjing. Bagi orang dewasa hal ini tampak mudah, namun bagi seorang anak, diperlukan proses pembelajaran berulang sebelum ia mampu membedakannya.</p>
@@ -301,6 +302,7 @@
   <p><em>&ldquo;Sebuah program komputer dikatakan belajar dari pengalaman E terkait dengan suatu tugas T dan ukuran kinerja P, jika kinerjanya pada T, yang diukur dengan P, meningkat seiring dengan bertambahnya pengalaman E.&rdquo;</em></p>
 
 </blockquote><p>Jika dikaitkan dengan analogi sebelumnya, maka yang dimaksud oleh <strong>Tom Mitchell</strong> adalah: sebuah program komputer dikatakan &ldquo;belajar&rdquo; jika kemampuannya dalam membedakan foto kucing dan anjing (T/<em>Task</em>) meningkat seiring dengan bertambahnya jumlah foto yang dipelajari (E/<em>Experience</em>). Peningkatan ini diukur menggunakan nilai tertentu seperti akurasi (P/<em>performance</em>).</p>
+<hr>
 <h2 id="2-ml-vs-pemrograman-konvensional" class="headerLink">
     <a href="#2-ml-vs-pemrograman-konvensional" class="header-mark"></a>2. ML vs Pemrograman Konvensional</h2><p>Perbedaan mendasar antara pemrograman konvensional dan Machine Learning terletak pada siapa yang bertanggung jawab dalam merumuskan logika atau aturan untuk menyelesaikan suatu masalah.</p>
 <p>Pada pemrograman konvensional, seorang programmer harus memahami logika masalah secara menyeluruh dan menuliskan aturan tersebut secara eksplisit dalam bentuk kode.</p>
@@ -379,7 +381,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-1" 
+    id="codeblock-id-97" 
     class="
       chroma 
       !tw-block 
@@ -472,7 +474,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-2" 
+    id="codeblock-id-98" 
     class="
       chroma 
       !tw-block 
@@ -569,7 +571,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-3" 
+    id="codeblock-id-99" 
     class="
       chroma 
       !tw-block 
@@ -639,6 +641,7 @@ BUKAN SPAM
 # model = train(data_latih)  ← komputer menemukan aturannya sendiri
 # model.predict(&quot;Email baru&quot;) ← bisa mengenali pola yang belum pernah dilihat
 </code></pre>
+<hr>
 <h2 id="3-mengapa-ml-dibutuhkan-dalam-sains-data" class="headerLink">
     <a href="#3-mengapa-ml-dibutuhkan-dalam-sains-data" class="header-mark"></a>3. Mengapa ML Dibutuhkan dalam Sains Data?</h2><p>Sains data (<em>Data Science</em>) bertujuan untuk mengekstraksi wawasan (<em>insights</em>) dan nilai dari sekumpulan data. Namun, seiring dengan kompleksitas masalah dan volume data yang terus membengkak, pendekatan analitik dan pemrograman konvensional sering kali menemui jalan buntu. Dalam konteks inilah ML bertindak sebagai mesin penggerak utama.</p>
 <p>Secara umum, terdapat empat situasi krusial di mana ML jauh lebih unggul dan esensial dibandingkan pendekatan pemrograman konvensional:</p>
@@ -654,6 +657,7 @@ BUKAN SPAM
 <h3 id="34-personalisasi-dalam-skala-masif" class="headerLink">
     <a href="#34-personalisasi-dalam-skala-masif" class="header-mark"></a>3.4 Personalisasi dalam Skala Masif</h3><p>Model bisnis digital modern sangat bergantung pada pengalaman pengguna yang disesuaikan secara personal (<em>tailored experience</em>). Platform seperti Netflix, Spotify, atau situs e-commerce memberikan rekomendasi konten maupun produk yang berbeda-beda untuk setiap penggunanya.</p>
 <p>Menulis aturan manual untuk melayani preferensi ratusan juta pengguna secara real-time adalah hal yang tidak rasional secara teknis. ML memecahkan masalah ini melalui sistem rekomendasi (<em>recommender systems</em>). Algoritma akan mempelajari riwayat interaksi setiap pengguna secara individual, membandingkannya dengan miliaran titik data lain, dan memprediksi apa yang paling relevan bagi pengguna tersebut. Hasilnya adalah personalisasi tingkat tinggi dalam skala masif yang berjalan secara otomatis.</p>
+<hr>
 <h2 id="4-anatomi-pipeline-machine-learning" class="headerLink">
     <a href="#4-anatomi-pipeline-machine-learning" class="header-mark"></a>4. Anatomi Pipeline Machine Learning</h2><p>Dalam praktiknya, ML bukan sekadar tentang algoritma, melainkan sebuah proses panjang. Pipeline ML merujuk pada alur kerja menyeluruh (<em>end-to-end</em>), dimulai dari penanganan data mentah hingga menghasilkan model yang siap digunakan di dunia nyata.</p>
 <p>Berikut adalah gambaran alur kerja tersebut:
@@ -678,7 +682,8 @@ Setelah model lolos uji evaluasi akhir dan tervalidasi dengan baik, model siap d
 <blockquote>
   <p><strong>Catatan penting:</strong> Pipeline ini <strong>tidak selalu linear</strong>. Dalam praktiknya, kita sering kembali ke tahap sebelumnya. Evaluasi yang buruk bisa berarti kita perlu mengumpulkan lebih banyak data, memperbaiki preprocessing, atau mengganti algoritma.</p>
 
-</blockquote><h2 id="5-jenis-jenis-data-dalam-ml" class="headerLink">
+</blockquote><hr>
+<h2 id="5-jenis-jenis-data-dalam-ml" class="headerLink">
     <a href="#5-jenis-jenis-data-dalam-ml" class="header-mark"></a>5. Jenis-jenis Data dalam ML</h2><p>Dalam Machine Learning, data adalah fondasi utama. Namun, tidak semua data diciptakan sama. Cara kita memproses dan memilih algoritma sangat bergantung pada jenis data yang kita miliki. Secara garis besar, data terbagi berdasarkan strukturnya dan format spesifiknya.</p>
 <h3 id="51-data-terstruktur-vs-tidak-terstruktur" class="headerLink">
     <a href="#51-data-terstruktur-vs-tidak-terstruktur" class="header-mark"></a>5.1 Data Terstruktur vs Tidak Terstruktur</h3><p>Secara konseptual, data di dunia nyata terbagi menjadi dua kategori utama berdasarkan tingkat keteraturannya, yaitu data terstruktur (<em>structured data</em>) dan data tidak terstruktur (<em>unstructured data</em>).</p>
@@ -714,7 +719,7 @@ Setelah model lolos uji evaluasi akhir dan tervalidasi dengan baik, model siap d
         </div>
     <div class="related-item-container">
             <h2 class="related-title">
-                <a href="/pengantar-ml-post2-supervised-learning/">Supervised Learning</a>
+                <a href="/supervised-learning/">Supervised Learning</a>
             </h2>
         </div>
     <div class="related-item-container">
@@ -726,12 +731,12 @@ Setelah model lolos uji evaluasi akhir dan tervalidasi dengan baik, model siap d
         </div>
     <div class="related-item-container">
             <h2 class="related-title">
-                <a href="/pengantar-ml-post3-unsupervised-reinforcement-learning/">Unsupervised dan Reinforcement Learning</a>
+                <a href="/unsupervised-and-reinforcement-learning/">Unsupervised dan Reinforcement Learning</a>
             </h2>
         </div>
     <div class="related-item-container">
             <h2 class="related-title">
-                <a href="/pengantar-ml-post4-mekanisme-ml/">Mekanisme Kerja Machine Learning</a>
+                <a href="/mekanisme-kerja-machine-learning/">Mekanisme Kerja Machine Learning</a>
             </h2>
         </div>
     

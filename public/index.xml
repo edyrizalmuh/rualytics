@@ -21,15 +21,12 @@
     <description><![CDATA[<em>Exploratory Data Analysis</em> (EDA) adalah salah satu tahapan dalam analisis data yang bertujuan untuk mengenal dan memahami data sebelum melakukan pemodelan lebih lanjut melalui eksplorasi dan visualisasi data.]]></description>
 </item><item>
     <title>Supervised Learning</title>
-    <link>http://localhost:1313/pengantar-ml-post2-supervised-learning/</link>
+    <link>http://localhost:1313/supervised-learning/</link>
     <pubDate>Sun, 03 May 2026 06:00:00 &#43;0800</pubDate><author>
         <name>Muhammad Edy Rizal</name>
-    </author><guid>http://localhost:1313/pengantar-ml-post2-supervised-learning/</guid>
-    <description><![CDATA[<p>Pada artikel sebelumnya, kita sudah membedah <a href="https://frge.top/rualytics_intro_ml" target="_blank" rel="noopener noreferrer">konsep dasar machine learning</a>. Selanjutnya, perlu dipahami bahwa jenis pembelajaran yang dapat dilakukan oleh mesin terbagi atas beberapa jenis. Pada artikel ini, kita akan fokus pada pembelajaran terbimbing, atau lebih familiar dengan istilah <em>supervised learning</em>. Pada post selanjutnya akan dibahas terkait jenis <a href="" rel="">pembelajaran tak terbimbing (<em>unsupervised learning</em>) dan pembelajaran penguatan (<em>reinforcement learning</em>)</a>.</p>
-<p><strong>Deskripsi</strong></p>
-<p>Notebook ini membahas salah satu paradigma paling penting dalam machine learning: <em>Supervised Learning</em>.
-Kita akan belajar konsepnya dari nol, melihat contoh nyata, memahami algoritma-algoritma populer,
-dan menyentuh dasar-dasar <em>feature engineering</em>.</p>]]></description>
+    </author><guid>http://localhost:1313/supervised-learning/</guid>
+    <description><![CDATA[<p>Pada artikel sebelumnya, kita sudah membedah <a href="https://frge.top/rualytics_intro_ml" target="_blank" rel="noopener noreferrer">konsep dasar machine learning</a>. Selanjutnya, perlu dipahami bahwa jenis pembelajaran yang dapat dilakukan oleh mesin terbagi atas beberapa jenis. Pada artikel ini, kita akan fokus pada <a href="https://frge.top/rualytics_supervised_learning" target="_blank" rel="noopener noreferrer"><em>supervised learning</em></a>. Pada post selanjutnya akan dibahas terkait jenis <a href="https://frge.top/rualytics_unsup_reinforcement" target="_blank" rel="noopener noreferrer"><em>unsupervised learning</em> dan <em>reinforcement learning</em></a>.</p>
+<p>Artikel ini akan membahas konsep dasar <em>supervised learning</em>, perbedaan regresi dan klasifikasi, pengantar <em>feature engineering</em>, disertai dengan contoh sederhana. Oleh karena itu, jika Anda berminat untuk mengikuti tutorial di artikel ini, maka pastikan terlebih dahulu bahwa library seperti numpy, pandas, matplotlib, seaborn, dan scikit-learn sudah terinstall di device Anda.</p>]]></description>
 </item><item>
     <title>Data Cleaning</title>
     <link>http://localhost:1313/data-cleaning/</link>
@@ -41,10 +38,10 @@ dan menyentuh dasar-dasar <em>feature engineering</em>.</p>]]></description>
             </div>Data mentah di dunia nyata hampir tidak pernah datang dalam kondisi bersih. Ada banyak masalah kualitas data yang mungkin terjadi, misalnya data hilang, data inkonsisten, atau data rusak. Oleh karena itu, <em>data cleaning</em> merupakan satu tahapan penting untuk memastikan kualitas data yang akan dianalisis atau dimodelkan.]]></description>
 </item><item>
     <title>Unsupervised dan Reinforcement Learning</title>
-    <link>http://localhost:1313/pengantar-ml-post3-unsupervised-reinforcement-learning/</link>
+    <link>http://localhost:1313/unsupervised-and-reinforcement-learning/</link>
     <pubDate>Mon, 04 May 2026 06:00:00 &#43;0800</pubDate><author>
         <name>Muhammad Edy Rizal</name>
-    </author><guid>http://localhost:1313/pengantar-ml-post3-unsupervised-reinforcement-learning/</guid>
+    </author><guid>http://localhost:1313/unsupervised-and-reinforcement-learning/</guid>
     <description><![CDATA[<p><strong>Deskripsi</strong></p>
 <p>Di Post 2 kita belajar <em>Supervised Learning</em> yang membutuhkan data berlabel.
 Tapi bagaimana jika kita tidak punya label sama sekali? Di sinilah <strong>Unsupervised Learning</strong> berperan.
@@ -61,10 +58,10 @@ Notebook ini juga memperkenalkan paradigma ketiga: <strong>Reinforcement Learnin
 meskipun tidak wajib. Tidak diperlukan background teknis mendalam.</p>]]></description>
 </item><item>
     <title>Mekanisme Kerja Machine Learning</title>
-    <link>http://localhost:1313/pengantar-ml-post4-mekanisme-ml/</link>
+    <link>http://localhost:1313/mekanisme-kerja-machine-learning/</link>
     <pubDate>Tue, 05 May 2026 06:00:00 &#43;0800</pubDate><author>
         <name>Muhammad Edy Rizal</name>
-    </author><guid>http://localhost:1313/pengantar-ml-post4-mekanisme-ml/</guid>
+    </author><guid>http://localhost:1313/mekanisme-kerja-machine-learning/</guid>
     <description><![CDATA[<h1 id="post-4-mekanisme-pembelajaran-model" class="headerLink">
     <a href="#post-4-mekanisme-pembelajaran-model" class="header-mark"></a>Post 4: Mekanisme Pembelajaran Model</h1><p>Bayangkan kamu ingin mengajari seorang anak kecil membedakan kucing dan anjing. Kamu akan menunjukkan banyak foto, memberikan penjelasan, dan kemudian menguji apakah ia bisa mengenali hewan baru yang belum pernah dilihat sebelumnya. Proses inilah yang secara kasar dilakukan oleh model machine learning.</p>
 <p>Post ini membahas &ldquo;dapur&rdquo; dari machine learning: bagaimana model benar-benar belajar dari data, apa saja yang bisa salah, dan bagaimana kita mempersiapkan data dengan benar.</p>]]></description>
