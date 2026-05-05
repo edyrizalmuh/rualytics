@@ -3,12 +3,61 @@
         <title>Pengantar Machine Learning - series - Rualytics</title>
         <link>http://localhost:1313/series/pengantar-machine-learning/</link>
         <description>Pengantar Machine Learning - series - Rualytics</description>
-        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Sun, 26 Apr 2026 06:00:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/series/pengantar-machine-learning/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Tue, 05 May 2026 06:00:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/series/pengantar-machine-learning/" rel="self" type="application/rss+xml" /><item>
     <title>Pengenalan Machine Learning</title>
     <link>http://localhost:1313/pengantar-ml-post1-pengenalan-ml/</link>
     <pubDate>Sun, 26 Apr 2026 06:00:00 &#43;0800</pubDate><author>
         <name>Muhammad Edy Rizal</name>
     </author><guid>http://localhost:1313/pengantar-ml-post1-pengenalan-ml/</guid>
     <description><![CDATA[<em>Machine Learning</em> (ML) adalah bidang ilmu yang berfokus pada pengembangan algoritma agar komputer mampu melakukan prediksi atau menghasilkan konten (seperti teks, gambar, audio, dan video) tanpa diprogram secara eksplisit untuk setiap tugas tersebut. Artikel ini merupakan bagian pertama dari seri Pengantar Machine Learning yang membahas konsep dasar <em>Machine Learning</em>.]]></description>
+</item><item>
+    <title>Supervised Learning</title>
+    <link>http://localhost:1313/pengantar-ml-post2-supervised-learning/</link>
+    <pubDate>Sun, 03 May 2026 06:00:00 &#43;0800</pubDate><author>
+        <name>Muhammad Edy Rizal</name>
+    </author><guid>http://localhost:1313/pengantar-ml-post2-supervised-learning/</guid>
+    <description><![CDATA[<p>Pada artikel sebelumnya, kita sudah membedah <a href="https://frge.top/rualytics_intro_ml" target="_blank" rel="noopener noreferrer">konsep dasar machine learning</a>.</p>
+<p><strong>Deskripsi</strong></p>
+<p>Notebook ini membahas salah satu paradigma paling penting dalam machine learning: <em>Supervised Learning</em>.
+Kita akan belajar konsepnya dari nol, melihat contoh nyata, memahami algoritma-algoritma populer,
+dan menyentuh dasar-dasar <em>feature engineering</em>.</p>
+<p><strong>Yang akan kamu pelajari:</strong></p>
+<ul>
+<li>Apa itu supervised learning dan perbedaan klasifikasi vs regresi</li>
+<li>Contoh penerapan di kehidupan sehari-hari</li>
+<li>Algoritma klasifikasi populer beserta kapan menggunakannya</li>
+<li>Algoritma regresi populer beserta perbedaan use case-nya</li>
+<li>Pengantar feature engineering</li>
+</ul>
+<p><strong>Prasyarat:</strong> Tidak diperlukan background teknis. Kode Python akan dijelaskan baris per baris.</p>]]></description>
+</item><item>
+    <title>Unsupervised dan Reinforcement Learning</title>
+    <link>http://localhost:1313/pengantar-ml-post3-unsupervised-reinforcement-learning/</link>
+    <pubDate>Mon, 04 May 2026 06:00:00 &#43;0800</pubDate><author>
+        <name>Muhammad Edy Rizal</name>
+    </author><guid>http://localhost:1313/pengantar-ml-post3-unsupervised-reinforcement-learning/</guid>
+    <description><![CDATA[<p><strong>Deskripsi</strong></p>
+<p>Di Post 2 kita belajar <em>Supervised Learning</em> yang membutuhkan data berlabel.
+Tapi bagaimana jika kita tidak punya label sama sekali? Di sinilah <strong>Unsupervised Learning</strong> berperan.
+Notebook ini juga memperkenalkan paradigma ketiga: <strong>Reinforcement Learning</strong>.</p>
+<p><strong>Yang akan kamu pelajari:</strong></p>
+<ul>
+<li>Apa itu unsupervised learning dan perbedaannya dengan supervised learning</li>
+<li>Pengantar konsep reinforcement learning</li>
+<li>Tiga algoritma clustering populer: K-Means, Hierarchical, DBSCAN</li>
+<li>Dua teknik dimensionality reduction: PCA dan t-SNE</li>
+<li>Panduan memilih paradigma yang tepat untuk masalahmu</li>
+</ul>
+<p><strong>Prasyarat:</strong> Post 2 (Supervised Learning) disarankan dibaca terlebih dahulu,
+meskipun tidak wajib. Tidak diperlukan background teknis mendalam.</p>]]></description>
+</item><item>
+    <title>Mekanisme Kerja Machine Learning</title>
+    <link>http://localhost:1313/pengantar-ml-post4-mekanisme-ml/</link>
+    <pubDate>Tue, 05 May 2026 06:00:00 &#43;0800</pubDate><author>
+        <name>Muhammad Edy Rizal</name>
+    </author><guid>http://localhost:1313/pengantar-ml-post4-mekanisme-ml/</guid>
+    <description><![CDATA[<h1 id="post-4-mekanisme-pembelajaran-model" class="headerLink">
+    <a href="#post-4-mekanisme-pembelajaran-model" class="header-mark"></a>Post 4: Mekanisme Pembelajaran Model</h1><p>Bayangkan kamu ingin mengajari seorang anak kecil membedakan kucing dan anjing. Kamu akan menunjukkan banyak foto, memberikan penjelasan, dan kemudian menguji apakah ia bisa mengenali hewan baru yang belum pernah dilihat sebelumnya. Proses inilah yang secara kasar dilakukan oleh model machine learning.</p>
+<p>Post ini membahas &ldquo;dapur&rdquo; dari machine learning: bagaimana model benar-benar belajar dari data, apa saja yang bisa salah, dan bagaimana kita mempersiapkan data dengan benar.</p>]]></description>
 </item></channel>
 </rss>
