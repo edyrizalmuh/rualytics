@@ -4,11 +4,11 @@
         <link>http://localhost:1313/posts/</link>
         <description>Semua Pos | Rualytics</description>
         <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Tue, 05 May 2026 06:00:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Pengenalan Machine Learning</title>
-    <link>http://localhost:1313/pengantar-ml-post1-pengenalan-ml/</link>
+    <title>Konsep Dasar Machine Learning</title>
+    <link>http://localhost:1313/konsep-dasar-machine-learning/</link>
     <pubDate>Sun, 26 Apr 2026 06:00:00 &#43;0800</pubDate><author>
         <name>Muhammad Edy Rizal</name>
-    </author><guid>http://localhost:1313/pengantar-ml-post1-pengenalan-ml/</guid>
+    </author><guid>http://localhost:1313/konsep-dasar-machine-learning/</guid>
     <description><![CDATA[<em>Machine Learning</em> (ML) adalah bidang ilmu yang berfokus pada pengembangan algoritma agar komputer mampu melakukan prediksi atau menghasilkan konten (seperti teks, gambar, audio, dan video) tanpa diprogram secara eksplisit untuk setiap tugas tersebut. Artikel ini merupakan bagian pertama dari seri Pengantar Machine Learning yang membahas konsep dasar <em>Machine Learning</em>.]]></description>
 </item><item>
     <title>Exploratory Data Analysis (EDA)</title>
@@ -23,20 +23,11 @@
     <pubDate>Sun, 03 May 2026 06:00:00 &#43;0800</pubDate><author>
         <name>Muhammad Edy Rizal</name>
     </author><guid>http://localhost:1313/pengantar-ml-post2-supervised-learning/</guid>
-    <description><![CDATA[<p>Pada artikel sebelumnya, kita sudah membedah <a href="https://frge.top/rualytics_intro_ml" target="_blank" rel="noopener noreferrer">konsep dasar machine learning</a>.</p>
+    <description><![CDATA[<p>Pada artikel sebelumnya, kita sudah membedah <a href="https://frge.top/rualytics_intro_ml" target="_blank" rel="noopener noreferrer">konsep dasar machine learning</a>. Selanjutnya, perlu dipahami bahwa jenis pembelajaran yang dapat dilakukan oleh mesin terbagi atas beberapa jenis. Pada artikel ini, kita akan fokus pada pembelajaran terbimbing, atau lebih familiar dengan istilah <em>supervised learning</em>. Pada post selanjutnya akan dibahas terkait jenis <a href="" rel="">pembelajaran tak terbimbing (<em>unsupervised learning</em>) dan pembelajaran penguatan (<em>reinforcement learning</em>)</a>.</p>
 <p><strong>Deskripsi</strong></p>
 <p>Notebook ini membahas salah satu paradigma paling penting dalam machine learning: <em>Supervised Learning</em>.
 Kita akan belajar konsepnya dari nol, melihat contoh nyata, memahami algoritma-algoritma populer,
-dan menyentuh dasar-dasar <em>feature engineering</em>.</p>
-<p><strong>Yang akan kamu pelajari:</strong></p>
-<ul>
-<li>Apa itu supervised learning dan perbedaan klasifikasi vs regresi</li>
-<li>Contoh penerapan di kehidupan sehari-hari</li>
-<li>Algoritma klasifikasi populer beserta kapan menggunakannya</li>
-<li>Algoritma regresi populer beserta perbedaan use case-nya</li>
-<li>Pengantar feature engineering</li>
-</ul>
-<p><strong>Prasyarat:</strong> Tidak diperlukan background teknis. Kode Python akan dijelaskan baris per baris.</p>]]></description>
+dan menyentuh dasar-dasar <em>feature engineering</em>.</p>]]></description>
 </item><item>
     <title>Data Cleaning</title>
     <link>http://localhost:1313/data-cleaning/</link>

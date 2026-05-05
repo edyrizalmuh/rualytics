@@ -1,4 +1,4 @@
-# Pengenalan Machine Learning
+# Konsep Dasar Machine Learning
 
 
 Di tengah popularitasnya sebagai *buzzword* teknologi, *Machine Learning* (ML) sering kali dianggap sebagai subjek yang kompleks dan sulit dipahami. Seri artikel "Pengantar *Machine Learning*" ini disusun khusus untuk membantu pemula memahami esensi ML secara bertahap. Melalui lima bagian pembahasan, kita akan membedah konsep-konsep dasar secara lugas, didukung dengan detail krusial serta ilustrasi sederhana untuk memudahkan pemahaman tanpa membebani pembaca dengan teknis yang terlalu mendalam.

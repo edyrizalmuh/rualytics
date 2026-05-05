@@ -1,7 +1,7 @@
 # Supervised Learning
 
 
-Pada artikel sebelumnya, kita sudah membedah [konsep dasar machine learning](https://frge.top/rualytics_intro_ml).
+Pada artikel sebelumnya, kita sudah membedah [konsep dasar machine learning](https://frge.top/rualytics_intro_ml). Selanjutnya, perlu dipahami bahwa jenis pembelajaran yang dapat dilakukan oleh mesin terbagi atas beberapa jenis. Pada artikel ini, kita akan fokus pada pembelajaran terbimbing, atau lebih familiar dengan istilah *supervised learning*. Pada post selanjutnya akan dibahas terkait jenis [pembelajaran tak terbimbing (*unsupervised learning*) dan pembelajaran penguatan (*reinforcement learning*)]().
 
 **Deskripsi**
 
