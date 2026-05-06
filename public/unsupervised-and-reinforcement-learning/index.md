@@ -1,27 +1,9 @@
 # Unsupervised dan Reinforcement Learning
 
 
-**Deskripsi**
+Pada postingan sebelumnya, kita sudah belajar tentang [konsep dasar *machine learning*](https://frge.top/rualytics_tipe_data) dan salah satu paradigma pembelajarannnya, yaitu [*supervised learning*](https://frge.top/rualytics_supervised_learning). Pada postingan ini, kita akan belajar tentang paradigma pembelajaran lain selain *supervised learning*, yaitu *unsupervised learning* dan *reinforcement learning*.
 
-Di Post 2 kita belajar *Supervised Learning* yang membutuhkan data berlabel.
-Tapi bagaimana jika kita tidak punya label sama sekali? Di sinilah **Unsupervised Learning** berperan.
-Notebook ini juga memperkenalkan paradigma ketiga: **Reinforcement Learning**.
-
-**Yang akan kamu pelajari:**
-- Apa itu unsupervised learning dan perbedaannya dengan supervised learning
-- Pengantar konsep reinforcement learning
-- Tiga algoritma clustering populer: K-Means, Hierarchical, DBSCAN
-- Dua teknik dimensionality reduction: PCA dan t-SNE
-- Panduan memilih paradigma yang tepat untuk masalahmu
-
-**Prasyarat:** Post 2 (Supervised Learning) disarankan dibaca terlebih dahulu,
-meskipun tidak wajib. Tidak diperlukan background teknis mendalam.
-
----
-
-
-## Setup Awal
-
+Artikel ini akan memberikan beberapa kode python sederhana untuk mengilustrasikan kedua konsep learning di atas. Jika Anda ingin mengikuti tutorial di artikel ini, pastikan Anda telah memuat library berikut ini.
 
 ```python
 import numpy as np
@@ -47,7 +29,6 @@ import warnings
 warnings.filterwarnings('ignore')
 
 print("Semua library berhasil diimpor!")
-
 ```
 
     Semua library berhasil diimpor!
@@ -57,41 +38,9 @@ print("Semua library berhasil diimpor!")
 
 ## 1. Apa Itu Unsupervised Learning?
 
-### Perbandingan dengan Supervised Learning
+Pada postingan sebelumnya sudah dijelaskan bahwa *supervised learning* merupakan paradigma *machine learning* yang dilakukan pada data berlabel. Label inilah yang bertindak sebagai *ground truth* dan mengarahkan algoritma untuk menghasilkan model yang optimal. Tapi bagaimana jadinya jika suatu data tidak memiliki label? Pada kasus semacam ini, terdapat paradigma lain yang disebut sebagai *unsupervised learning*. Pada paradigma ini, algoritma ML bertugas menemukan pola tersebut secara mandiri tanpa panduan dari label.
 
-Pada *supervised learning*, kita punya data beserta jawabannya (label).
-Model belajar dari pasangan "soal-jawaban".
-
-Pada **unsupervised learning**, kita hanya punya data **tanpa label**.
-Model bertugas **menemukan pola tersembunyi** secara mandiri, tanpa bimbingan.
-
-```
-Supervised Learning             Unsupervised Learning
-------------------------        -------------------------
-[Foto Kucing] -> "Kucing"       [Foto 1]  --|
-[Foto Anjing] -> "Anjing"       [Foto 2]  --+--> Pola tersembunyi?
-[Foto Kucing] -> "Kucing"       [Foto 3]  --|
-         ^                                  ^
-    Ada label                          Tidak ada label
-```
-
-### Analogi Sehari-hari
-
-Bayangkan kamu mendapat setumpuk surat tanpa nama pengirim.
-Kamu mulai mengelompokkannya berdasarkan kemiripan: ukuran amplop,
-warna kertas, gaya tulisan tangan. Kamu tidak tahu nama kelompoknya,
-tapi kamu bisa menemukan **struktur alami** dalam tumpukan surat tersebut.
-
-Inilah yang dilakukan unsupervised learning.
-
-### Dua Tugas Utama Unsupervised Learning
-
-| Tugas                        | Tujuan                                       | Contoh Algoritma              |
-| ---------------------------- | -------------------------------------------- | ----------------------------- |
-| **Clustering**               | Mengelompokkan data yang mirip               | K-Means, DBSCAN, Hierarchical |
-| **Dimensionality Reduction** | Meringkas banyak fitur menjadi lebih sedikit | PCA, t-SNE                    |
-
-
+Secara garis besar, *unsupervised learning* punya dua jenis utama. Pertama, algoritma *unsupervised learning* yang bertugas untuk melakukan ***clustering***, yaitu jenis analisis yang bertujuan untuk mengelompokkan data yang mirip. Kedua, algoritma *unsupervised learning* yang bertugas untuk melakukan ***dimensionality reduction***, yaitu analisis yang merangkum data dengan banyak fitur/variabel menjadi lebih sedikit.
 
 ```python
 # Visualisasi perbedaan Supervised vs Unsupervised
@@ -130,7 +79,7 @@ plt.show()
 
 
     
-![png](unsupervised_learning_files/unsupervised_learning_4_0.png)
+![png](images/unsupervised_learning_4_0.png)
     
 
 
@@ -138,115 +87,40 @@ plt.show()
 
 ## 2. Pengantar Reinforcement Learning
 
-Selain supervised dan unsupervised learning, ada paradigma ketiga yang
-cara belajarnya paling berbeda: **Reinforcement Learning (RL)**.
+Selain *supervised* dan *unsupervised learning*, ada paradigma ketiga yang
+cara belajarnya paling berbeda, yaitu ***reinforcement learning* (RL)**. Tidak seperti *supervised learning* yang memiliki label, *reinforcement learning* justru belajar melalui interaksi dengan lingkungannya. *Reinforcement learning* belajar membuat pilihan optimal dengan serangkaian *trial-and-error*.
 
-### Analogi: Melatih Anjing
+Analoginya kurang lebih sama seperti proses melatih anjing. Misalnya Anda seorang *trainer* yang sedang melatih anjing untuk duduk. Jika anjing yang Anda latih duduk saat diperintah, maka Anda sebagai *trainer* akan memberikan hadiah (*reward*). Namun, jika anjing yang Anda latih tidak duduk sesuai perintah, maka Anda tidak memberikan hadiah. Dari proses latihan ini, anjing akan belajar mengenai tindakan apa yang perlu ia lakukan untuk mendapatkan hadiah maksimal.
 
-Bayangkan kamu melatih anjing untuk duduk.
-- Jika anjing duduk saat diperintah, kamu beri **hadiah** (reward).
-- Jika anjing tidak duduk, kamu tidak memberi hadiah.
+![Diagram Reinforcement Learning](images/reinforcement_learning_diagram.svg)
 
-Anjing belajar: "tindakan apa yang perlu saya lakukan untuk mendapat hadiah maksimal?"
+Paradigma *reinforcement learning* terdiri atas 5 komponen utama, yaitu 
+* **agen (*agent*)**, program yang sedang menjalani proses *training*,
+* **lingkungan (*environment*)** yang menjadi lokasi agen, 
+* **tindakan (*action* $a_t$)** yang dapat dilakukan oleh agen, 
+* **keadaan (*state* $s_t$)** dari kondisi lingkungan terkini,
+* **hadiah (*reward* $r_t$)**, sinyal umpan balik berupa nilai +1, 0, atau -1 yang diperoleh agen berdasarkan tindakan yang dipilih. 
 
-Reinforcement Learning bekerja persis seperti ini.
+Adapun cara kerjanya terdiri atas beberapa tahapan berikut.
+1. Agen mengamati keadaan lingkungan terkini dan memilih sebuah aksi berdasarkan kebijakannya, yaitu strategi yang telah dipelajari terkait aksi apa yang perlu dilakukan pada tiap situasi.
+2. Lingkungan menerima aksi, transisi ke keadaan baru, dan mengirim kembali sinyal hadiah berupa angka yang memberitahu agen seberapa bagus atau buruknya *outcome* yang diperoleh.
+3. Tujuan dari agen adalah untuk memaksimalkan *reward* kumulatif, yaitu total semua *reward* yang diterima, difaktorkan dengan $\gamma$ sehingga *reward* baru lebih penting dibandingkan *reward* yang sudah lama.
+4. Setelah beberapa iterasi, agen menyesuaikan kebijakannya untuk memilih aksi yang dapat mengarah pada *reward* yang lebih tinggi. Proses perulangan *trial-and-error* ini merupakan esensi dari RL.
 
-### Komponen Utama RL
-
-```
-              Lingkungan (Environment)
-                    |
-          Keadaan saat ini (State)
-                    |
-                    v
-              +----------+
-              |  Agent   |  <-- Model/AI yang belajar
-              +----------+
-                    |
-              Aksi (Action)
-                    |
-                    v
-          Hadiah/Hukuman (Reward)
-                    |
-              (Kembali ke atas, siklus terus berulang)
-```
-
-| Komponen        | Penjelasan                    | Contoh (Bermain Chess)         |
-| --------------- | ----------------------------- | ------------------------------ |
-| **Agent**       | Yang mengambil keputusan      | Program AI                     |
-| **Environment** | Dunia tempat agent beroperasi | Papan catur                    |
-| **State**       | Kondisi saat ini              | Posisi semua bidak             |
-| **Action**      | Pilihan yang bisa diambil     | Langkah yang mungkin           |
-| **Reward**      | Sinyal umpan balik            | +1 menang, -1 kalah, 0 lainnya |
-
-### Contoh Aplikasi RL di Dunia Nyata
-
+Saat ini, paradigma RL telah diterapkan pada banyak bidang. Beberapa diantaranya adalah:
 - **AlphaGo/AlphaZero** (DeepMind): Menguasai permainan Go, Chess, dan Shogi melebihi juara dunia manusia.
 - **ChatGPT**: Menggunakan RLHF (Reinforcement Learning from Human Feedback) untuk belajar merespons dengan baik.
 - **Robotika**: Robot belajar berjalan, mengambil objek, atau melipat pakaian.
 - **Rekomendasi konten**: Platform seperti YouTube mengoptimalkan waktu tonton pengguna.
 - **Trading algoritmik**: Agen belajar kapan harus beli/jual aset untuk memaksimalkan profit.
 
-### Mengapa RL Berbeda?
-
-RL tidak belajar dari dataset tetap. Ia belajar dari **interaksi langsung**
-dengan lingkungan, sering kali melalui jutaan percobaan (trial and error).
+RL berbeda dengan *supervised* dan *unsupervised learning* karena RL tidak belajar dari dataset tetap. Ia belajar dari **interaksi langsung** dengan lingkungan, sering kali melalui jutaan percobaan (*trial and error*).
 Ini membuatnya sangat powerful tapi juga mahal secara komputasi.
 
-> **Catatan:** RL membutuhkan bab tersendiri yang lebih dalam.
-> Di notebook ini kita hanya mengenal konsep dasarnya
-> sebagai pelengkap panorama paradigma machine learning.
+{{< admonition type="note" title="Note" open=true >}}
+RL membutuhkan pembahasan yang lebih dalam. Artikel ini hanya mengenal konsep dasarnya sebagai pelengkap paradigma *machine learning*.
+{{< /admonition >}}
 
-
-
-```python
-# Visualisasi siklus Reinforcement Learning
-fig, ax = plt.subplots(figsize=(12, 6))
-ax.set_xlim(0, 10); ax.set_ylim(0, 6); ax.axis('off')
-
-# Kotak Agent
-agent_box = plt.Rectangle((0.5, 2.2), 2.5, 1.6, linewidth=2,
-                            edgecolor='#4A90D9', facecolor='#D6E8F7', zorder=3)
-ax.add_patch(agent_box)
-ax.text(1.75, 3.0, 'Agent\n(Model AI)', ha='center', va='center',
-        fontsize=12, fontweight='bold', color='#1a5276')
-
-# Kotak Environment
-env_box = plt.Rectangle((7.0, 2.2), 2.5, 1.6, linewidth=2,
-                          edgecolor='#E8835A', facecolor='#FDEBD0', zorder=3)
-ax.add_patch(env_box)
-ax.text(8.25, 3.0, 'Environment\n(Lingkungan)', ha='center', va='center',
-        fontsize=12, fontweight='bold', color='#784212')
-
-# Panah Action (atas)
-ax.annotate('', xy=(7.0, 3.6), xytext=(3.0, 3.6),
-            arrowprops=dict(arrowstyle='->', color='#4A90D9', lw=2.5))
-ax.text(5.0, 3.85, 'Action (Aksi)', ha='center', fontsize=11,
-        color='#4A90D9', fontweight='bold')
-
-# Panah State & Reward (bawah)
-ax.annotate('', xy=(3.0, 2.4), xytext=(7.0, 2.4),
-            arrowprops=dict(arrowstyle='->', color='#E8835A', lw=2.5))
-ax.text(5.0, 1.95, 'State (Keadaan) + Reward (Hadiah)', ha='center',
-        fontsize=11, color='#E8835A', fontweight='bold')
-
-# Label contoh
-ax.text(5.0, 5.3, 'Siklus Reinforcement Learning', ha='center',
-        fontsize=14, fontweight='bold', color='#2c3e50')
-ax.text(1.75, 1.4, 'Contoh: Program bermain game\nMemilih langkah terbaik',
-        ha='center', fontsize=9, color='#555', style='italic')
-ax.text(8.25, 1.4, 'Contoh: Papan permainan\nMemberi skor tiap langkah',
-        ha='center', fontsize=9, color='#555', style='italic')
-
-plt.tight_layout()
-plt.show()
-
-```
-
-
-    
-![png](unsupervised_learning_files/unsupervised_learning_6_0.png)
-    
 
 
 ---
@@ -302,7 +176,7 @@ plt.show()
 
 
     
-![png](unsupervised_learning_files/unsupervised_learning_8_0.png)
+![png](images/unsupervised_learning_8_0.png)
     
 
 
@@ -393,7 +267,7 @@ print("(Silhouette Score mendekati 1.0 = cluster sangat terpisah dengan baik)")
 
 
     
-![png](unsupervised_learning_files/unsupervised_learning_10_0.png)
+![png](images/unsupervised_learning_10_0.png)
     
 
 
@@ -469,7 +343,7 @@ plt.show()
 
 
     
-![png](unsupervised_learning_files/unsupervised_learning_13_0.png)
+![png](images/unsupervised_learning_13_0.png)
     
 
 
@@ -558,7 +432,7 @@ plt.show()
 
 
     
-![png](unsupervised_learning_files/unsupervised_learning_15_0.png)
+![png](images/unsupervised_learning_15_0.png)
     
 
 
@@ -733,7 +607,7 @@ print(f"Artinya: dengan hanya 2 fitur (dari 4), kita mempertahankan {total_2pc:.
 
 
     
-![png](unsupervised_learning_files/unsupervised_learning_21_0.png)
+![png](images/unsupervised_learning_21_0.png)
     
 
 
@@ -772,7 +646,7 @@ print("  - Panah berlawanan arah = fitur berkorelasi negatif.")
 
 
     
-![png](unsupervised_learning_files/unsupervised_learning_22_0.png)
+![png](images/unsupervised_learning_22_0.png)
     
 
 
@@ -839,7 +713,7 @@ plt.show()
 
 
     
-![png](unsupervised_learning_files/unsupervised_learning_24_0.png)
+![png](images/unsupervised_learning_24_0.png)
     
 
 
@@ -887,7 +761,7 @@ print("  t-SNE  : Ketiga kelas terpisah lebih jelas, tapi posisi/jarak antar clu
 
 
     
-![png](unsupervised_learning_files/unsupervised_learning_25_0.png)
+![png](images/unsupervised_learning_25_0.png)
     
 
 
@@ -1004,7 +878,7 @@ plt.show()
 
 
     
-![png](unsupervised_learning_files/unsupervised_learning_27_0.png)
+![png](images/unsupervised_learning_27_0.png)
     
 
 
@@ -1093,7 +967,7 @@ print(df_cust.groupby('nama_segmen')[
 
 
     
-![png](unsupervised_learning_files/unsupervised_learning_29_0.png)
+![png](images/unsupervised_learning_29_0.png)
     
 
 
@@ -1116,40 +990,11 @@ print(df_cust.groupby('nama_segmen')[
 | Agent harus belajar dari trial-error di lingkungan dinamis   | Reinforcement Learning        |
 | Punya sedikit data berlabel dan banyak data tanpa label      | Semi-supervised Learning*     |
 
-> *Semi-supervised Learning adalah pendekatan hybrid yang menggabungkan sedikit data berlabel
-> dengan banyak data tanpa label. Ini dibahas di topik lanjutan.
+{{< admonition type="note" title="Note" open=true >}}
+\**Semi-supervised Learning* adalah pendekatan hybrid yang menggabungkan sedikit data berlabel dengan banyak data tanpa label. Ini dibahas di topik lanjutan.
+{{< /admonition >}}
+
+
 
 
 ---
-
-## Rangkuman
-
-**Unsupervised Learning**
-- Belajar dari data tanpa label dengan menemukan pola tersembunyi.
-- Dua tugas utama: *Clustering* (mengelompokkan) dan *Dimensionality Reduction* (meringkas fitur).
-
-**Reinforcement Learning**
-- Paradigma ketiga di mana agent belajar lewat interaksi dan umpan balik (reward).
-- Cocok untuk masalah sekuensial dan lingkungan dinamis seperti game dan robotika.
-
-**Algoritma Clustering**
-- **K-Means**: Cepat dan intuitif, cocok untuk cluster berbentuk bulat.
-- **Hierarchical**: Menghasilkan dendrogram, tidak perlu menentukan K lebih awal.
-- **DBSCAN**: Tahan terhadap noise, bisa menangani bentuk cluster sembarang.
-
-**Dimensionality Reduction**
-- **PCA**: Linier, cepat, interpretatif, cocok untuk reduksi fitur sebelum modeling.
-- **t-SNE**: Non-linier, hanya untuk visualisasi, sangat baik mengungkap struktur tersembunyi.
-
-**Panduan Memilih Paradigma**
-- Ada label + prediksi kelas/angka -> Supervised Learning.
-- Tidak ada label + ingin temukan struktur -> Unsupervised Learning.
-- Agent belajar dari lingkungan secara real-time -> Reinforcement Learning.
-
----
-
-**Selanjutnya (Post 4):** Evaluasi Model: Metrik, Overfitting, dan Cross-Validation
-
-*Bagaimana kita tahu apakah model yang sudah kita latih benar-benar bisa diandalkan?*
-
-

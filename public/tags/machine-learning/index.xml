@@ -16,7 +16,6 @@
     <pubDate>Sun, 03 May 2026 06:00:00 &#43;0800</pubDate><author>
         <name>Muhammad Edy Rizal</name>
     </author><guid>http://localhost:1313/supervised-learning/</guid>
-    <description><![CDATA[<p>Pada artikel sebelumnya, kita sudah membedah <a href="https://frge.top/rualytics_intro_ml" target="_blank" rel="noopener noreferrer">konsep dasar machine learning</a>. Selanjutnya, perlu dipahami bahwa jenis pembelajaran yang dapat dilakukan oleh mesin terbagi atas beberapa jenis. Pada artikel ini, kita akan fokus pada <a href="https://frge.top/rualytics_supervised_learning" target="_blank" rel="noopener noreferrer"><em>supervised learning</em></a>. Pada post selanjutnya akan dibahas terkait jenis <a href="https://frge.top/rualytics_unsup_reinforcement" target="_blank" rel="noopener noreferrer"><em>unsupervised learning</em> dan <em>reinforcement learning</em></a>.</p>
-<p>Artikel ini akan membahas konsep dasar <em>supervised learning</em>, perbedaan regresi dan klasifikasi, pengantar <em>feature engineering</em>, disertai dengan contoh sederhana. Oleh karena itu, jika Anda berminat untuk mengikuti tutorial di artikel ini, maka pastikan terlebih dahulu bahwa library seperti numpy, pandas, matplotlib, seaborn, dan scikit-learn sudah terinstall di device Anda.</p>]]></description>
+    <description><![CDATA[Artikel ini membahas konsep dasar <em>supervised learning</em> sebagai materi pengantar untuk pemula. Materi yang dibahas mencakup penjelasan tentang apa itu <em>supervised learning</em>, perbedaan regresi dan klasifikasi, serta pengenalan beberapa algoritma <em>supervised learning</em> populer.]]></description>
 </item></channel>
 </rss>

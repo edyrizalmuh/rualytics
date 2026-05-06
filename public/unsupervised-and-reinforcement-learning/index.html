@@ -18,7 +18,6 @@
     <meta property="og:image" content="http://localhost:1313/logo-adaptive.svg">
       <meta property="og:see_also" content="http://localhost:1313/konsep-dasar-machine-learning/">
       <meta property="og:see_also" content="http://localhost:1313/supervised-learning/">
-      <meta property="og:see_also" content="http://localhost:1313/mekanisme-kerja-machine-learning/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/logo-adaptive.svg">
@@ -29,14 +28,14 @@
 
 <meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo-adaptive.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
-<link rel="canonical" href="http://localhost:1313/unsupervised-and-reinforcement-learning/" /><link rel="prev" href="http://localhost:1313/mekanisme-kerja-machine-learning/" /><link rel="next" href="http://localhost:1313/data-cleaning/" />
+<link rel="canonical" href="http://localhost:1313/unsupervised-and-reinforcement-learning/" /><link rel="prev" href="http://localhost:1313/excel-macro/" /><link rel="next" href="http://localhost:1313/data-cleaning/" />
 <link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
         "headline": "Unsupervised dan Reinforcement Learning",
         "inLanguage": "id",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http://localhost:1313/unsupervised-and-reinforcement-learning/"
-        },"genre": "posts","keywords":["Machine Learning","Pemula"],"wordcount":  4005 ,
+        },"genre": "posts","keywords":["Machine Learning","Pemula"],"wordcount":  3811 ,
         "url": "http://localhost:1313/unsupervised-and-reinforcement-learning/","datePublished": "2026-05-04T06:00:00+08:00","dateModified": "2026-05-04T06:00:00+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -168,22 +167,8 @@
         <h2 class="toc-title">Daftar Isi</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#setup-awal">Setup Awal</a></li>
-    <li><a href="#1-apa-itu-unsupervised-learning">1. Apa Itu Unsupervised Learning?</a>
-      <ul>
-        <li><a href="#perbandingan-dengan-supervised-learning">Perbandingan dengan Supervised Learning</a></li>
-        <li><a href="#analogi-sehari-hari">Analogi Sehari-hari</a></li>
-        <li><a href="#dua-tugas-utama-unsupervised-learning">Dua Tugas Utama Unsupervised Learning</a></li>
-      </ul>
-    </li>
-    <li><a href="#2-pengantar-reinforcement-learning">2. Pengantar Reinforcement Learning</a>
-      <ul>
-        <li><a href="#analogi-melatih-anjing">Analogi: Melatih Anjing</a></li>
-        <li><a href="#komponen-utama-rl">Komponen Utama RL</a></li>
-        <li><a href="#contoh-aplikasi-rl-di-dunia-nyata">Contoh Aplikasi RL di Dunia Nyata</a></li>
-        <li><a href="#mengapa-rl-berbeda">Mengapa RL Berbeda?</a></li>
-      </ul>
-    </li>
+    <li><a href="#1-apa-itu-unsupervised-learning">1. Apa Itu Unsupervised Learning?</a></li>
+    <li><a href="#2-pengantar-reinforcement-learning">2. Pengantar Reinforcement Learning</a></li>
     <li><a href="#3-algoritma-clustering-populer">3. Algoritma Clustering Populer</a>
       <ul>
         <li><a href="#31-k-means-clustering">3.1 K-Means Clustering</a></li>
@@ -205,7 +190,6 @@
         <li><a href="#ringkasan-kapan-menggunakan-paradigma-yang-mana">Ringkasan: Kapan Menggunakan Paradigma yang Mana?</a></li>
       </ul>
     </li>
-    <li><a href="#rangkuman">Rangkuman</a></li>
   </ul>
 </nav></div>
     </div><dialog id="toc-dialog" class="tw-max-w-full tw-w-full tw-max-h-full tw-h-full tw-ml-16">
@@ -213,22 +197,8 @@
             <h2 class="tw-mx-0 tw-my-6 tw-uppercase tw-text-2xl">Daftar Isi</h2>
             <div class="toc-content"><nav id="TableOfContents">
   <ul>
-    <li><a href="#setup-awal">Setup Awal</a></li>
-    <li><a href="#1-apa-itu-unsupervised-learning">1. Apa Itu Unsupervised Learning?</a>
-      <ul>
-        <li><a href="#perbandingan-dengan-supervised-learning">Perbandingan dengan Supervised Learning</a></li>
-        <li><a href="#analogi-sehari-hari">Analogi Sehari-hari</a></li>
-        <li><a href="#dua-tugas-utama-unsupervised-learning">Dua Tugas Utama Unsupervised Learning</a></li>
-      </ul>
-    </li>
-    <li><a href="#2-pengantar-reinforcement-learning">2. Pengantar Reinforcement Learning</a>
-      <ul>
-        <li><a href="#analogi-melatih-anjing">Analogi: Melatih Anjing</a></li>
-        <li><a href="#komponen-utama-rl">Komponen Utama RL</a></li>
-        <li><a href="#contoh-aplikasi-rl-di-dunia-nyata">Contoh Aplikasi RL di Dunia Nyata</a></li>
-        <li><a href="#mengapa-rl-berbeda">Mengapa RL Berbeda?</a></li>
-      </ul>
-    </li>
+    <li><a href="#1-apa-itu-unsupervised-learning">1. Apa Itu Unsupervised Learning?</a></li>
+    <li><a href="#2-pengantar-reinforcement-learning">2. Pengantar Reinforcement Learning</a></li>
     <li><a href="#3-algoritma-clustering-populer">3. Algoritma Clustering Populer</a>
       <ul>
         <li><a href="#31-k-means-clustering">3.1 K-Means Clustering</a></li>
@@ -250,7 +220,6 @@
         <li><a href="#ringkasan-kapan-menggunakan-paradigma-yang-mana">Ringkasan: Kapan Menggunakan Paradigma yang Mana?</a></li>
       </ul>
     </li>
-    <li><a href="#rangkuman">Rangkuman</a></li>
   </ul>
 </nav></div>
         </div>
@@ -263,9 +232,9 @@
             <div class="post-meta-line"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="4 May 2026">4 May 2026</time>&nbsp;<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>&nbsp;<time datetime="4 May 2026">4 May 2026</time>&nbsp;<svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;4005 kata&nbsp;
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;3811 kata&nbsp;
                     <svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;18 menit&nbsp;</div>
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;17 menit&nbsp;</div>
         </div><div class="details series-nav open">
                                 <div class="details-summary series-title">
                                     <span> - Pengantar Machine Learning</span>
@@ -276,8 +245,7 @@
                                     <nav>
                                         <ul>
                                                     <li><a href="/konsep-dasar-machine-learning/">Konsep Dasar Machine Learning</a></li>
-                                                    <li><a href="/supervised-learning/">Supervised Learning</a></li><li><span class="active">Unsupervised dan Reinforcement Learning</span></li>
-                                                    <li><a href="/mekanisme-kerja-machine-learning/">Mekanisme Kerja Machine Learning</a></li></ul>
+                                                    <li><a href="/supervised-learning/">Supervised Learning</a></li><li><span class="active">Unsupervised dan Reinforcement Learning</span></li></ul>
                                     </nav>
                                 </div>
                             </div><div class="details toc print:!tw-block" id="toc-static"  kept="">
@@ -288,22 +256,8 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#setup-awal">Setup Awal</a></li>
-    <li><a href="#1-apa-itu-unsupervised-learning">1. Apa Itu Unsupervised Learning?</a>
-      <ul>
-        <li><a href="#perbandingan-dengan-supervised-learning">Perbandingan dengan Supervised Learning</a></li>
-        <li><a href="#analogi-sehari-hari">Analogi Sehari-hari</a></li>
-        <li><a href="#dua-tugas-utama-unsupervised-learning">Dua Tugas Utama Unsupervised Learning</a></li>
-      </ul>
-    </li>
-    <li><a href="#2-pengantar-reinforcement-learning">2. Pengantar Reinforcement Learning</a>
-      <ul>
-        <li><a href="#analogi-melatih-anjing">Analogi: Melatih Anjing</a></li>
-        <li><a href="#komponen-utama-rl">Komponen Utama RL</a></li>
-        <li><a href="#contoh-aplikasi-rl-di-dunia-nyata">Contoh Aplikasi RL di Dunia Nyata</a></li>
-        <li><a href="#mengapa-rl-berbeda">Mengapa RL Berbeda?</a></li>
-      </ul>
-    </li>
+    <li><a href="#1-apa-itu-unsupervised-learning">1. Apa Itu Unsupervised Learning?</a></li>
+    <li><a href="#2-pengantar-reinforcement-learning">2. Pengantar Reinforcement Learning</a></li>
     <li><a href="#3-algoritma-clustering-populer">3. Algoritma Clustering Populer</a>
       <ul>
         <li><a href="#31-k-means-clustering">3.1 K-Means Clustering</a></li>
@@ -325,26 +279,11 @@
         <li><a href="#ringkasan-kapan-menggunakan-paradigma-yang-mana">Ringkasan: Kapan Menggunakan Paradigma yang Mana?</a></li>
       </ul>
     </li>
-    <li><a href="#rangkuman">Rangkuman</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content" data-pagefind-body><p><strong>Deskripsi</strong></p>
-<p>Di Post 2 kita belajar <em>Supervised Learning</em> yang membutuhkan data berlabel.
-Tapi bagaimana jika kita tidak punya label sama sekali? Di sinilah <strong>Unsupervised Learning</strong> berperan.
-Notebook ini juga memperkenalkan paradigma ketiga: <strong>Reinforcement Learning</strong>.</p>
-<p><strong>Yang akan kamu pelajari:</strong></p>
-<ul>
-<li>Apa itu unsupervised learning dan perbedaannya dengan supervised learning</li>
-<li>Pengantar konsep reinforcement learning</li>
-<li>Tiga algoritma clustering populer: K-Means, Hierarchical, DBSCAN</li>
-<li>Dua teknik dimensionality reduction: PCA dan t-SNE</li>
-<li>Panduan memilih paradigma yang tepat untuk masalahmu</li>
-</ul>
-<p><strong>Prasyarat:</strong> Post 2 (Supervised Learning) disarankan dibaca terlebih dahulu,
-meskipun tidak wajib. Tidak diperlukan background teknis mendalam.</p>
-<hr>
-<h2 id="setup-awal" class="headerLink">
-    <a href="#setup-awal" class="header-mark"></a>Setup Awal</h2><div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
+            </div><div class="content" id="content" data-pagefind-body><p>Pada postingan sebelumnya, kita sudah belajar tentang <a href="https://frge.top/rualytics_tipe_data" target="_blank" rel="noopener noreferrer">konsep dasar <em>machine learning</em></a> dan salah satu paradigma pembelajarannnya, yaitu <a href="https://frge.top/rualytics_supervised_learning" target="_blank" rel="noopener noreferrer"><em>supervised learning</em></a>. Pada postingan ini, kita akan belajar tentang paradigma pembelajaran lain selain <em>supervised learning</em>, yaitu <em>unsupervised learning</em> dan <em>reinforcement learning</em>.</p>
+<p>Artikel ini akan memberikan beberapa kode python sederhana untuk mengilustrasikan kedua konsep learning di atas. Jika Anda ingin mengikuti tutorial di artikel ini, pastikan Anda telah memuat library berikut ini.</p>
+<div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
   <div class="
     
     tw-flex 
@@ -461,12 +400,9 @@ meskipun tidak wajib. Tidak diperlukan background teknis mendalam.</p>
 </code></pre>
 <hr>
 <h2 id="1-apa-itu-unsupervised-learning" class="headerLink">
-    <a href="#1-apa-itu-unsupervised-learning" class="header-mark"></a>1. Apa Itu Unsupervised Learning?</h2><h3 id="perbandingan-dengan-supervised-learning" class="headerLink">
-    <a href="#perbandingan-dengan-supervised-learning" class="header-mark"></a>Perbandingan dengan Supervised Learning</h3><p>Pada <em>supervised learning</em>, kita punya data beserta jawabannya (label).
-Model belajar dari pasangan &ldquo;soal-jawaban&rdquo;.</p>
-<p>Pada <strong>unsupervised learning</strong>, kita hanya punya data <strong>tanpa label</strong>.
-Model bertugas <strong>menemukan pola tersembunyi</strong> secara mandiri, tanpa bimbingan.</p>
-<div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
+    <a href="#1-apa-itu-unsupervised-learning" class="header-mark"></a>1. Apa Itu Unsupervised Learning?</h2><p>Pada postingan sebelumnya sudah dijelaskan bahwa <em>supervised learning</em> merupakan paradigma <em>machine learning</em> yang dilakukan pada data berlabel. Label inilah yang bertindak sebagai <em>ground truth</em> dan mengarahkan algoritma untuk menghasilkan model yang optimal. Tapi bagaimana jadinya jika suatu data tidak memiliki label? Pada kasus semacam ini, terdapat paradigma lain yang disebut sebagai <em>unsupervised learning</em>. Pada paradigma ini, algoritma ML bertugas menemukan pola tersebut secara mandiri tanpa panduan dari label.</p>
+<p>Secara garis besar, <em>unsupervised learning</em> punya dua jenis utama. Pertama, algoritma <em>unsupervised learning</em> yang bertugas untuk melakukan <em><strong>clustering</strong></em>, yaitu jenis analisis yang bertujuan untuk mengelompokkan data yang mirip. Kedua, algoritma <em>unsupervised learning</em> yang bertugas untuk melakukan <em><strong>dimensionality reduction</strong></em>, yaitu analisis yang merangkum data dengan banyak fitur/variabel menjadi lebih sedikit.</p>
+<div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
   <div class="
     
     tw-flex 
@@ -485,7 +421,7 @@ Model bertugas <strong>menemukan pola tersembunyi</strong> secara mandiri, tanpa
       aria-hidden="true">
           <div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div>
-          <p class="tw-select-none !tw-my-1">text</p>
+          <p class="tw-select-none !tw-my-1">python</p>
       </button>
 
    <div class="tw-flex">
@@ -555,45 +491,87 @@ Model bertugas <strong>menemukan pola tersembunyi</strong> secara mandiri, tanpa
       tw-overflow-y-hidden
       tw-overflow-x-auto
       tw-scrollbar-thin
-      "><span class="line"><span class="cl">Supervised Learning             Unsupervised Learning
-</span></span><span class="line"><span class="cl">------------------------        -------------------------
-</span></span><span class="line"><span class="cl">[Foto Kucing] -&gt; &#34;Kucing&#34;       [Foto 1]  --|
-</span></span><span class="line"><span class="cl">[Foto Anjing] -&gt; &#34;Anjing&#34;       [Foto 2]  --+--&gt; Pola tersembunyi?
-</span></span><span class="line"><span class="cl">[Foto Kucing] -&gt; &#34;Kucing&#34;       [Foto 3]  --|
-</span></span><span class="line"><span class="cl">         ^                                  ^
-</span></span><span class="line"><span class="cl">    Ada label                          Tidak ada label</span></span></code></pre>
+      "><span class="line"><span class="cl"><span class="c1"># Visualisasi perbedaan Supervised vs Unsupervised</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Panel kiri: Supervised (ada label)</span>
+</span></span><span class="line"><span class="cl"><span class="n">palette_sup</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;#4A90D9&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;#E8835A&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;#5CB85C&#39;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mask</span> <span class="o">=</span> <span class="n">y</span> <span class="o">==</span> <span class="bp">cls</span>
+</span></span><span class="line"><span class="cl">    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">mask</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">mask</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">color</span><span class="o">=</span><span class="n">palette_sup</span><span class="p">[</span><span class="bp">cls</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Kelas </span><span class="si">{</span><span class="bp">cls</span><span class="si">}</span><span class="s1"> (sudah diberi label)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Supervised Learning</span><span class="se">\n</span><span class="s1">(Data sudah memiliki label)&#39;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fitur 1&#39;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Fitur 2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Panel kanan: Unsupervised (tanpa label)</span>
+</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;slategray&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Unsupervised Learning</span><span class="se">\n</span><span class="s1">(Data TANPA label, model mencari pola sendiri)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fitur 1&#39;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Fitur 2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axes</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[[</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Supervised vs Unsupervised: Perbedaan Utama&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span></span></code></pre>
 </div>
-<h3 id="analogi-sehari-hari" class="headerLink">
-    <a href="#analogi-sehari-hari" class="header-mark"></a>Analogi Sehari-hari</h3><p>Bayangkan kamu mendapat setumpuk surat tanpa nama pengirim.
-Kamu mulai mengelompokkannya berdasarkan kemiripan: ukuran amplop,
-warna kertas, gaya tulisan tangan. Kamu tidak tahu nama kelompoknya,
-tapi kamu bisa menemukan <strong>struktur alami</strong> dalam tumpukan surat tersebut.</p>
-<p>Inilah yang dilakukan unsupervised learning.</p>
-<h3 id="dua-tugas-utama-unsupervised-learning" class="headerLink">
-    <a href="#dua-tugas-utama-unsupervised-learning" class="header-mark"></a>Dua Tugas Utama Unsupervised Learning</h3>
-<div class="table-wrapper">
-  <table>
-    <thead>
-        <tr>
-            <th style="text-align: ">Tugas</th>
-            <th style="text-align: ">Tujuan</th>
-            <th style="text-align: ">Contoh Algoritma</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="text-align: "><strong>Clustering</strong></td>
-            <td style="text-align: ">Mengelompokkan data yang mirip</td>
-            <td style="text-align: ">K-Means, DBSCAN, Hierarchical</td>
-        </tr>
-        <tr>
-            <td style="text-align: "><strong>Dimensionality Reduction</strong></td>
-            <td style="text-align: ">Meringkas banyak fitur menjadi lebih sedikit</td>
-            <td style="text-align: ">PCA, t-SNE</td>
-        </tr>
-    </tbody>
-  </table>
-</div>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/unsupervised_learning_4_0.png' srcset="/unsupervised-and-reinforcement-learning/images/unsupervised_learning_4_0_hu_453acced801f465.webp 800w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_4_0_hu_91a1caf801ba5027.webp 1200w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_4_0_hu_6d3fa801ed946800.webp 1600w"  alt="png" height="512" width="1384"></p>
+<hr>
+<h2 id="2-pengantar-reinforcement-learning" class="headerLink">
+    <a href="#2-pengantar-reinforcement-learning" class="header-mark"></a>2. Pengantar Reinforcement Learning</h2><p>Selain <em>supervised</em> dan <em>unsupervised learning</em>, ada paradigma ketiga yang
+cara belajarnya paling berbeda, yaitu <strong><em>reinforcement learning</em> (RL)</strong>. Tidak seperti <em>supervised learning</em> yang memiliki label, <em>reinforcement learning</em> justru belajar melalui interaksi dengan lingkungannya. <em>Reinforcement learning</em> belajar membuat pilihan optimal dengan serangkaian <em>trial-and-error</em>.</p>
+<p>Analoginya kurang lebih sama seperti proses melatih anjing. Misalnya Anda seorang <em>trainer</em> yang sedang melatih anjing untuk duduk. Jika anjing yang Anda latih duduk saat diperintah, maka Anda sebagai <em>trainer</em> akan memberikan hadiah (<em>reward</em>). Namun, jika anjing yang Anda latih tidak duduk sesuai perintah, maka Anda tidak memberikan hadiah. Dari proses latihan ini, anjing akan belajar mengenai tindakan apa yang perlu ia lakukan untuk mendapatkan hadiah maksimal.</p>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/reinforcement_learning_diagram.svg'   alt="Diagram Reinforcement Learning"  ></p>
+<p>Paradigma <em>reinforcement learning</em> terdiri atas 5 komponen utama, yaitu</p>
+<ul>
+<li><strong>agen (<em>agent</em>)</strong>, program yang sedang menjalani proses <em>training</em>,</li>
+<li><strong>lingkungan (<em>environment</em>)</strong> yang menjadi lokasi agen,</li>
+<li><strong>tindakan (<em>action</em> $a_t$)</strong> yang dapat dilakukan oleh agen,</li>
+<li><strong>keadaan (<em>state</em> $s_t$)</strong> dari kondisi lingkungan terkini,</li>
+<li><strong>hadiah (<em>reward</em> $r_t$)</strong>, sinyal umpan balik berupa nilai +1, 0, atau -1 yang diperoleh agen berdasarkan tindakan yang dipilih.</li>
+</ul>
+<p>Adapun cara kerjanya terdiri atas beberapa tahapan berikut.</p>
+<ol>
+<li>Agen mengamati keadaan lingkungan terkini dan memilih sebuah aksi berdasarkan kebijakannya, yaitu strategi yang telah dipelajari terkait aksi apa yang perlu dilakukan pada tiap situasi.</li>
+<li>Lingkungan menerima aksi, transisi ke keadaan baru, dan mengirim kembali sinyal hadiah berupa angka yang memberitahu agen seberapa bagus atau buruknya <em>outcome</em> yang diperoleh.</li>
+<li>Tujuan dari agen adalah untuk memaksimalkan <em>reward</em> kumulatif, yaitu total semua <em>reward</em> yang diterima, difaktorkan dengan $\gamma$ sehingga <em>reward</em> baru lebih penting dibandingkan <em>reward</em> yang sudah lama.</li>
+<li>Setelah beberapa iterasi, agen menyesuaikan kebijakannya untuk memilih aksi yang dapat mengarah pada <em>reward</em> yang lebih tinggi. Proses perulangan <em>trial-and-error</em> ini merupakan esensi dari RL.</li>
+</ol>
+<p>Saat ini, paradigma RL telah diterapkan pada banyak bidang. Beberapa diantaranya adalah:</p>
+<ul>
+<li><strong>AlphaGo/AlphaZero</strong> (DeepMind): Menguasai permainan Go, Chess, dan Shogi melebihi juara dunia manusia.</li>
+<li><strong>ChatGPT</strong>: Menggunakan RLHF (Reinforcement Learning from Human Feedback) untuk belajar merespons dengan baik.</li>
+<li><strong>Robotika</strong>: Robot belajar berjalan, mengambil objek, atau melipat pakaian.</li>
+<li><strong>Rekomendasi konten</strong>: Platform seperti YouTube mengoptimalkan waktu tonton pengguna.</li>
+<li><strong>Trading algoritmik</strong>: Agen belajar kapan harus beli/jual aset untuk memaksimalkan profit.</li>
+</ul>
+<p>RL berbeda dengan <em>supervised</em> dan <em>unsupervised learning</em> karena RL tidak belajar dari dataset tetap. Ia belajar dari <strong>interaksi langsung</strong> dengan lingkungan, sering kali melalui jutaan percobaan (<em>trial and error</em>).
+Ini membuatnya sangat powerful tapi juga mahal secara komputasi.</p>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Note<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">RL membutuhkan pembahasan yang lebih dalam. Artikel ini hanya mengenal konsep dasarnya sebagai pelengkap paradigma <em>machine learning</em>.</div></div></div>
+<hr>
+<h2 id="3-algoritma-clustering-populer" class="headerLink">
+    <a href="#3-algoritma-clustering-populer" class="header-mark"></a>3. Algoritma Clustering Populer</h2><p><strong>Clustering</strong> adalah tugas mengelompokkan data sehingga data dalam satu kelompok
+(<strong>cluster</strong>) lebih mirip satu sama lain dibanding data di kelompok lain.</p>
+<p>Kita akan menggunakan dua dataset untuk mendemonstrasikan algoritma yang berbeda:</p>
+<ul>
+<li><strong>Dataset blob</strong>: Data berbentuk bola-bola rapi (cocok untuk K-Means)</li>
+<li><strong>Dataset bulan</strong>: Data berbentuk melengkung/tidak beraturan (menantang untuk K-Means)</li>
+</ul>
 <div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
   <div class="
     
@@ -683,442 +661,6 @@ tapi kamu bisa menemukan <strong>struktur alami</strong> dalam tumpukan surat te
       tw-overflow-y-hidden
       tw-overflow-x-auto
       tw-scrollbar-thin
-      "><span class="line"><span class="cl"><span class="c1"># Visualisasi perbedaan Supervised vs Unsupervised</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Panel kiri: Supervised (ada label)</span>
-</span></span><span class="line"><span class="cl"><span class="n">palette_sup</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;#4A90D9&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;#E8835A&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;#5CB85C&#39;</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mask</span> <span class="o">=</span> <span class="n">y</span> <span class="o">==</span> <span class="bp">cls</span>
-</span></span><span class="line"><span class="cl">    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">mask</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">mask</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">color</span><span class="o">=</span><span class="n">palette_sup</span><span class="p">[</span><span class="bp">cls</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Kelas </span><span class="si">{</span><span class="bp">cls</span><span class="si">}</span><span class="s1"> (sudah diberi label)&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Supervised Learning</span><span class="se">\n</span><span class="s1">(Data sudah memiliki label)&#39;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fitur 1&#39;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Fitur 2&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Panel kanan: Unsupervised (tanpa label)</span>
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;slategray&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Unsupervised Learning</span><span class="se">\n</span><span class="s1">(Data TANPA label, model mencari pola sendiri)&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                  <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fitur 1&#39;</span><span class="p">);</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Fitur 2&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axes</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[[</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Supervised vs Unsupervised: Perbedaan Utama&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">             <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span></span></code></pre>
-</div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_4_0.png'   alt="png"  ></p>
-<hr>
-<h2 id="2-pengantar-reinforcement-learning" class="headerLink">
-    <a href="#2-pengantar-reinforcement-learning" class="header-mark"></a>2. Pengantar Reinforcement Learning</h2><p>Selain supervised dan unsupervised learning, ada paradigma ketiga yang
-cara belajarnya paling berbeda: <strong>Reinforcement Learning (RL)</strong>.</p>
-<h3 id="analogi-melatih-anjing" class="headerLink">
-    <a href="#analogi-melatih-anjing" class="header-mark"></a>Analogi: Melatih Anjing</h3><p>Bayangkan kamu melatih anjing untuk duduk.</p>
-<ul>
-<li>Jika anjing duduk saat diperintah, kamu beri <strong>hadiah</strong> (reward).</li>
-<li>Jika anjing tidak duduk, kamu tidak memberi hadiah.</li>
-</ul>
-<p>Anjing belajar: &ldquo;tindakan apa yang perlu saya lakukan untuk mendapat hadiah maksimal?&rdquo;</p>
-<p>Reinforcement Learning bekerja persis seperti ini.</p>
-<h3 id="komponen-utama-rl" class="headerLink">
-    <a href="#komponen-utama-rl" class="header-mark"></a>Komponen Utama RL</h3><div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
-  <div class="
-    
-    tw-flex 
-    tw-flex-row
-    tw-flex-1 
-    tw-justify-between 
-    tw-w-full tw-bg-bgColor-secondary
-    ">      
-    <button 
-      class="
-        code-block-button
-        tw-mx-2 
-        tw-flex
-        tw-flex-row
-        tw-flex-1"
-      aria-hidden="true">
-          <div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div>
-          <p class="tw-select-none !tw-my-1">text</p>
-      </button>
-
-   <div class="tw-flex">
-      <button 
-        class="
-          line-number-button
-          tw-mx-2 
-          tw-hidden 
-          group-[.is-open]:tw-block 
-          group-[.show-line-numbers]:tw-text-fgColor-link 
-          print:!tw-hidden" 
-        title="Toggle line numbers"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M61.77 401l17.5-20.15a19.92 19.92 0 0 0 5.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h22.83a157.41 157.41 0 0 0-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33 0 15.94 2.44 15.94 9.09 0 4.72-4.2 8.22-14.36 8.22a41.54 41.54 0 0 1-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16 0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zM16 160h64a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H64V40a8 8 0 0 0-8-8H32a8 8 0 0 0-7.14 4.42l-8 16A8 8 0 0 0 24 64h8v64H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8zm-3.91 160H80a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44 0-29.06-25-39.56-44.47-39.56-21.36 0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44 0 0 1 9.46-3.84c3.33 0 9.28 1.56 9.28 8.75C51 248.19 0 257.31 0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
-
-      <button 
-        class="
-          wrap-code-button
-          tw-select-none 
-          tw-mx-2 
-          tw-hidden 
-          group-[.is-open]:tw-block 
-          group-[.is-wrap]:tw-text-fgColor-link 
-          print:!tw-hidden" 
-        title="Toggle code wrap"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
-      
-      <button 
-        class="
-          copy-code-button
-          tw-select-none
-          tw-mx-2 
-          tw-hidden
-          group-[.is-open]:tw-block
-          hover:tw-text-fgColor-link 
-          print:!tw-hidden"
-        title="Copy code">
-          <span class="copy-icon tw-block"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z"/></svg></span>
-          <span class="check-icon tw-hidden"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
-      </button>
-        
-      <button 
-        class="
-          tw-select-none 
-          tw-mx-2 
-          tw-block 
-          group-[.is-open]:tw-hidden 
-          print:!tw-hidden" 
-        disabled
-        aria-hidden="true"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button>
-    </div>
-  </div>
-  <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-4" 
-    class="
-      chroma 
-      !tw-block 
-      tw-p-0
-      tw-m-0
-      tw-transition-[max-height] 
-      tw-duration-500 
-      tw-ease-in-out 
-      group-[.is-closed]:!tw-max-h-0 
-      group-[.is-wrap]:tw-text-wrap
-      tw-overflow-y-hidden
-      tw-overflow-x-auto
-      tw-scrollbar-thin
-      "><span class="line"><span class="cl">              Lingkungan (Environment)
-</span></span><span class="line"><span class="cl">                    |
-</span></span><span class="line"><span class="cl">          Keadaan saat ini (State)
-</span></span><span class="line"><span class="cl">                    |
-</span></span><span class="line"><span class="cl">                    v
-</span></span><span class="line"><span class="cl">              +----------+
-</span></span><span class="line"><span class="cl">              |  Agent   |  &lt;-- Model/AI yang belajar
-</span></span><span class="line"><span class="cl">              +----------+
-</span></span><span class="line"><span class="cl">                    |
-</span></span><span class="line"><span class="cl">              Aksi (Action)
-</span></span><span class="line"><span class="cl">                    |
-</span></span><span class="line"><span class="cl">                    v
-</span></span><span class="line"><span class="cl">          Hadiah/Hukuman (Reward)
-</span></span><span class="line"><span class="cl">                    |
-</span></span><span class="line"><span class="cl">              (Kembali ke atas, siklus terus berulang)</span></span></code></pre>
-</div>
-
-<div class="table-wrapper">
-  <table>
-    <thead>
-        <tr>
-            <th style="text-align: ">Komponen</th>
-            <th style="text-align: ">Penjelasan</th>
-            <th style="text-align: ">Contoh (Bermain Chess)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="text-align: "><strong>Agent</strong></td>
-            <td style="text-align: ">Yang mengambil keputusan</td>
-            <td style="text-align: ">Program AI</td>
-        </tr>
-        <tr>
-            <td style="text-align: "><strong>Environment</strong></td>
-            <td style="text-align: ">Dunia tempat agent beroperasi</td>
-            <td style="text-align: ">Papan catur</td>
-        </tr>
-        <tr>
-            <td style="text-align: "><strong>State</strong></td>
-            <td style="text-align: ">Kondisi saat ini</td>
-            <td style="text-align: ">Posisi semua bidak</td>
-        </tr>
-        <tr>
-            <td style="text-align: "><strong>Action</strong></td>
-            <td style="text-align: ">Pilihan yang bisa diambil</td>
-            <td style="text-align: ">Langkah yang mungkin</td>
-        </tr>
-        <tr>
-            <td style="text-align: "><strong>Reward</strong></td>
-            <td style="text-align: ">Sinyal umpan balik</td>
-            <td style="text-align: ">+1 menang, -1 kalah, 0 lainnya</td>
-        </tr>
-    </tbody>
-  </table>
-</div>
-<h3 id="contoh-aplikasi-rl-di-dunia-nyata" class="headerLink">
-    <a href="#contoh-aplikasi-rl-di-dunia-nyata" class="header-mark"></a>Contoh Aplikasi RL di Dunia Nyata</h3><ul>
-<li><strong>AlphaGo/AlphaZero</strong> (DeepMind): Menguasai permainan Go, Chess, dan Shogi melebihi juara dunia manusia.</li>
-<li><strong>ChatGPT</strong>: Menggunakan RLHF (Reinforcement Learning from Human Feedback) untuk belajar merespons dengan baik.</li>
-<li><strong>Robotika</strong>: Robot belajar berjalan, mengambil objek, atau melipat pakaian.</li>
-<li><strong>Rekomendasi konten</strong>: Platform seperti YouTube mengoptimalkan waktu tonton pengguna.</li>
-<li><strong>Trading algoritmik</strong>: Agen belajar kapan harus beli/jual aset untuk memaksimalkan profit.</li>
-</ul>
-<h3 id="mengapa-rl-berbeda" class="headerLink">
-    <a href="#mengapa-rl-berbeda" class="header-mark"></a>Mengapa RL Berbeda?</h3><p>RL tidak belajar dari dataset tetap. Ia belajar dari <strong>interaksi langsung</strong>
-dengan lingkungan, sering kali melalui jutaan percobaan (trial and error).
-Ini membuatnya sangat powerful tapi juga mahal secara komputasi.</p>
-<blockquote>
-  <p><strong>Catatan:</strong> RL membutuhkan bab tersendiri yang lebih dalam.
-Di notebook ini kita hanya mengenal konsep dasarnya
-sebagai pelengkap panorama paradigma machine learning.</p>
-
-</blockquote><div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
-  <div class="
-    
-    tw-flex 
-    tw-flex-row
-    tw-flex-1 
-    tw-justify-between 
-    tw-w-full tw-bg-bgColor-secondary
-    ">      
-    <button 
-      class="
-        code-block-button
-        tw-mx-2 
-        tw-flex
-        tw-flex-row
-        tw-flex-1"
-      aria-hidden="true">
-          <div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div>
-          <p class="tw-select-none !tw-my-1">python</p>
-      </button>
-
-   <div class="tw-flex">
-      <button 
-        class="
-          line-number-button
-          tw-mx-2 
-          tw-hidden 
-          group-[.is-open]:tw-block 
-          group-[.show-line-numbers]:tw-text-fgColor-link 
-          print:!tw-hidden" 
-        title="Toggle line numbers"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M61.77 401l17.5-20.15a19.92 19.92 0 0 0 5.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h22.83a157.41 157.41 0 0 0-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33 0 15.94 2.44 15.94 9.09 0 4.72-4.2 8.22-14.36 8.22a41.54 41.54 0 0 1-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16 0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zM16 160h64a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H64V40a8 8 0 0 0-8-8H32a8 8 0 0 0-7.14 4.42l-8 16A8 8 0 0 0 24 64h8v64H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8zm-3.91 160H80a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44 0-29.06-25-39.56-44.47-39.56-21.36 0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44 0 0 1 9.46-3.84c3.33 0 9.28 1.56 9.28 8.75C51 248.19 0 257.31 0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
-
-      <button 
-        class="
-          wrap-code-button
-          tw-select-none 
-          tw-mx-2 
-          tw-hidden 
-          group-[.is-open]:tw-block 
-          group-[.is-wrap]:tw-text-fgColor-link 
-          print:!tw-hidden" 
-        title="Toggle code wrap"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
-      
-      <button 
-        class="
-          copy-code-button
-          tw-select-none
-          tw-mx-2 
-          tw-hidden
-          group-[.is-open]:tw-block
-          hover:tw-text-fgColor-link 
-          print:!tw-hidden"
-        title="Copy code">
-          <span class="copy-icon tw-block"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z"/></svg></span>
-          <span class="check-icon tw-hidden"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
-      </button>
-        
-      <button 
-        class="
-          tw-select-none 
-          tw-mx-2 
-          tw-block 
-          group-[.is-open]:tw-hidden 
-          print:!tw-hidden" 
-        disabled
-        aria-hidden="true"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button>
-    </div>
-  </div>
-  <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-5" 
-    class="
-      chroma 
-      !tw-block 
-      tw-p-0
-      tw-m-0
-      tw-transition-[max-height] 
-      tw-duration-500 
-      tw-ease-in-out 
-      group-[.is-closed]:!tw-max-h-0 
-      group-[.is-wrap]:tw-text-wrap
-      tw-overflow-y-hidden
-      tw-overflow-x-auto
-      tw-scrollbar-thin
-      "><span class="line"><span class="cl"><span class="c1"># Visualisasi siklus Reinforcement Learning</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Kotak Agent</span>
-</span></span><span class="line"><span class="cl"><span class="n">agent_box</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">),</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                            <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;#4A90D9&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;#D6E8F7&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">agent_box</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.75</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;Agent</span><span class="se">\n</span><span class="s1">(Model AI)&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#1a5276&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Kotak Environment</span>
-</span></span><span class="line"><span class="cl"><span class="n">env_box</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="mf">7.0</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">),</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                          <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;#E8835A&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;#FDEBD0&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">env_box</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">8.25</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;Environment</span><span class="se">\n</span><span class="s1">(Lingkungan)&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#784212&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Panah Action (atas)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">7.0</span><span class="p">,</span> <span class="mf">3.6</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.6</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#4A90D9&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.5</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.85</span><span class="p">,</span> <span class="s1">&#39;Action (Aksi)&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#4A90D9&#39;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Panah State &amp; Reward (bawah)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">7.0</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#E8835A&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.5</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">1.95</span><span class="p">,</span> <span class="s1">&#39;State (Keadaan) + Reward (Hadiah)&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#E8835A&#39;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Label contoh</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">5.3</span><span class="p">,</span> <span class="s1">&#39;Siklus Reinforcement Learning&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#2c3e50&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.75</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="s1">&#39;Contoh: Program bermain game</span><span class="se">\n</span><span class="s1">Memilih langkah terbaik&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#555&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;italic&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">8.25</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="s1">&#39;Contoh: Papan permainan</span><span class="se">\n</span><span class="s1">Memberi skor tiap langkah&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#555&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;italic&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span></span></code></pre>
-</div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_6_0.png'   alt="png"  ></p>
-<hr>
-<h2 id="3-algoritma-clustering-populer" class="headerLink">
-    <a href="#3-algoritma-clustering-populer" class="header-mark"></a>3. Algoritma Clustering Populer</h2><p><strong>Clustering</strong> adalah tugas mengelompokkan data sehingga data dalam satu kelompok
-(<strong>cluster</strong>) lebih mirip satu sama lain dibanding data di kelompok lain.</p>
-<p>Kita akan menggunakan dua dataset untuk mendemonstrasikan algoritma yang berbeda:</p>
-<ul>
-<li><strong>Dataset blob</strong>: Data berbentuk bola-bola rapi (cocok untuk K-Means)</li>
-<li><strong>Dataset bulan</strong>: Data berbentuk melengkung/tidak beraturan (menantang untuk K-Means)</li>
-</ul>
-<div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
-  <div class="
-    
-    tw-flex 
-    tw-flex-row
-    tw-flex-1 
-    tw-justify-between 
-    tw-w-full tw-bg-bgColor-secondary
-    ">      
-    <button 
-      class="
-        code-block-button
-        tw-mx-2 
-        tw-flex
-        tw-flex-row
-        tw-flex-1"
-      aria-hidden="true">
-          <div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div>
-          <p class="tw-select-none !tw-my-1">python</p>
-      </button>
-
-   <div class="tw-flex">
-      <button 
-        class="
-          line-number-button
-          tw-mx-2 
-          tw-hidden 
-          group-[.is-open]:tw-block 
-          group-[.show-line-numbers]:tw-text-fgColor-link 
-          print:!tw-hidden" 
-        title="Toggle line numbers"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M61.77 401l17.5-20.15a19.92 19.92 0 0 0 5.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h22.83a157.41 157.41 0 0 0-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33 0 15.94 2.44 15.94 9.09 0 4.72-4.2 8.22-14.36 8.22a41.54 41.54 0 0 1-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16 0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zM16 160h64a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H64V40a8 8 0 0 0-8-8H32a8 8 0 0 0-7.14 4.42l-8 16A8 8 0 0 0 24 64h8v64H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8zm-3.91 160H80a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44 0-29.06-25-39.56-44.47-39.56-21.36 0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44 0 0 1 9.46-3.84c3.33 0 9.28 1.56 9.28 8.75C51 248.19 0 257.31 0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
-
-      <button 
-        class="
-          wrap-code-button
-          tw-select-none 
-          tw-mx-2 
-          tw-hidden 
-          group-[.is-open]:tw-block 
-          group-[.is-wrap]:tw-text-fgColor-link 
-          print:!tw-hidden" 
-        title="Toggle code wrap"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
-      
-      <button 
-        class="
-          copy-code-button
-          tw-select-none
-          tw-mx-2 
-          tw-hidden
-          group-[.is-open]:tw-block
-          hover:tw-text-fgColor-link 
-          print:!tw-hidden"
-        title="Copy code">
-          <span class="copy-icon tw-block"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z"/></svg></span>
-          <span class="check-icon tw-hidden"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
-      </button>
-        
-      <button 
-        class="
-          tw-select-none 
-          tw-mx-2 
-          tw-block 
-          group-[.is-open]:tw-hidden 
-          print:!tw-hidden" 
-        disabled
-        aria-hidden="true"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button>
-    </div>
-  </div>
-  <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-6" 
-    class="
-      chroma 
-      !tw-block 
-      tw-p-0
-      tw-m-0
-      tw-transition-[max-height] 
-      tw-duration-500 
-      tw-ease-in-out 
-      group-[.is-closed]:!tw-max-h-0 
-      group-[.is-wrap]:tw-text-wrap
-      tw-overflow-y-hidden
-      tw-overflow-x-auto
-      tw-scrollbar-thin
       "><span class="line"><span class="cl"><span class="c1"># Membuat dua dataset untuk perbandingan</span>
 </span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
@@ -1154,7 +696,7 @@ sebagai pelengkap panorama paradigma machine learning.</p>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span></span></code></pre>
 </div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_8_0.png'   alt="png"  ></p>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/unsupervised_learning_8_0.png' srcset="/unsupervised-and-reinforcement-learning/images/unsupervised_learning_8_0_hu_98021d26ef5da36e.webp 800w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_8_0_hu_1c1f24f1c4de37c0.webp 1200w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_8_0_hu_2eb0e74693a86e7.webp 1600w"  alt="png" height="512" width="1284"></p>
 <h3 id="31-k-means-clustering" class="headerLink">
     <a href="#31-k-means-clustering" class="header-mark"></a>3.1 K-Means Clustering</h3><p><strong>Intuisi:</strong> K-Means bekerja seperti pemilihan ketua kelompok.
 Tentukan dulu berapa banyak kelompok yang ingin dibuat (K), lalu algoritma:</p>
@@ -1245,7 +787,7 @@ Tentukan dulu berapa banyak kelompok yang ingin dibuat (K), lalu algoritma:</p>
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-7" 
+    id="codeblock-id-4" 
     class="
       chroma 
       !tw-block 
@@ -1317,7 +859,7 @@ Tentukan dulu berapa banyak kelompok yang ingin dibuat (K), lalu algoritma:</p>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;K-Means Blob - Silhouette Score: </span><span class="si">{</span><span class="n">silhouette_score</span><span class="p">(</span><span class="n">X_blob_s</span><span class="p">,</span> <span class="n">labels_km</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;(Silhouette Score mendekati 1.0 = cluster sangat terpisah dengan baik)&#34;</span><span class="p">)</span></span></span></code></pre>
 </div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_10_0.png'   alt="png"  ></p>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/unsupervised_learning_10_0.png' srcset="/unsupervised-and-reinforcement-learning/images/unsupervised_learning_10_0_hu_55daf104c3841500.webp 800w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_10_0_hu_eb52e541adb5eb7.webp 1200w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_10_0_hu_4e68ee18a92ef0eb.webp 1600w"  alt="png" height="483" width="1384"></p>
 <pre><code>K-Means Blob - Silhouette Score: 0.8179
 (Silhouette Score mendekati 1.0 = cluster sangat terpisah dengan baik)
 </code></pre>
@@ -1420,7 +962,7 @@ kita bisa melihat dendrogram dan memilih K belakangan.</p>
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-8" 
+    id="codeblock-id-5" 
     class="
       chroma 
       !tw-block 
@@ -1469,7 +1011,7 @@ kita bisa melihat dendrogram dan memilih K belakangan.</p>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span></span></code></pre>
 </div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_13_0.png'   alt="png"  ></p>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/unsupervised_learning_13_0.png' srcset="/unsupervised-and-reinforcement-learning/images/unsupervised_learning_13_0_hu_99518996a898a29d.webp 800w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_13_0_hu_5a95c6bea4a162c5.webp 1200w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_13_0_hu_4a327f3fea4df7ba.webp 1600w"  alt="png" height="483" width="1383"></p>
 <h3 id="33-dbscan-density-based-spatial-clustering" class="headerLink">
     <a href="#33-dbscan-density-based-spatial-clustering" class="header-mark"></a>3.3 DBSCAN (Density-Based Spatial Clustering)</h3><p><strong>Intuisi:</strong> K-Means dan Hierarchical kesulitan menangani cluster yang bentuknya tidak beraturan.
 DBSCAN menggunakan pendekatan berbeda: ia mendefinisikan cluster sebagai
@@ -1585,7 +1127,7 @@ dan otomatis mendeteksi outlier.</p>
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-9" 
+    id="codeblock-id-6" 
     class="
       chroma 
       !tw-block 
@@ -1652,7 +1194,7 @@ dan otomatis mendeteksi outlier.</p>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span></span></code></pre>
 </div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_15_0.png'   alt="png"  ></p>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/unsupervised_learning_15_0.png' srcset="/unsupervised-and-reinforcement-learning/images/unsupervised_learning_15_0_hu_ec6a67d28a0d0516.webp 800w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_15_0_hu_31134f2c99a0fe7.webp 1200w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_15_0_hu_52b5e9d10c41b2a7.webp 1600w"  alt="png" height="1012" width="1584"></p>
 <h3 id="34-use-case-dan-perbandingan-algoritma-clustering" class="headerLink">
     <a href="#34-use-case-dan-perbandingan-algoritma-clustering" class="header-mark"></a>3.4 Use Case dan Perbandingan Algoritma Clustering</h3>
 <div class="table-wrapper">
@@ -1762,7 +1304,7 @@ dan otomatis mendeteksi outlier.</p>
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-10" 
+    id="codeblock-id-7" 
     class="
       chroma 
       !tw-block 
@@ -1888,7 +1430,7 @@ di ruang fitur, membuat algoritma ML sulit belajar.</li>
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-11" 
+    id="codeblock-id-8" 
     class="
       chroma 
       !tw-block 
@@ -1981,7 +1523,7 @@ di ruang fitur, membuat algoritma ML sulit belajar.</li>
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-12" 
+    id="codeblock-id-9" 
     class="
       chroma 
       !tw-block 
@@ -2110,7 +1652,7 @@ Ia hanya mempertahankan variansi, bukan informasi tentang kelas.</p>
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-13" 
+    id="codeblock-id-10" 
     class="
       chroma 
       !tw-block 
@@ -2173,7 +1715,7 @@ Ia hanya mempertahankan variansi, bukan informasi tentang kelas.</p>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Total variansi yang dipertahankan oleh 2 PC: </span><span class="si">{</span><span class="n">total_2pc</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Artinya: dengan hanya 2 fitur (dari 4), kita mempertahankan </span><span class="si">{</span><span class="n">total_2pc</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">% informasi asli.&#34;</span><span class="p">)</span></span></span></code></pre>
 </div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_21_0.png'   alt="png"  ></p>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/unsupervised_learning_21_0.png' srcset="/unsupervised-and-reinforcement-learning/images/unsupervised_learning_21_0_hu_91c4be9a25a20738.webp 800w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_21_0_hu_b753800d954d9e92.webp 1200w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_21_0_hu_e8e717993509e498.webp 1600w"  alt="png" height="484" width="1384"></p>
 <pre><code>Total variansi yang dipertahankan oleh 2 PC: 95.8%
 Artinya: dengan hanya 2 fitur (dari 4), kita mempertahankan 96% informasi asli.
 </code></pre>
@@ -2252,7 +1794,7 @@ Artinya: dengan hanya 2 fitur (dari 4), kita mempertahankan 96% informasi asli.
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-14" 
+    id="codeblock-id-11" 
     class="
       chroma 
       !tw-block 
@@ -2291,7 +1833,7 @@ Artinya: dengan hanya 2 fitur (dari 4), kita mempertahankan 96% informasi asli.
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;  - Panah searah = fitur berkorelasi positif.&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;  - Panah berlawanan arah = fitur berkorelasi negatif.&#34;</span><span class="p">)</span></span></span></code></pre>
 </div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_22_0.png'   alt="png"  ></p>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/unsupervised_learning_22_0.png' srcset="/unsupervised-and-reinforcement-learning/images/unsupervised_learning_22_0_hu_b4cc40f5a43b047f.webp 800w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_22_0_hu_6683ef98d4bd39dc.webp 1200w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_22_0_hu_4a4a8a2d297fa2dd.webp 1600w"  alt="png" height="467" width="881"></p>
 <pre><code>Interpretasi Loading Plot:
   - Panah panjang = fitur tersebut sangat mempengaruhi PC tersebut.
   - Panah searah = fitur berkorelasi positif.
@@ -2426,7 +1968,7 @@ Nilai tipikal: 5-50. Semakin besar, cluster terlihat lebih global.</li>
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-15" 
+    id="codeblock-id-12" 
     class="
       chroma 
       !tw-block 
@@ -2463,7 +2005,7 @@ Nilai tipikal: 5-50. Semakin besar, cluster terlihat lebih global.</li>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span></span></code></pre>
 </div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_24_0.png'   alt="png"  ></p>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/unsupervised_learning_24_0.png' srcset="/unsupervised-and-reinforcement-learning/images/unsupervised_learning_24_0_hu_4129fecd85aa4ea4.webp 800w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_24_0_hu_53eeed453e411af.webp 1200w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_24_0_hu_2fa14d1078cff5cd.webp 1600w"  alt="png" height="512" width="1583"></p>
 <div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
   <div class="
     
@@ -2539,7 +2081,7 @@ Nilai tipikal: 5-50. Semakin besar, cluster terlihat lebih global.</li>
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-16" 
+    id="codeblock-id-13" 
     class="
       chroma 
       !tw-block 
@@ -2591,7 +2133,7 @@ Nilai tipikal: 5-50. Semakin besar, cluster terlihat lebih global.</li>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;  PCA    : Cluster Setosa terpisah jelas, Versicolor dan Virginica sedikit tumpang tindih.&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;  t-SNE  : Ketiga kelas terpisah lebih jelas, tapi posisi/jarak antar cluster tidak bermakna.&#34;</span><span class="p">)</span></span></span></code></pre>
 </div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_25_0.png'   alt="png"  ></p>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/unsupervised_learning_25_0.png' srcset="/unsupervised-and-reinforcement-learning/images/unsupervised_learning_25_0_hu_dd10330cabaa08e4.webp 800w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_25_0_hu_88196ffa99c3365e.webp 1200w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_25_0_hu_e10857b8e2936043.webp 1600w"  alt="png" height="512" width="1384"></p>
 <pre><code>Perhatikan:
   PCA    : Cluster Setosa terpisah jelas, Versicolor dan Virginica sedikit tumpang tindih.
   t-SNE  : Ketiga kelas terpisah lebih jelas, tapi posisi/jarak antar cluster tidak bermakna.
@@ -2675,7 +2217,7 @@ Jawabannya bergantung pada beberapa faktor kunci.</p>
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-17" 
+    id="codeblock-id-14" 
     class="
       chroma 
       !tw-block 
@@ -2783,7 +2325,7 @@ Jawabannya bergantung pada beberapa faktor kunci.</p>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span></span></code></pre>
 </div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_27_0.png'   alt="png"  ></p>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/unsupervised_learning_27_0.png' srcset="/unsupervised-and-reinforcement-learning/images/unsupervised_learning_27_0_hu_2161a5e5cd9ebc4d.webp 800w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_27_0_hu_dc8c57f3e05c93f2.webp 1200w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_27_0_hu_46db71df1fc60590.webp 1600w"  alt="png" height="1184" width="1384"></p>
 <h3 id="52-contoh-kasus-nyata-supervised-vs-unsupervised" class="headerLink">
     <a href="#52-contoh-kasus-nyata-supervised-vs-unsupervised" class="header-mark"></a>5.2 Contoh Kasus Nyata: Supervised vs Unsupervised</h3><p>Mari kita lihat satu contoh konkret untuk mempertegas perbedaannya.</p>
 <div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
@@ -2861,7 +2403,7 @@ Jawabannya bergantung pada beberapa faktor kunci.</p>
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-18" 
+    id="codeblock-id-15" 
     class="
       chroma 
       !tw-block 
@@ -2949,7 +2491,7 @@ Jawabannya bergantung pada beberapa faktor kunci.</p>
 </span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s1">&#39;total_belanja_juta&#39;</span><span class="p">,</span> <span class="s1">&#39;frekuensi_beli&#39;</span><span class="p">,</span> <span class="s1">&#39;hari_sejak_terakhir&#39;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span></span></span></code></pre>
 </div>
-<p><img class="tw-inline" loading="lazy" src='unsupervised_learning_files/unsupervised_learning_29_0.png'   alt="png"  ></p>
+<p><img class="tw-inline" loading="lazy" src='/unsupervised-and-reinforcement-learning/images/unsupervised_learning_29_0.png' srcset="/unsupervised-and-reinforcement-learning/images/unsupervised_learning_29_0_hu_4116eef2735f4527.webp 800w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_29_0_hu_881e0a36eb2feeb8.webp 1200w, /unsupervised-and-reinforcement-learning/images/unsupervised_learning_29_0_hu_3450ce86fe2904ba.webp 1600w"  alt="png" height="614" width="1382"></p>
 <pre><code>Profil Rata-rata Tiap Segmen Pelanggan (Unsupervised):
                    total_belanja_juta  frekuensi_beli  hari_sejak_terakhir
 nama_segmen                                                               
@@ -2995,42 +2537,15 @@ Pelanggan Premium                 5.0            18.2                132.1
     </tbody>
   </table>
 </div>
-<blockquote>
-  <p>*Semi-supervised Learning adalah pendekatan hybrid yang menggabungkan sedikit data berlabel
-dengan banyak data tanpa label. Ini dibahas di topik lanjutan.</p>
-
-</blockquote><hr>
-<h2 id="rangkuman" class="headerLink">
-    <a href="#rangkuman" class="header-mark"></a>Rangkuman</h2><p><strong>Unsupervised Learning</strong></p>
-<ul>
-<li>Belajar dari data tanpa label dengan menemukan pola tersembunyi.</li>
-<li>Dua tugas utama: <em>Clustering</em> (mengelompokkan) dan <em>Dimensionality Reduction</em> (meringkas fitur).</li>
-</ul>
-<p><strong>Reinforcement Learning</strong></p>
-<ul>
-<li>Paradigma ketiga di mana agent belajar lewat interaksi dan umpan balik (reward).</li>
-<li>Cocok untuk masalah sekuensial dan lingkungan dinamis seperti game dan robotika.</li>
-</ul>
-<p><strong>Algoritma Clustering</strong></p>
-<ul>
-<li><strong>K-Means</strong>: Cepat dan intuitif, cocok untuk cluster berbentuk bulat.</li>
-<li><strong>Hierarchical</strong>: Menghasilkan dendrogram, tidak perlu menentukan K lebih awal.</li>
-<li><strong>DBSCAN</strong>: Tahan terhadap noise, bisa menangani bentuk cluster sembarang.</li>
-</ul>
-<p><strong>Dimensionality Reduction</strong></p>
-<ul>
-<li><strong>PCA</strong>: Linier, cepat, interpretatif, cocok untuk reduksi fitur sebelum modeling.</li>
-<li><strong>t-SNE</strong>: Non-linier, hanya untuk visualisasi, sangat baik mengungkap struktur tersembunyi.</li>
-</ul>
-<p><strong>Panduan Memilih Paradigma</strong></p>
-<ul>
-<li>Ada label + prediksi kelas/angka -&gt; Supervised Learning.</li>
-<li>Tidak ada label + ingin temukan struktur -&gt; Unsupervised Learning.</li>
-<li>Agent belajar dari lingkungan secara real-time -&gt; Reinforcement Learning.</li>
-</ul>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Note<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">*<em>Semi-supervised Learning</em> adalah pendekatan hybrid yang menggabungkan sedikit data berlabel dengan banyak data tanpa label. Ini dibahas di topik lanjutan.</div></div></div>
 <hr>
-<p><strong>Selanjutnya (Post 4):</strong> Evaluasi Model: Metrik, Overfitting, dan Cross-Validation</p>
-<p><em>Bagaimana kita tahu apakah model yang sudah kita latih benar-benar bisa diandalkan?</em></p>
 </div>
 
         
@@ -3062,7 +2577,7 @@ dengan banyak data tanpa label. Ini dibahas di topik lanjutan.</p>
         </div>
     <div class="related-item-container">
             <h2 class="related-title">
-                <a href="/mekanisme-kerja-machine-learning/">Mekanisme Kerja Machine Learning</a>
+                <a href="/excel-macro/">Pengenalan Macro di Microsoft Excel</a>
             </h2>
         </div>
     
@@ -3102,8 +2617,8 @@ dengan banyak data tanpa label. Ini dibahas di topik lanjutan.</p>
         </section>
     </div>
 
-    <div class="post-nav print:tw-hidden"><a href="/mekanisme-kerja-machine-learning/" class="prev" rel="prev" title="Mekanisme Kerja Machine Learning"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Mekanisme Kerja Machine Learning</a>
+    <div class="post-nav print:tw-hidden"><a href="/excel-macro/" class="prev" rel="prev" title="Pengenalan Macro di Microsoft Excel"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Pengenalan Macro di Microsoft Excel</a>
             <a href="/data-cleaning/" class="next" rel="next" title="Data Cleaning">Data Cleaning<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>
