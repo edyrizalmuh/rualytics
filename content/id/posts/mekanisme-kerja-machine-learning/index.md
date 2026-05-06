@@ -1,6 +1,6 @@
 +++
 date = '2026-05-05T06:00:00+08:00'
-draft = false
+draft = true
 title = 'Mekanisme Kerja Machine Learning'
 translationKey = "mekanisme-kerja-machine-learning"
 languages = 'id'
