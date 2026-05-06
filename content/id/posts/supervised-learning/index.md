@@ -10,9 +10,9 @@ tags = ['Machine Learning', 'Pemula']
 series = ['Pengantar Machine Learning']
 weight = 2
 categories = ['Konsep']
-description = "*"
-summary = ""
-seo_description = ""
+description = "Artikel ini membahas konsep dasar *supervised learning* sebagai materi pengantar untuk pemula. Materi yang dibahas mencakup penjelasan tentang apa itu *supervised learning*, perbedaan regresi dan klasifikasi, serta pengenalan beberapa algoritma *supervised learning* populer."
+summary = "Artikel ini membahas konsep dasar *supervised learning* sebagai materi pengantar untuk pemula. Materi yang dibahas mencakup penjelasan tentang apa itu *supervised learning*, perbedaan regresi dan klasifikasi, serta pengenalan beberapa algoritma *supervised learning* populer."
+seo_description = "Pelajari fundamental Supervised Learning lewat artikel ini. Mulai dari pemahaman konsep 'belajar terbimbing', perbandingan mendalam antara regresi dan klasifikasi, hingga daftar algoritma populer yang wajib diketahui oleh setiap calon praktisi data."
 +++
 
 Pada artikel sebelumnya, kita sudah membedah [konsep dasar machine learning](https://frge.top/rualytics_intro_ml). Selanjutnya, perlu dipahami bahwa jenis pembelajaran yang dapat dilakukan oleh mesin terbagi atas beberapa jenis. Pada artikel ini, kita akan fokus pada [*supervised learning*](https://frge.top/rualytics_supervised_learning). Pada post selanjutnya akan dibahas terkait jenis [*unsupervised learning* dan *reinforcement learning*](https://frge.top/rualytics_unsup_reinforcement).
