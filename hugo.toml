@@ -4,6 +4,7 @@ languageCode = "id"
 defaultContentLanguageInSubdir = false
 theme = "DoIt"
 title = "Rualytics"
+enableRobotsTXT = true
 
 
 [languages.id]
