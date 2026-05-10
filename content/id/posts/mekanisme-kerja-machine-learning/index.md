@@ -1,6 +1,6 @@
 +++
 date = '2026-05-05T06:00:00+08:00'
-draft = true
+draft = false
 title = 'Mekanisme Kerja Machine Learning'
 translationKey = "mekanisme-kerja-machine-learning"
 languages = 'id'
@@ -15,24 +15,9 @@ summary = ""
 seo_description = ""
 +++
 
-# Post 4: Mekanisme Pembelajaran Model
+Tiga postingan sebelumnya dalam series Pengantar Machine Learning menjelaskan konsep dasar *machine learning* dan tiga paradigma pembelajarannya. Postingan kali ini akan membahas lebih dalam ke sisi teknisnya: konsep *training-testing*, apa itu model dan bagaimana ia belajar, konsep *overfitting* dan *underfitting*, *data preprocessing*, perbedaan *hyperparameter* dan *parameter*, serta konsep *cross-validation*.
 
-Bayangkan kamu ingin mengajari seorang anak kecil membedakan kucing dan anjing. Kamu akan menunjukkan banyak foto, memberikan penjelasan, dan kemudian menguji apakah ia bisa mengenali hewan baru yang belum pernah dilihat sebelumnya. Proses inilah yang secara kasar dilakukan oleh model machine learning.
-
-Post ini membahas "dapur" dari machine learning: bagaimana model benar-benar belajar dari data, apa saja yang bisa salah, dan bagaimana kita mempersiapkan data dengan benar.
-
----
-
-**Daftar Isi**
-1. Konsep Training dan Testing
-2. Apa itu Model dan Bagaimana Ia Belajar
-3. Overfitting dan Underfitting
-4. Bias-Variance Tradeoff
-5. Data Preprocessing
-6. Hyperparameter vs Parameter
-7. Cross-Validation
-
-
+Jika Anda ingin mengikuti tutorial pada postingan ini, pastikan Anda telah memuat library python berikut ini.
 ```python
 # Impor semua library yang dibutuhkan
 import numpy as np
@@ -58,23 +43,21 @@ print("Semua library berhasil diimpor!")
 
 ---
 
-## 1. Konsep Training dan Testing: Mengapa Data Dibagi
+## 1. Konsep *Training* dan *Testing*
 
-### Analogi Ujian Sekolah
+Bayangkan Anda adalah seorang siswa yang sedang bersiap menghadapi ujian matematika. Sebagai persiapan, Anda mengumpulkan 100 soal latihan. Ada banyak strategi belajar yang bisa diterapkan, salah satunya adalah menghafal setiap jawaban dari soal-soal tersebut. Namun, pendekatan ini kurang efektif karena jika soal ujian sedikit saja dimodifikasi, Anda kemungkinan besar akan kesulitan menjawabnya.
 
-Bayangkan kamu sedang belajar untuk ujian matematika. Kamu punya 100 soal latihan. Strategi belajar yang baik bukan menghafal semua 100 jawaban itu, melainkan memahami caranya sehingga bisa mengerjakan soal baru yang belum pernah dilihat.
+Strategi yang lebih baik adalah memahami konsep di balik 100 soal tersebut. Dengan memahami pola soal latihan, Anda secara tidak langsung telah melakukan generalisasi terhadap pengetahuan Anda.
 
-Dalam machine learning, logikanya sama persis:
+Logika pembelajaran ini serupa dengan apa yang terjadi dalam *machine learning*. Dalam konteks ini, 100 soal latihan tadi disebut sebagai data *training*, sedangkan soal ujian adalah data *testing*. Tujuan utamanya bukanlah membuat model menghafal "jawaban" dari data *training*, melainkan menangkap pola yang ada di dalamnya. Data *testing* kemudian digunakan untuk menguji sejauh mana kemampuan model dalam menangani data yang belum pernah dilihat sebelumnya.
 
-- **Data training** = soal latihan. Model belajar dari data ini.
-- **Data testing** = soal ujian. Digunakan untuk menguji kemampuan model pada data yang belum pernah dilihat sebelumnya.
+Mengapa pembagian data ini menjadi sangat krusial? Bayangkan jika guru Anda mengambil soal ujian justru dari 100 soal latihan yang sudah Anda kerjakan sebelumnya. Jika Anda mendapatkan nilai sempurna, apakah itu karena Anda benar-benar paham materinya, atau sekadar karena Anda sudah hafal kunci jawabannya?
 
-### Mengapa Tidak Pakai Semua Data untuk Training?
+Logika yang sama berlaku dalam machine learning. Jika sebuah model dilatih dan diuji menggunakan data yang sama, nilai akurasi yang dihasilkan bisa tampak sangat tinggi, namun sebenarnya menyesatkan. Nilai tinggi tersebut muncul bukan karena model berhasil menangkap pola, melainkan karena ia hanya "menghafal" jawaban tanpa benar-benar belajar.
 
-Jika model dilatih dan diuji pada data yang sama, nilai akurasinya akan tampak sangat tinggi, tapi itu menyesatkan. Model hanya "menghafal" jawaban, bukan benar-benar belajar. Saat diberi data baru, performanya bisa anjlok.
+Akibatnya, jika model tersebut diterapkan di dunia nyata, performanya berpotensi sangat buruk karena ia tidak mampu memprediksi data baru yang belum pernah ia lihat. Oleh karena itu, pemisahan antara data training dan data testing sangat penting dilakukan guna menyimulasikan kondisi nyata: menguji sejauh mana model mampu memberikan prediksi akurat pada data yang asing baginya.
 
-**Aturan umum:** 70-80% data untuk training, 20-30% untuk testing.
-
+Adapun proporsi pembagiannya relatif. Beberapa proporsi yang umum digunakan adalah 70:30 atau 80:20 dimana data *training* memperoleh proporsi yang lebih besar. Berikut merupakan contoh implementasi pembagian data training dan testing menggunakan fungsi `train_test_split()` dari library scikit-learn.
 
 ```python
 # Membuat contoh data sederhana:
@@ -115,39 +98,51 @@ plt.show()
 
 
     
-![png](post4_mekanisme_pembelajaran_model_files/post4_mekanisme_pembelajaran_model_3_1.png)
+![png](images/post4_mekanisme_pembelajaran_model_3_1.png)
     
+Pada praktiknya, data mentah sering kali tidak hanya dibagi menjadi dua bagian, melainkan tiga: data training, validation, dan testing. Sebagai ilustrasi, Anda bisa bayangkan data validation sebagai kuis, sementara data testing sebagai ujian final. 
+
+Data validation berperan sebagai "validator" untuk mengevaluasi performa model selama proses belajar berlangsung. Hasil dari kuis ini digunakan untuk melakukan perbaikan dan mencari pengaturan model terbaik. 
+
+Sementara itu, data testing disimpan rapat hingga tahap akhir pemodelan, sehingga model tidak pernah melihat data testing sebelumnya. Data testing hanya digunakan satu kali sebagai simulasi ujian yang sesungguhnya untuk melihat bagaimana performa model saat menghadapi data baru yang belum pernah dilihat sama sekali.
+
+
+{{< admonition type="tip" title="Tips" open=true >}}
+Data mentah sering kali dibagi menjadi tiga set: 
+* Data training = 100 soal latihan,
+* Data validation = kuis,  
+* Data testing = ujian final 
+{{< /admonition >}}
 
 
 ---
 
-## 2. Apa itu Model dan Bagaimana Model "Belajar"
+## 2. Bagaimana model "belajar"?
 
-### Model = Fungsi yang Memetakan Input ke Output
+Pada dasarnya, sebuah model *machine learning* adalah sebuah fungsi matematika. Selayaknya sebuah fungsi matematis, sebuah model memerlukan *input* (fitur/prediktor) dan kemudian akan memberikan *output* (prediksi). 
 
-Sebuah model machine learning pada dasarnya adalah sebuah fungsi matematika. Ia menerima input (fitur) dan menghasilkan output (prediksi).
-
-Contoh paling sederhana adalah **Linear Regression**:
+Sebagai ilustrasi, perhatikan kembali data bangkitan pada section sebelumnya. Akan sangat masuk akal jika kita mengasumsikan bahwa nilai ujian siswa dapat diprediksi dengan memperhatikan jam belajarnya. Dalam hal ini, hubungan kedua variabel ini dapat dituliskan sebagai sebuah model, misalnya dalam bentuk paling sederhana dengan menggunakan model linear regression berikut.
 
 ```
 prediksi_nilai = (bobot x jam_belajar) + bias
 ```
 
-Di sini:
-- **bobot** dan **bias** adalah nilai yang belum diketahui. Inilah yang harus dipelajari oleh model.
-- Proses "belajar" = mencari nilai bobot dan bias yang paling pas agar prediksi model sedekat mungkin dengan nilai sebenarnya.
+Fungsi di atas terdiri atas beberapa komponen. **Bobot** dan **bias** adalah nilai yang belum diketahui dan harus dipelajari oleh model. Proses "belajar" yang dimaksud sebelumnya merujuk pada proses pencarian nilai bobot dan bias yang paling pas agar prediksi model sedekat mungkin dengan nilai sebenarnya. Dengan kata lain, proses "belajar" merupakan proses di mana model mencoba meminimalkan kesalahan prediksi.
 
-### Proses Belajar: Meminimalkan Kesalahan
+Secara garis besar, alur kerjanya akan terlihat seperti ini:
 
-Model belajar dengan cara terus-menerus memperbaiki dirinya. Di setiap langkah:
+{{< mermaid >}}
+graph TD
+    A((Mulai)) --> B[Model membuat prediksi berdasarkan bobot terkini]
+    B --> C[Prediksi dibandingkan <br/>dengan jawaban sebenarnya]
+    C --> D[Error dihitung]
+    D --> E[Bobot diperbarui <br/>agar error berkurang]
+    E --> F{Model Konvergen?}
+    F --> |Ya| G((Selesai))
+    F --> |Tidak| B
+{{< /mermaid >}}
 
-1. Model membuat prediksi berdasarkan bobot yang dimiliki saat ini
-2. Prediksi dibandingkan dengan jawaban sebenarnya
-3. Kesalahan (error) dihitung
-4. Bobot diperbarui sedikit agar error berkurang
-
-Proses ini diulang ratusan hingga ribuan kali hingga model konvergen, artinya perubahan bobot sudah sangat kecil dan model dianggap cukup baik.
-
+Perulangan di atas dilakukan ratusan, bahkan ribuan kali hingga model konvergen, yaitu kondisi di mana perubahan bobot sudah sangat kecil dan model dianggap sudah cukup akurat.
 
 ```python
 # Melatih model Linear Regression dengan data training
@@ -190,7 +185,7 @@ plt.show()
 
 
     
-![png](post4_mekanisme_pembelajaran_model_files/post4_mekanisme_pembelajaran_model_5_1.png)
+![png](images/post4_mekanisme_pembelajaran_model_5_1.png)
     
 
 
@@ -198,22 +193,11 @@ plt.show()
 
 ## 3. Overfitting dan Underfitting
 
-Dua masalah klasik yang paling sering ditemui dalam machine learning adalah **underfitting** dan **overfitting**.
+*Overfitting* dan *underfitting* adalah dua masalah klasik yang sering ditemui dalam *machine learning*. *Overfitting* merujuk pada kondisi di mana model terlalu kompleks sehingga sangat pas dengan data *training*. Sebaliknya, *underfitting* merujuk pada kondisi dimana model terlalu sederhana sehingga tidak mampu menangkap pola pada data. 
 
-### Analogi: Belajar Memasak dari Buku Resep
+Baik *overfitting* maupun *underfitting* berakibat pada akurasi yang rendah di data *testing*. Keduanya hanya berbeda pada akurasi di data *training*. Karena model yang *overfitting* sangat pas dengan data *training*, maka akurasi di data *training*-nya tinggi, tapi akurasi di data *testing*-nya rendah. Sebaliknya, karena model *undefitting* tidak dapat menangkap pola di data *training*, maka akurasi di data *training* dan *testing* keduanya rendah.
 
-- **Underfitting:** Kamu hanya membaca judul resep tanpa memahami isinya. Hasilnya, masakan tidak matang dengan benar karena kamu tidak paham prosesnya. Model terlalu sederhana untuk menangkap pola yang ada di data.
-
-- **Overfitting:** Kamu menghafal setiap kata dalam buku resep, termasuk catatan kaki dan koreksi kesalahan cetak. Kamu bisa memasak resep itu persis seperti buku, tapi tidak bisa membuat variasi atau berimprovisasi. Model terlalu "menghafal" data training dan gagal di data baru.
-
-- **Good Fit:** Kamu memahami teknik dasar memasak. Kamu tidak hafal setiap detail, tapi bisa memasak berbagai hidangan dan beradaptasi dengan bahan yang tersedia.
-
-| Kondisi      | Performa Training | Performa Testing | Masalah                 |
-| ------------ | ----------------- | ---------------- | ----------------------- |
-| Underfitting | Buruk             | Buruk            | Model terlalu sederhana |
-| Good Fit     | Baik              | Baik             | Ideal                   |
-| Overfitting  | Sangat Baik       | Buruk            | Model terlalu kompleks  |
-
+Gambar berikut ini mengilustrasikan kondisi *overfitting*, *underfitting*, dan *good fit*.
 
 ```python
 # Data dengan pola sinusoidal dan sedikit noise
@@ -256,48 +240,34 @@ plt.show()
 
 
     
-![png](post4_mekanisme_pembelajaran_model_files/post4_mekanisme_pembelajaran_model_7_0.png)
+![png](images/post4_mekanisme_pembelajaran_model_7_0.png)
     
 
 
 ---
 
-## 4. Bias-Variance Tradeoff
+## 4. *Bias-Variance Tradeoff*
 
-Bias-variance tradeoff adalah konsep yang menjelaskan secara lebih formal mengapa underfitting dan overfitting bisa terjadi, dan mengapa keduanya sulit dihindari secara bersamaan.
+*Bias-variance tradeoff* adalah konsep yang menjelaskan secara lebih formal mengapa *underfitting* dan *overfitting* bisa terjadi, dan mengapa keduanya sulit dihindari secara bersamaan. Untuk memahami konsep *bias-variance tradeoff*, Anda terlebih dahulu harus memahami apa perbedaan *bias* dan *variance*.
 
-### Apa itu Bias?
+![Bias vs Variance](images/bias-variance-tradeoff1.png)
 
-**Bias** adalah error yang terjadi karena asumsi model terlalu sederhana sehingga tidak bisa menangkap pola yang sesungguhnya ada di data.
+**Bias** adalah *error* yang terjadi karena asumsi model terlalu sederhana sehingga tidak bisa menangkap pola yang sesungguhnya ada di data. Sedangkan **variance** merupakan *error* yang terjadi karena model terlalu sensitif terhadap perubahan data.
 
-- Bias tinggi = underfitting
-- Analogi: seorang penembak yang selalu meleset ke kiri secara konsisten. Ia punya "bias" ke kiri.
+Sebuah model yang *overfitting* akan memiliki *bias* yang rendah dan *variance* yang tinggi. Sebaliknya, sebuah model yang *underfitting* akan memiliki *bias* yang tinggi dan *variance* yang rendah. 
 
-### Apa itu Variance?
+Menurunkan *bias* berarti membuat model lebih kompleks, yang akibatnya akan menaikkan *variance*. Sebaliknya, menyederhanakan model akan menaikkan bias, tapi akan menurunkan *variance*. Tujuan kita adalah menemukan titik keseimbangan antara *bias* dan *variance* di mana total error paling kecil. Ini lah yang disebut sebagai *bias-variance tradeoff*.
 
-**Variance** adalah seberapa besar perubahan prediksi model ketika data training diganti dengan data lain. Model dengan variance tinggi sangat sensitif terhadap data training: ganti sedikit datanya, prediksinya berubah drastis.
+$$
+\text{Total Error} = \text{Bias}^2 + \text{Variance} + \text{Irreducible Noise}
+$$
 
-- Variance tinggi = overfitting
-- Analogi: seorang penembak yang tembakannya tersebar acak ke segala penjuru. Tidak konsisten.
+{{< admonition type="tip" title="Tips" open=false >}}
+"*Irreducible noise*" adalah error yang berasal dari ketidakpastian alami dalam data. Ini tidak bisa dihilangkan, berapa pun kompleksitas modelnya.
+{{< /admonition >}}
 
-### Hubungannya dengan Overfitting dan Underfitting
 
-| Kondisi      | Bias   | Variance |
-| ------------ | ------ | -------- |
-| Underfitting | Tinggi | Rendah   |
-| Good Fit     | Rendah | Rendah   |
-| Overfitting  | Rendah | Tinggi   |
-
-### The Tradeoff
-
-Menurunkan bias (membuat model lebih kompleks) biasanya menaikkan variance, dan sebaliknya. Tujuan kita adalah menemukan titik keseimbangan di mana total error paling kecil.
-
-```
-Total Error = Bias^2 + Variance + Irreducible Noise
-```
-
-"Irreducible noise" adalah error yang berasal dari ketidakpastian alami dalam data. Ini tidak bisa dihilangkan, berapa pun kompleksitas modelnya.
-
+Gambar berikut mengilustrasikan konsep *bias-variance tradeoff*. Titik hijau merupakan titik optimal sebab total error pada titik ini merupakan total error terendah.
 
 ```python
 # Visualisasi Bias-Variance Tradeoff
@@ -336,33 +306,30 @@ plt.show()
 
 
     
-![png](post4_mekanisme_pembelajaran_model_files/post4_mekanisme_pembelajaran_model_9_0.png)
+![png](images/post4_mekanisme_pembelajaran_model_9_0.png)
     
 
 
 ---
 
-## 5. Data Preprocessing: Konsep Dasar
+## 5. *Data Preprocessing*
 
-Sebelum melatih model, data perlu dipersiapkan terlebih dahulu. Data dunia nyata jarang sekali dalam kondisi "bersih" dan siap pakai. Proses persiapan data ini disebut **preprocessing**.
+Sebelum melatih model, data perlu dipersiapkan terlebih dahulu. Data dunia nyata jarang sekali dalam kondisi bersih dan siap pakai. Proses persiapan data ini disebut **preprocessing**.
 
-Bayangkan kamu sedang membuat adonan kue. Sebelum mencampur semua bahan, kamu harus mengayak tepung, mengukur takaran yang tepat, dan menyiapkan setiap bahan dalam kondisi yang sesuai. Preprocessing data bekerja dengan cara yang sama.
+Terdapat banyak jenis tahapan preprocessing, dalam artikel ini akan dibahas tiga jenis saja, yaitu:
+- Menangani data hilang (*missing values*)
+- Menyeragamkan skala fitur (*normalization* dan *standardization*)
+- Mengubah data teks menjadi angka (*encoding*)
 
-Tiga hal yang akan kita bahas:
-- Menangani data yang hilang (missing values)
-- Menyeragamkan skala fitur (normalization dan standardization)
-- Mengubah data teks menjadi angka (encoding)
+### 5.1 Menangani Data Hilang (*Missing Values*)
 
-### 5.1 Missing Values: Menangani Data yang Hilang
-
-Data yang hilang (missing values) sangat umum ditemui di dunia nyata. Penyebabnya bisa bermacam-macam: responden tidak mengisi formulir, sensor rusak, atau data memang tidak tersedia.
-
-Ada tiga pendekatan utama:
+[Data hilang (*missing values*)](https://rualytics.com/data-cleaning/#31-nilai-hilang-missing-values) sangat umum ditemui di dunia nyata. Penyebabnya bisa bermacam-macam: responden tidak mengisi formulir, sensor rusak, atau data memang tidak tersedia. Ada tiga pendekatan utama dalam menangani data hilang, yaitu:
 
 1. **Drop (hapus):** Hapus baris atau kolom yang memiliki data hilang. Cocok jika jumlah data hilang sangat sedikit.
-2. **Isi dengan mean atau median:** Isi dengan rata-rata (mean) atau nilai tengah (median). Cocok untuk data numerik.
-3. **Isi dengan modus:** Isi dengan nilai yang paling sering muncul. Cocok untuk data kategorikal.
+2. **Imputasi (estimasi) dengan statistik deskriptif:** imputasi dapat menggunakan nilai rata-rata (*mean*) atau nilai tengah (*median*) jika datanya numerik, atau bisa juga menggunakan modus untuk data kategorik.
+3. **Imputasi (estimasi) berbasis model:** Selain menggunakan statistik deskriptif, imputasi juga dapat dilakukan menggunakan model. Tentu saja modelnya perlu disesuaikan dengan karakteristik data.
 
+Berikut merupakan contoh implementasi penanganan data hilang menggunakan *mean*  dan modus.
 
 ```python
 # Membuat contoh data dengan missing values
@@ -426,25 +393,34 @@ print(data_siswa.isnull().sum())
     dtype: int64
     
 
-### 5.2 Normalization vs Standardization
+### 5.2 *Normalization* vs *Standardization*
 
-Bayangkan kamu ingin membandingkan nilai ujian (skala 0-100) dengan tinggi badan siswa (skala 150-180 cm). Skala keduanya sangat berbeda, dan ini bisa membingungkan model karena ia mungkin salah mengira bahwa fitur dengan angka lebih besar itu "lebih penting".
+Data di dunia nyata sering kali terdiri atas beberapa variabel, masing-masing mungkin memiliki skala yang berbeda. Misalnya, variabel `nilai ujian` memiliki skala 0-100, sedangkan `tinggi badan siswa` memiliki skala 150-180 cm. Kedua variabel ini memiliki skala yang berbeda. Jika digunakan secara langsung dalam pemodelan tanpa penanganan terlebih dahulu, model bisa jadi memberikan perhatian lebih pada `tinggi badan siswa` karena nilainya yang lebih besar dibandingkan `nilai ujian`. Agar dapat dibandingkan secara langsung, perlu adanya penyamaan skala, bisa menggunakan **normalization** atau **standardization**.
 
-**Normalization (Min-Max Scaling):** Mengubah semua nilai ke rentang 0 sampai 1.
+**Normalization (Min-Max Scaling)** merupakan metode untuk mengubah semua nilai ke rentang 0 sampai 1. Secara matematis, nilai baru dari proses *normalization* didefinisikan sebagai persamaan berikut.
 
-```
-nilai_baru = (nilai - nilai_minimum) / (nilai_maksimum - nilai_minimum)
-```
+$$
+x' = \frac{x - x_{\min}}{x_{\max} - x_{\min}}
+$$
 
-**Standardization (Z-score Scaling):** Mengubah data agar memiliki rata-rata 0 dan standar deviasi 1.
+dimana $x$ adalah nilai yang akan dikonversi, $x'$ adalah nilai hasil normalisasi, serta $x_{min}$ dan $x_{max}$ adalah nilai minimum dan maksimum dari variabel $X$.
 
-```
-nilai_baru = (nilai - rata-rata) / standar_deviasi
-```
+{{< admonition type="note" title="Note" open=true >}}
+Selain **min-max scaling**, terdapat setidaknya dua metode normalisasi lain yang umum digunakan, misalnya **max-abs normalization** dan **mean normalization**. keduanya menggunakan formula berbeda, sehingga menghasilkan rentang yang berbeda.
+{{< /admonition >}}
 
-**Kapan memakai yang mana?**
-- Gunakan **normalization** jika kamu tahu rentang nilai yang pasti dan distribusi datamu cukup merata.
-- Gunakan **standardization** jika datamu memiliki nilai pencilan (outlier). Cara ini lebih umum dan lebih robust dalam praktik.
+Sementara itu, **standardization (Z-score Scaling)** merupakan metode yang mengubah data agar memiliki rata-rata 0 dan standar deviasi 1. Secara matematis, metode ini didefinisikan sebagai berikut.
+
+$$
+z = \frac{x_i - \mu}{\sigma}
+$$
+
+dimana $z$ adalah nilai tersandar setelah transformasi, $x_i$ adalah nilai yang akan distandarisasi, $\mu$ adalah rata-rata variabel $X$, dan $\sigma$ adalah standar deviasi dari variabel $X$.
+
+
+{{< admonition type="tip" title="Tips" open=true >}}
+Gunakan **normalization** jika kamu tahu rentang nilai yang pasti dan distribusi datamu cukup merata. Gunakan **standardization** jika datamu memiliki nilai pencilan (*outlier*).
+{{< /admonition >}}
 
 
 ```python
@@ -490,7 +466,7 @@ print(data_std.round(3))
 
 
     
-![png](post4_mekanisme_pembelajaran_model_files/post4_mekanisme_pembelajaran_model_15_0.png)
+![png](images/post4_mekanisme_pembelajaran_model_15_0.png)
     
 
 
@@ -521,17 +497,13 @@ print(data_std.round(3))
 
 ### 5.3 Encoding Categorical Variables
 
-Model machine learning bekerja dengan angka, bukan teks. Kolom seperti `kota_asal` atau `jenis_kelamin` perlu diubah menjadi angka terlebih dahulu. Proses ini disebut **encoding**.
+Model *machine learning* bekerja dengan angka, bukan teks. Kolom seperti `kota_asal` atau `jenis_kelamin` perlu diubah menjadi angka terlebih dahulu. Proses ini disebut **encoding**.
 
-Ada dua cara utama:
+Setidaknya ada dua cara utama dalam melakukan *encoding*:
 
-**1. Label Encoding:** Mengganti setiap kategori dengan sebuah angka urut.
-- Contoh: Jakarta = 0, Bandung = 1, Surabaya = 2
-- Cocok untuk data **ordinal** (yang memiliki urutan alami), seperti: rendah, sedang, tinggi.
+**1. *Label Encoding*:** Mengganti setiap kategori dengan sebuah angka urut. Misalnya, Jakarta = 0, Bandung = 1, Surabaya = 2. Cara ini cocok untuk data **ordinal** (yang memiliki urutan alami), seperti: rendah, sedang, tinggi.
 
-**2. One-Hot Encoding:** Membuat kolom baru untuk setiap kategori dengan nilai 0 atau 1.
-- Cocok untuk data **nominal** (yang tidak memiliki urutan), seperti nama kota atau warna.
-- Menghindari model salah mengira ada hubungan hierarki antar kategori. Misalnya, jika Surabaya diberi angka 2 dan Jakarta diberi angka 0, model mungkin mengira "Surabaya lebih besar dari Jakarta" hanya karena angkanya lebih besar.
+**2. *One-Hot Encoding*:** Membuat kolom baru untuk setiap kategori dengan nilai 0 atau 1. Cara ini cocok untuk data **nominal** (yang tidak memiliki urutan), seperti nama kota atau warna. Menghindari model salah mengira ada hubungan hierarki antar kategori. Misalnya, jika Surabaya diberi angka 2 dan Jakarta diberi angka 0, model mungkin mengira "Surabaya lebih besar dari Jakarta" hanya karena angkanya lebih besar.
 
 
 ```python
@@ -589,34 +561,9 @@ print(data_final)
 
 ## 6. Hyperparameter vs Parameter
 
-Ini adalah perbedaan yang sering membingungkan pemula, tapi konsepnya cukup intuitif.
+Terdapat dua istilah yang mungkin membingungkan pemula terkait pemodelan *machine learning*, yaitu *hyperparameter* dan *parameter*. Keduanya mirip, tetapi berbeda secara konsep. **Parameter** adalah nilai internal yang dipelajari oleh model selama proses *training*. Sebaliknya, **hyperparameter** adalah pengaturan yang Anda tentukan sebelum proses *training* dimulai. Oleh karena itu, Anda **tidak dapat** menentukan parameter, tetapi **Anda perlu menentukan *hyperparameter***.
 
-### Parameter: Yang Dipelajari oleh Model
-
-**Parameter** adalah nilai internal yang dipelajari oleh model selama proses training. Kamu tidak menentukan nilainya secara langsung karena itu tugas model.
-
-Contoh parameter:
-- Bobot (weight) dan bias dalam linear regression
-- Bobot koneksi antar neuron dalam neural network
-
-### Hyperparameter: Yang Kamu Tentukan Sebelum Training
-
-**Hyperparameter** adalah pengaturan yang kamu tentukan sebelum proses training dimulai. Model tidak bisa mempelajari ini sendiri karena hyperparameter mengendalikan cara model belajar, bukan apa yang dipelajari.
-
-**Analogi:** Bayangkan kamu melatih seorang atlet:
-- **Hyperparameter** = jadwal latihan, intensitas, durasi istirahat. Kamu sebagai pelatih yang menentukan ini.
-- **Parameter** = kekuatan otot, teknik, dan refleks si atlet. Ini berkembang sendiri selama proses latihan.
-
-### Contoh Hyperparameter Umum
-
-| Hyperparameter  | Digunakan di                      | Fungsi                                             |
-| --------------- | --------------------------------- | -------------------------------------------------- |
-| `max_depth`     | Decision Tree, XGBoost            | Kedalaman maksimum pohon keputusan                 |
-| `n_estimators`  | Random Forest                     | Jumlah pohon yang dibuat                           |
-| `learning_rate` | Gradient Boosting, Neural Network | Seberapa besar langkah pembaruan bobot per iterasi |
-| `n_neighbors`   | KNN                               | Jumlah tetangga yang dipertimbangkan               |
-| `C`             | SVM                               | Seberapa ketat batas keputusan                     |
-
+Sebagai contoh, bobot dan bias dalam contoh *linear regression* di atas merupakan parameter, sebab model lah yang menentukan nilai keduanya, bukan Anda. Sementara itu, varian dari *linear regression* seperti [ridge (L2) dan lasso (L1) regression](https://rualytics.com/supervised-learning/#43-ridge-dan-lasso-regression) memiliki hyperparameter $\lambda$ yang mengatur regularisasi pada kedua model.
 
 ```python
 # Menunjukkan pengaruh hyperparameter max_depth pada Decision Tree
@@ -657,7 +604,7 @@ for d, tr, te in zip(max_depths, train_scores, test_scores):
 
 
     
-![png](post4_mekanisme_pembelajaran_model_files/post4_mekanisme_pembelajaran_model_19_0.png)
+![png](images/post4_mekanisme_pembelajaran_model_19_0.png)
     
 
 
@@ -674,28 +621,19 @@ for d, tr, te in zip(max_depths, train_scores, test_scores):
 
 ## 7. Cross-Validation
 
-### Masalah dengan Single Train-Test Split
+Sebelumnya telah dibahas konsep data *training* dan *testing*. Tetapi, jika Anda cermati, pembagian ini memiliki satu kelemahan: bagaimana jika hasil evaluasi modelnya bagus hanya karena keberuntungan saja, yaitu hanya karena pembagian datanya kebetulan bagus? Bagaimana jika datanya dibagi dengan cara yang berbeda, apakah ada jaminan bahwa hasil evaluasi modelnya akan sama bagusnya?
 
-Membagi data satu kali memiliki kelemahan: hasilnya bergantung pada keberuntungan pembagian.
+*Cross validation* merupakan pendekatan lanjutan dari konsep data *training* dan *testing* yang dibahas sebelumnya. Dengan *cross validation*, data mentah tidak hanya dibagi sekali saja, tetapi dibagi berulang kali untuk memastikan bahwa tidak ada data set yang kebetulan "mudah" untuk dimodelkan.
 
-Bayangkan kamu menguji kemampuan memasak seseorang hanya dengan satu hidangan. Jika kebetulan itu hidangan favoritnya, hasilnya terlihat bagus. Jika bukan, hasilnya buruk. Satu kali pengujian tidak bisa diandalkan untuk menggambarkan kemampuan sesungguhnya.
+![K-fold CV](images/kfold-cross-validation-en.svg)
 
-Hal yang sama berlaku untuk model machine learning. Satu kali pembagian mungkin kebetulan menghasilkan training set yang "mudah" atau testing set yang "mudah", sehingga hasilnya tidak representatif.
+*Cross Validation*, atau disebut juga sebagai **K-Fold Cross-Validation** membagi data menjadi K bagian yang sama besar (disebut "*fold*"). Proses *training* dan *testing* kemudian diulang sebanyak K kali, di mana setiap *fold* mendapat giliran menjadi data *testing* tepat satu kali.
 
-### K-Fold Cross-Validation
+Evaluasi akhirnya diperoleh dengan merata-ratakan semua evaluasi dari K iterasi. Cara ini memberikan estimasi performa yang lebih stabil dan terpercaya dibandingkan satu kali pembagian saja.
 
-**K-Fold Cross-Validation** membagi data menjadi K bagian yang sama besar (disebut "fold"). Proses training dan testing kemudian diulang K kali, di mana setiap fold mendapat giliran menjadi data testing tepat satu kali.
-
-Contoh dengan K=5:
-- **Iterasi 1:** Fold 1 = Testing, Fold 2+3+4+5 = Training
-- **Iterasi 2:** Fold 2 = Testing, Fold 1+3+4+5 = Training
-- **Iterasi 3:** Fold 3 = Testing, Fold 1+2+4+5 = Training
-- ... dan seterusnya
-
-Hasil akhirnya adalah rata-rata dari semua K iterasi. Cara ini memberikan estimasi performa yang jauh lebih stabil dan terpercaya dibandingkan satu kali pembagian saja.
-
-**Nilai K yang umum digunakan:** 5 atau 10.
-
+{{< admonition type="tip" title="Tips" open=true >}}
+Nilai $K$ yang umum digunakan adalah $K=5$ atau $K=10$.
+{{< /admonition >}}
 
 ```python
 # Perbandingan: Single Train-Test Split vs 5-Fold Cross-Validation
@@ -771,29 +709,7 @@ plt.show()
 
 
     
-![png](post4_mekanisme_pembelajaran_model_files/post4_mekanisme_pembelajaran_model_22_0.png)
+![png](images/post4_mekanisme_pembelajaran_model_22_0.png)
     
 
 
----
-
-## Ringkasan
-
-| Konsep                              | Inti Pemahaman                                                                    |
-| ----------------------------------- | --------------------------------------------------------------------------------- |
-| **Training vs Testing**             | Data harus dipisah agar evaluasi model jujur dan tidak menyesatkan                |
-| **Model**                           | Fungsi matematika dengan parameter yang dipelajari dari data                      |
-| **Overfitting**                     | Model menghafal data training, gagal di data baru                                 |
-| **Underfitting**                    | Model terlalu sederhana, tidak bisa menangkap pola                                |
-| **Bias**                            | Error akibat model terlalu sederhana (hubungan dengan underfitting)               |
-| **Variance**                        | Sensitivitas model terhadap perubahan data training (hubungan dengan overfitting) |
-| **Missing Values**                  | Tangani dengan menghapus, mengisi mean/median, atau modus                         |
-| **Normalization / Standardization** | Menyeragamkan skala fitur agar model tidak "bingung"                              |
-| **Encoding**                        | Mengubah data kategorikal menjadi angka agar bisa diproses model                  |
-| **Parameter**                       | Nilai internal yang dipelajari model selama training (contoh: bobot, bias)        |
-| **Hyperparameter**                  | Pengaturan yang kita tentukan sebelum training dimulai (contoh: max_depth)        |
-| **Cross-Validation**                | Evaluasi yang lebih andal dengan membagi data K kali secara bergantian            |
-
----
-
-**Post Berikutnya:** Metrik Evaluasi Model -- bagaimana mengukur "seberapa baik" model benar-benar bekerja, dan mengapa akurasi saja seringkali tidak cukup.

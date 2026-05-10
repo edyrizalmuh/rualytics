@@ -1,0 +1,99 @@
+<svg width="100%" viewBox="0 0 680 490" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Georgia', serif">
+  <title>K-Fold Cross Validation (K=5)</title>
+  <desc>Illustration of K-fold cross validation with 5 folds, showing each fold taking a turn as the validation set</desc>
+
+  <rect width="680" height="490" fill="#f8f6f1"/>
+
+  <!-- Column headers -->
+  <text x="152" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a3530">Fold 1</text>
+  <text x="245" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a3530">Fold 2</text>
+  <text x="338" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a3530">Fold 3</text>
+  <text x="431" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a3530">Fold 4</text>
+  <text x="524" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a3530">Fold 5</text>
+  <text x="628" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a3530">Accuracy</text>
+
+  <line x1="40" y1="62" x2="660" y2="62" stroke="#c5b8a0" stroke-width="1"/>
+
+  <!-- ROW 1 -->
+  <text x="68" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a3530">Round 1</text>
+  <rect x="110" y="80" width="85" height="44" rx="6" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+  <text x="152" y="102" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#633806" font-weight="bold">Validation</text>
+  <rect x="203" y="80" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="245" y="102" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="296" y="80" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="338" y="102" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="389" y="80" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="431" y="102" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="482" y="80" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="524" y="102" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <text x="628" y="102" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3a3530">87%</text>
+
+  <!-- ROW 2 -->
+  <text x="68" y="158" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a3530">Round 2</text>
+  <rect x="110" y="138" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="152" y="160" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="203" y="138" width="85" height="44" rx="6" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+  <text x="245" y="160" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#633806" font-weight="bold">Validation</text>
+  <rect x="296" y="138" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="338" y="160" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="389" y="138" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="431" y="160" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="482" y="138" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="524" y="160" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <text x="628" y="160" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3a3530">91%</text>
+
+  <!-- ROW 3 -->
+  <text x="68" y="216" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a3530">Round 3</text>
+  <rect x="110" y="196" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="152" y="218" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="203" y="196" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="245" y="218" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="296" y="196" width="85" height="44" rx="6" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+  <text x="338" y="218" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#633806" font-weight="bold">Validation</text>
+  <rect x="389" y="196" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="431" y="218" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="482" y="196" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="524" y="218" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <text x="628" y="218" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3a3530">84%</text>
+
+  <!-- ROW 4 -->
+  <text x="68" y="274" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a3530">Round 4</text>
+  <rect x="110" y="254" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="152" y="276" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="203" y="254" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="245" y="276" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="296" y="254" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="338" y="276" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="389" y="254" width="85" height="44" rx="6" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+  <text x="431" y="276" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#633806" font-weight="bold">Validation</text>
+  <rect x="482" y="254" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="524" y="276" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <text x="628" y="276" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3a3530">89%</text>
+
+  <!-- ROW 5 -->
+  <text x="68" y="332" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a3530">Round 5</text>
+  <rect x="110" y="312" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="152" y="334" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="203" y="312" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="245" y="334" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="296" y="312" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="338" y="334" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="389" y="312" width="85" height="44" rx="6" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.8"/>
+  <text x="431" y="334" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#085041">Training</text>
+  <rect x="482" y="312" width="85" height="44" rx="6" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+  <text x="524" y="334" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#633806" font-weight="bold">Validation</text>
+  <text x="628" y="334" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3a3530">93%</text>
+
+  <!-- Divider + average -->
+  <line x1="580" y1="370" x2="656" y2="370" stroke="#c5b8a0" stroke-width="1"/>
+  <text x="510" y="393" text-anchor="end" font-size="13" font-weight="bold" fill="#3a3530">Average accuracy:</text>
+  <text x="628" y="393" text-anchor="middle" font-size="14" font-weight="bold" fill="#0F6E56">88.8%</text>
+
+  <!-- Legend -->
+  <rect x="183" y="428" width="16" height="16" rx="3" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1"/>
+  <text x="205" y="440" font-size="12" fill="#3a3530">Training</text>
+  <rect x="310" y="428" width="16" height="16" rx="3" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.2"/>
+  <text x="332" y="440" font-size="12" fill="#3a3530">Validation</text>
+
+  <text x="340" y="470" text-anchor="middle" font-size="11.5" fill="#888780" font-style="italic">Each fold takes exactly one turn as the validation set</text>
+</svg>
