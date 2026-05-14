@@ -10,9 +10,9 @@ featuredImagePreview = "images/thumbnail.png"
 # series = ['']
 # weight = 4
 categories = ['Konsep']
-description = "*"
-summary = ""
-seo_description = ""
+description = "Memilih jenis grafik bukan sekedar masalah estetika, melainkan kejelasan komunikasi. Postingan ini akan membahas prinsip dasar visualisasi data: apa yang membedakan visualisasi data yang bagus dan yang buruk, serta pentingnya storytelling dalam visualisasi data."
+summary = "Memilih jenis grafik bukan sekedar masalah estetika, melainkan kejelasan komunikasi. Postingan ini akan membahas prinsip dasar visualisasi data: apa yang membedakan visualisasi data yang bagus dan yang buruk, serta pentingnya storytelling dalam visualisasi data."
+seo_description = "Memilih jenis grafik bukan sekedar masalah estetika, melainkan kejelasan komunikasi. Postingan ini akan membahas prinsip dasar visualisasi data: apa yang membedakan visualisasi data yang bagus dan yang buruk, serta pentingnya storytelling dalam visualisasi data."
 +++
 
 ## 1. Pendahuluan
