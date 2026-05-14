@@ -1,5 +1,5 @@
 +++
-date = '2026-05-05T06:00:00+08:00'
+date = '2026-05-11T06:00:00+08:00'
 draft = false
 title = 'Mekanisme Kerja Machine Learning'
 translationKey = "mekanisme-kerja-machine-learning"

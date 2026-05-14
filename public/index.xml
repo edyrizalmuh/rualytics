@@ -3,7 +3,7 @@
         <title>Rualytics</title>
         <link>http://localhost:1313/</link>
         <description>Rualytics adalah blog edukasi yang men share study note dan panduan praktis terkait  statistika, sains data, dan topik terkait lainnya.</description>
-        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Tue, 05 May 2026 06:00:00 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Tue, 12 May 2026 06:00:00 &#43;0800</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Konsep Dasar Machine Learning</title>
@@ -66,7 +66,7 @@
 </item><item>
     <title>Mekanisme Kerja Machine Learning</title>
     <link>http://localhost:1313/mekanisme-kerja-machine-learning/</link>
-    <pubDate>Tue, 05 May 2026 06:00:00 &#43;0800</pubDate><author>
+    <pubDate>Mon, 11 May 2026 06:00:00 &#43;0800</pubDate><author>
         <name>Muhammad Edy Rizal</name>
     </author><guid>http://localhost:1313/mekanisme-kerja-machine-learning/</guid>
     <description><![CDATA[<p>Tiga postingan sebelumnya dalam series Pengantar Machine Learning menjelaskan konsep dasar <em>machine learning</em> dan tiga paradigma pembelajarannya. Postingan kali ini akan membahas lebih dalam ke sisi teknisnya: konsep <em>training-testing</em>, apa itu model dan bagaimana ia belajar, konsep <em>overfitting</em> dan <em>underfitting</em>, <em>data preprocessing</em>, perbedaan <em>hyperparameter</em> dan <em>parameter</em>, serta konsep <em>cross-validation</em>.</p>
@@ -92,6 +92,25 @@
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div>
           <p class="tw-select-none !tw-my-1">python</p>]]></description>
 </item><item>
+    <title>Pengantar Visualisasi dan Storytelling</title>
+    <link>http://localhost:1313/pengantar-visualisasi-dan-storytelling/</link>
+    <pubDate>Tue, 12 May 2026 06:00:00 &#43;0800</pubDate><author>
+        <name>Muhammad Edy Rizal</name>
+    </author><guid>http://localhost:1313/pengantar-visualisasi-dan-storytelling/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/pengantar-visualisasi-dan-storytelling/images/thumbnail.png" referrerpolicy="no-referrer">
+            </div><h2 id="1-pendahuluan" class="headerLink">
+    <a href="#1-pendahuluan" class="header-mark"></a>1. Pendahuluan</h2><p>Kedua chart berikut ini dibuat berdasarkan data yang sama. Silakan perhatikan kedua chart tersebut, kemudian tentukan chart mana yang menurut Anda lebih mudah untuk dipahami.</p>
+<p><img class="tw-inline" loading="lazy" src='/pengantar-visualisasi-dan-storytelling/images/thumbnail.png' srcset="/pengantar-visualisasi-dan-storytelling/images/thumbnail_hu_c1166c27b35ce6bf.webp 800w, /pengantar-visualisasi-dan-storytelling/images/thumbnail_hu_ad9effb6662cfd4d.webp 1200w, /pengantar-visualisasi-dan-storytelling/images/thumbnail_hu_bff861dee7f2d2f5.webp 1600w"  alt="Pie Chart vs Bar Chart" height="716" width="1807"></p>
+<p>Apakah Anda sudah menentukan jawaban Anda? Jika Anda masih ragu, coba pertimbangkan beberapa pertanyaan singkat berikut:</p>
+<ol>
+<li>Kategori apa yang paling banyak proporsi belanjanya?</li>
+<li>Kategori apa yang paling sedikit?</li>
+<li>Kategori apa yang lebih besar proporsi belanjanya, kosmetik atau makanan?</li>
+<li>Berapa banyak responden yang membeli buku?</li>
+</ol>
+<p>Berdasarkan pertanyaan di atas, menurut Anda, chart mana yang lebih informatif dan mudah dipahami?</p>]]></description>
+</item><item>
     <title>Pengenalan Macro di Microsoft Excel</title>
     <link>http://localhost:1313/excel-macro/</link>
     <pubDate>Tue, 24 Mar 2026 06:00:00 &#43;0800</pubDate><author>
@@ -116,28 +135,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset/images/cell-5-output-1.png" referrerpolicy="no-referrer">
             </div><p>Notebook ini membangun Neural Network untuk mengklasifikasikan flower/planar dataset (non-linearly separable).</p>]]></description>
-</item><item>
-    <title></title>
-    <link>http://localhost:1313/rencana-series-pengantar-machine-learning/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate><author>
-        <name>Muhammad Edy Rizal</name>
-    </author><guid>http://localhost:1313/rencana-series-pengantar-machine-learning/</guid>
-    <description><![CDATA[<h1 id="series-pengantar-machine-learning" class="headerLink">
-    <a href="#series-pengantar-machine-learning" class="header-mark"></a>SERIES: PENGANTAR MACHINE LEARNING</h1><h2 id="post-1-pengenalan-machine-learning" class="headerLink">
-    <a href="#post-1-pengenalan-machine-learning" class="header-mark"></a>Post 1: Pengenalan Machine Learning</h2><p>Rasional: Fondasi konseptual yang koheren</p>
-<h3 id="1-definisi-machine-learning" class="headerLink">
-    <a href="#1-definisi-machine-learning" class="header-mark"></a>1 Definisi machine learning</h3><h3 id="2-perbedaan-ml-dengan-pemrograman-konvensional" class="headerLink">
-    <a href="#2-perbedaan-ml-dengan-pemrograman-konvensional" class="header-mark"></a>2 Perbedaan ML dengan pemrograman konvensional</h3><h3 id="3-mengapa-ml-dibutuhkan-dalam-sains-data" class="headerLink">
-    <a href="#3-mengapa-ml-dibutuhkan-dalam-sains-data" class="header-mark"></a>3 Mengapa ML dibutuhkan dalam sains data</h3><h3 id="4-anatomi-pipeline-machine-learning" class="headerLink">
-    <a href="#4-anatomi-pipeline-machine-learning" class="header-mark"></a>4 Anatomi Pipeline Machine Learning</h3><h4 id="41-gambaran-end-to-end-dari-raw-data--model--deployment" class="headerLink">
-    <a href="#41-gambaran-end-to-end-dari-raw-data--model--deployment" class="header-mark"></a>4.1 Gambaran end-to-end: dari raw data → model → deployment</h4><h4 id="42-tahapan-utama-data-collection-preprocessing-training-evaluation-deployment" class="headerLink">
-    <a href="#42-tahapan-utama-data-collection-preprocessing-training-evaluation-deployment" class="header-mark"></a>4.2 Tahapan utama: data collection, preprocessing, training, evaluation, deployment</h4><h3 id="5-jenis-jenis-data-dalam-ml" class="headerLink">
-    <a href="#5-jenis-jenis-data-dalam-ml" class="header-mark"></a>5 Jenis-jenis Data dalam ML</h3><h4 id="51-structured-vs-unstructured-data" class="headerLink">
-    <a href="#51-structured-vs-unstructured-data" class="header-mark"></a>5.1 Structured vs unstructured data</h4><h4 id="52-tabular-time-series-text-image-audio" class="headerLink">
-    <a href="#52-tabular-time-series-text-image-audio" class="header-mark"></a>5.2 Tabular, time series, text, image, audio</h4><h3 id="6-peran-statistika-dan-matematika-dalam-ml" class="headerLink">
-    <a href="#6-peran-statistika-dan-matematika-dalam-ml" class="header-mark"></a>6 Peran Statistika dan Matematika dalam ML</h3><h4 id="61-konsep-probabilitas-dasar" class="headerLink">
-    <a href="#61-konsep-probabilitas-dasar" class="header-mark"></a>6.1 Konsep probabilitas dasar</h4><h4 id="62-linear-algebra-sederhana-vektor-matriks" class="headerLink">
-    <a href="#62-linear-algebra-sederhana-vektor-matriks" class="header-mark"></a>6.2 Linear algebra sederhana (vektor, matriks)</h4><h2 id="post-2-supervised-learning" class="headerLink">
-    <a href="#post-2-supervised-learning" class="header-mark"></a>Post 2: Supervised Learning</h2><p>Rasional: Fokus pada satu paradigma dengan aplikasi konkret</p>]]></description>
 </item></channel>
 </rss>
