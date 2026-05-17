@@ -3,24 +3,14 @@
         <title>Visualisasi Data - Label - Rualytics</title>
         <link>http://localhost:1313/tags/visualisasi-data/</link>
         <description>Visualisasi Data - Label - Rualytics</description>
-        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Tue, 12 May 2026 06:00:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/visualisasi-data/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Sun, 17 May 2026 06:00:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/visualisasi-data/" rel="self" type="application/rss+xml" /><item>
     <title>Pengantar Visualisasi dan Storytelling</title>
     <link>http://localhost:1313/pengantar-visualisasi-dan-storytelling/</link>
-    <pubDate>Tue, 12 May 2026 06:00:00 &#43;0800</pubDate><author>
+    <pubDate>Sun, 17 May 2026 06:00:00 &#43;0800</pubDate><author>
         <name>Muhammad Edy Rizal</name>
     </author><guid>http://localhost:1313/pengantar-visualisasi-dan-storytelling/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/pengantar-visualisasi-dan-storytelling/images/thumbnail.png" referrerpolicy="no-referrer">
-            </div><h2 id="1-pendahuluan" class="headerLink">
-    <a href="#1-pendahuluan" class="header-mark"></a>1. Pendahuluan</h2><p>Kedua chart berikut ini dibuat berdasarkan data yang sama. Silakan perhatikan kedua chart tersebut, kemudian tentukan chart mana yang menurut Anda lebih mudah untuk dipahami.</p>
-<p><img class="tw-inline" loading="lazy" src='/pengantar-visualisasi-dan-storytelling/images/thumbnail.png' srcset="/pengantar-visualisasi-dan-storytelling/images/thumbnail_hu_c1166c27b35ce6bf.webp 800w, /pengantar-visualisasi-dan-storytelling/images/thumbnail_hu_ad9effb6662cfd4d.webp 1200w, /pengantar-visualisasi-dan-storytelling/images/thumbnail_hu_bff861dee7f2d2f5.webp 1600w"  alt="Pie Chart vs Bar Chart" height="716" width="1807"></p>
-<p>Apakah Anda sudah menentukan jawaban Anda? Jika Anda masih ragu, coba pertimbangkan beberapa pertanyaan singkat berikut:</p>
-<ol>
-<li>Kategori apa yang paling banyak proporsi belanjanya?</li>
-<li>Kategori apa yang paling sedikit?</li>
-<li>Kategori apa yang lebih besar proporsi belanjanya, kosmetik atau makanan?</li>
-<li>Berapa banyak responden yang membeli buku?</li>
-</ol>
-<p>Berdasarkan pertanyaan di atas, menurut Anda, chart mana yang lebih informatif dan mudah dipahami?</p>]]></description>
+            </div>Memilih jenis grafik bukan sekedar masalah estetika, melainkan kejelasan komunikasi. Postingan ini akan membahas prinsip dasar visualisasi data: apa yang membedakan visualisasi data yang bagus dan yang buruk, serta pentingnya storytelling dalam visualisasi data.]]></description>
 </item></channel>
 </rss>

@@ -17,7 +17,7 @@ Berdasarkan pertanyaan di atas, menurut Anda, chart mana yang lebih informatif d
 
 Memilih jenis grafik bukan sekedar masalah estetika, melainkan kejelasan komunikasi. Postingan ini akan membahas prinsip dasar visualisasi data: apa yang membedakan visualisasi data yang bagus dan yang buruk, serta pentingnya storytelling dalam visualisasi data. 
 
-Materi yang dibahas merupakan pengantar untuk pemula, dan sebagian poin-poin pentingnya merujuk pada buku [Storytelling with Data](https://www.storytellingwithdata.com/) oleh [Cole Nussbaumer Knaflic](https://www.linkedin.com/in/colenussbaumer). Untuk eksplorasi yang lebih mendalam, saya menyarankan untuk merujuk langsung pada buku tersebut.
+Materi yang dibahas merupakan pengantar untuk pemula, dan sebagian poin-poin pentingnya merujuk pada buku [Storytelling with Data](https://frge.top/ref_storytellingdata) oleh [Cole Nussbaumer Knaflic](https://frge.top/aut_colenussbaumer). Untuk eksplorasi yang lebih mendalam, saya menyarankan untuk merujuk langsung pada buku tersebut.
 
 ## 2. Berhenti Menyajikan "Tiram", Mulailah Memberikan "Mutiara"
 
@@ -128,7 +128,7 @@ Sebagai contoh, alih-alih memberikan judul klise seperti "Hasil Survei Program S
 
 Kesalahan yang sering dilakukan oleh profesional adalah langsung membuka perangkat lunak presentasi saat mulai bekerja. Secara psikologis, begitu kita mulai menghabiskan waktu untuk "mengutak-atik" jenis huruf, warna, dan posisi elemen di komputer, kita akan membentuk ikatan emosional terhadap slide tersebut. Hal ini membuat kita resisten terhadap perubahan, meskipun slide tersebut ternyata tidak efektif bagi narasi keseluruhan.
 
-[Cole Nussbaumer Knaflic](https://www.linkedin.com/in/colenussbaumer) melalui [Storytelling with Data](https://www.storytellingwithdata.com/)  merekomendasikan pendekatan "*low-tech*" seperti penggunaan papan tulis atau Post-it notes. Metode ini memungkinkan Anda untuk:
+[Cole Nussbaumer Knaflic](https://frge.top/aut_colenussbaumer) melalui [Storytelling with Data](https://frge.top/ref_storytellingdata)  merekomendasikan pendekatan "*low-tech*" seperti penggunaan papan tulis atau Post-it notes. Metode ini memungkinkan Anda untuk:
 
 * Membangun struktur narasi visual (*storyboard*) tanpa beban teknis.
 * Mengatur ulang alur cerita dengan fleksibel tanpa rasa bersalah saat harus membuang ide.
