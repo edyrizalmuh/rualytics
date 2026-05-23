@@ -7,28 +7,28 @@
     <title>Konsep Dasar Machine Learning</title>
     <link>http://localhost:1313/konsep-dasar-machine-learning/</link>
     <pubDate>Sun, 26 Apr 2026 06:00:00 &#43;0800</pubDate><author>
-        <name>Muhammad Edy Rizal</name>
+        <name>MER</name>
     </author><guid>http://localhost:1313/konsep-dasar-machine-learning/</guid>
     <description><![CDATA[<em>Machine Learning</em> (ML) adalah bidang ilmu yang berfokus pada pengembangan algoritma agar komputer mampu melakukan prediksi atau menghasilkan konten (seperti teks, gambar, audio, dan video) tanpa diprogram secara eksplisit untuk setiap tugas tersebut. Artikel ini merupakan bagian pertama dari seri Pengantar Machine Learning yang membahas konsep dasar <em>Machine Learning</em>.]]></description>
 </item><item>
     <title>Exploratory Data Analysis (EDA)</title>
     <link>http://localhost:1313/exploratory-data-analysis/</link>
     <pubDate>Sun, 05 Apr 2026 06:00:00 &#43;0800</pubDate><author>
-        <name>Muhammad Edy Rizal</name>
+        <name>MER</name>
     </author><guid>http://localhost:1313/exploratory-data-analysis/</guid>
     <description><![CDATA[<em>Exploratory Data Analysis</em> (EDA) adalah salah satu tahapan dalam analisis data yang bertujuan untuk mengenal dan memahami data sebelum melakukan pemodelan lebih lanjut melalui eksplorasi dan visualisasi data.]]></description>
 </item><item>
     <title>Supervised Learning</title>
     <link>http://localhost:1313/supervised-learning/</link>
     <pubDate>Sun, 03 May 2026 06:00:00 &#43;0800</pubDate><author>
-        <name>Muhammad Edy Rizal</name>
+        <name>MER</name>
     </author><guid>http://localhost:1313/supervised-learning/</guid>
     <description><![CDATA[Artikel ini membahas konsep dasar <em>supervised learning</em> sebagai materi pengantar untuk pemula. Materi yang dibahas mencakup penjelasan tentang apa itu <em>supervised learning</em>, perbedaan regresi dan klasifikasi, serta pengenalan beberapa algoritma <em>supervised learning</em> populer.]]></description>
 </item><item>
     <title>Data Cleaning</title>
     <link>http://localhost:1313/data-cleaning/</link>
     <pubDate>Sun, 12 Apr 2026 06:00:00 &#43;0800</pubDate><author>
-        <name>Muhammad Edy Rizal</name>
+        <name>MER</name>
     </author><guid>http://localhost:1313/data-cleaning/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/data-cleaning/images/GIGO-edit2.jpg" referrerpolicy="no-referrer">
@@ -37,7 +37,7 @@
     <title>Unsupervised dan Reinforcement Learning</title>
     <link>http://localhost:1313/unsupervised-and-reinforcement-learning/</link>
     <pubDate>Mon, 04 May 2026 06:00:00 &#43;0800</pubDate><author>
-        <name>Muhammad Edy Rizal</name>
+        <name>MER</name>
     </author><guid>http://localhost:1313/unsupervised-and-reinforcement-learning/</guid>
     <description><![CDATA[<p>Pada postingan sebelumnya, kita sudah belajar tentang <a href="https://frge.top/rualytics_tipe_data" target="_blank" rel="noopener noreferrer">konsep dasar <em>machine learning</em></a> dan salah satu paradigma pembelajarannnya, yaitu <a href="https://frge.top/rualytics_supervised_learning" target="_blank" rel="noopener noreferrer"><em>supervised learning</em></a>. Pada postingan ini, kita akan belajar tentang paradigma pembelajaran lain selain <em>supervised learning</em>, yaitu <em>unsupervised learning</em> dan <em>reinforcement learning</em>.</p>
 <p>Artikel ini akan memberikan beberapa kode python sederhana untuk mengilustrasikan kedua konsep learning di atas. Jika Anda ingin mengikuti tutorial di artikel ini, pastikan Anda telah memuat library berikut ini.</p>
@@ -65,7 +65,7 @@
     <title>Mekanisme Kerja Machine Learning</title>
     <link>http://localhost:1313/mekanisme-kerja-machine-learning/</link>
     <pubDate>Mon, 11 May 2026 06:00:00 &#43;0800</pubDate><author>
-        <name>Muhammad Edy Rizal</name>
+        <name>MER</name>
     </author><guid>http://localhost:1313/mekanisme-kerja-machine-learning/</guid>
     <description><![CDATA[<p>Tiga postingan sebelumnya dalam series Pengantar Machine Learning menjelaskan konsep dasar <em>machine learning</em> dan tiga paradigma pembelajarannya. Postingan kali ini akan membahas lebih dalam ke sisi teknisnya: konsep <em>training-testing</em>, apa itu model dan bagaimana ia belajar, konsep <em>overfitting</em> dan <em>underfitting</em>, <em>data preprocessing</em>, perbedaan <em>hyperparameter</em> dan <em>parameter</em>, serta konsep <em>cross-validation</em>.</p>
 <p>Jika Anda ingin mengikuti tutorial pada postingan ini, pastikan Anda telah memuat library python berikut ini.</p>
@@ -93,7 +93,7 @@
     <title>Pengantar Visualisasi dan Storytelling</title>
     <link>http://localhost:1313/pengantar-visualisasi-dan-storytelling/</link>
     <pubDate>Sun, 17 May 2026 06:00:00 &#43;0800</pubDate><author>
-        <name>Muhammad Edy Rizal</name>
+        <name>MER</name>
     </author><guid>http://localhost:1313/pengantar-visualisasi-dan-storytelling/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/pengantar-visualisasi-dan-storytelling/images/thumbnail.png" referrerpolicy="no-referrer">
@@ -102,14 +102,14 @@
     <title>Pengenalan Macro di Microsoft Excel</title>
     <link>http://localhost:1313/excel-macro/</link>
     <pubDate>Tue, 24 Mar 2026 06:00:00 &#43;0800</pubDate><author>
-        <name>Muhammad Edy Rizal</name>
+        <name>MER</name>
     </author><guid>http://localhost:1313/excel-macro/</guid>
     <description><![CDATA[Macro adalah cara Excel &ldquo;mengingat&rdquo; dan &ldquo;mengulang&rdquo; serangkaian perintah secara otomatis. Tutorial ini menjelaskan langkah praktis penggunaan macro di Microsoft Excel.]]></description>
 </item><item>
     <title>Pivot Table</title>
     <link>http://localhost:1313/pivot-table/</link>
     <pubDate>Tue, 24 Mar 2026 06:00:00 &#43;0800</pubDate><author>
-        <name>Muhammad Edy Rizal</name>
+        <name>MER</name>
     </author><guid>http://localhost:1313/pivot-table/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/pivot-table/images/thumbnail-pivot-table.png" referrerpolicy="no-referrer">
@@ -118,7 +118,7 @@
     <title>Pemodelan Neural Network Menggunakan Scikit Learn pada Planar Dataset</title>
     <link>http://localhost:1313/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset/</link>
     <pubDate>Wed, 11 Mar 2026 15:57:53 &#43;0800</pubDate><author>
-        <name>Muhammad Edy Rizal</name>
+        <name>MER</name>
     </author><guid>http://localhost:1313/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/pemodelan-nn-menggunakan-scikit-learn-pada-planar-dataset/images/cell-5-output-1.png" referrerpolicy="no-referrer">

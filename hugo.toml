@@ -124,7 +124,7 @@ license = '<a rel="license external nofollow noopener noreferrer" href="https://
 
 
 [params.author]
-name = "Muhammad Edy Rizal"
+name = "MER"
 
 
 [params.app]
@@ -187,7 +187,7 @@ custom = ""
 hugo = true
 hostedOn = ""
 copyright = true
-author = true
+author = false
 since = 2_026
 icp = ""
 license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
